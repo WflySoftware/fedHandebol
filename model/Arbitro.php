@@ -6,7 +6,7 @@ class Arbitro
 	private $nome;
 	private $telefone;
 	private $cpf;
-	private $carteira;
+
 
 	public function __construct(){
 
@@ -35,12 +35,7 @@ class Arbitro
 	public function __setCpf($cpf){
 		$this->cpf = $cpf;
 	}
-	public function __getCarteira(){
-		return $this->cpf;
-	}
-	public function __setCarteira($cpf){
-		$this->cpf = $cpf;
-	}
+
 }
 
 
