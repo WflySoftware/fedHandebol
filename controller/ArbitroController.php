@@ -1,5 +1,6 @@
 <?php
-
+include_once($_SERVER['DOCUMENT_ROOT'].'/fedHandebol/persistence/ArbitroDAO.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/fedHandebol/model/Arbitro.php');
 class ArbitroController{
 	
 	private $arbitroDAO;
