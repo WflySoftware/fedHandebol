@@ -7,6 +7,9 @@ switch($pagina){
 	case 'tipo':
 		include($_SERVER['DOCUMENT_ROOT'].'/fedHandebol/views/type.php');
 		break;
+	case 'tecnico':
+		include($_SERVER['DOCUMENT_ROOT'].'/fedHandebol/views/cad_Tecnico.php');
+		break;	
 	default:
 		include($_SERVER['DOCUMENT_ROOT'].'/fedHandebol/views/initial.php');	
 }
