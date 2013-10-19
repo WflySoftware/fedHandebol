@@ -9,6 +9,9 @@ switch($pagina){
 		break;
 	case 'tecnico':
 		include($_SERVER['DOCUMENT_ROOT'].'/fedHandebol/views/cad_Tecnico.php');
+		break;
+	case 'jogador':
+		include($_SERVER['DOCUMENT_ROOT'].'/fedHandebol/views/cad_Jogador.php');
 		break;	
 	default:
 		include($_SERVER['DOCUMENT_ROOT'].'/fedHandebol/views/initial.php');	

@@ -2,16 +2,15 @@
 <html>
 	<head>
 		<title>RadarCriminal | Mapa de Ocorrências no DF.</title>
-		<script type="text/javascript" src="./views/assets/puc1imu.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-		<script type="text/javascript" src="./views/assets/Chart.js"></script>
-		<script type="text/javascript" src="./views/assets/jquery.min.js"></script>
-		<script type="text/javascript" src="./views/assets/modernizr.js"></script>
-		<!--[if lte IE 8]>
-			<script type="text/javascript" src="assets/excanvas.js"></script>
-		<![endif]-->
-		<link rel="stylesheet" href="./views/assets/styles.css"/>
-        <link rel="stylesheet" href="./views/assets/efeito-menu.css"/>
+		<?php require_once 'import.php'; ?>
+
+<script type="text/javascript">
+jQuery(function($){
+	$("#telefone").mask("(99)9999-9999"); //CPF
+	$("#cpf").mask("999.999.999-99"); //Numero de Telefone
+	$("#numero").mask("99"); //Numero da Camisa
+});
+</script>
 	</head>
 
 	<body>
@@ -33,7 +32,7 @@
                 <li class="borda borda-direita"><a href="">Cadastros</a>
                 	<ul> 
                     	<li><a href="?pag=tecnico">Tecnicos</a></li>
-                        <li><a href="">Jogadores</a></li>
+                        <li><a href="?pag=jogador">Jogadores</a></li>
                         <li><a href="">Arbitro</a></li>
                         <li><a href="">Time</a></li>
                     </ul></li>
