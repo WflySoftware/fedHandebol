@@ -1,6 +1,6 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT'].'/fedHandebol/persistence/JogadorDAO.php');
-include_once($_SERVER['DOCUMENT_ROOT'].'/fedHandebol/model/Jogador.php');
+include_once(__APP_PATH.'/persistence/JogadorDAO.php');
+include_once(__APP_PATH.'/model/Jogador.php');
 class JogadorController{
 	private $jogadorDAO;
 	
