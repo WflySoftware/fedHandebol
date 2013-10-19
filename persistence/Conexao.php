@@ -14,7 +14,7 @@ class Conexao{
 		$this->servidor      = "localhost";
 		$this->usuario       = "root";
 		$this->senha         = "";
-		$this->db            = "radar_criminal";
+		$this->db            = "federacao_handebol";
 		$this->banco = NewADOConnection($this->tipo_banco);
 		$this->banco->dialect = 3;
 		$this->banco->debug = false;
