@@ -1,12 +1,12 @@
 <?php
-include_once(__APP_PATH.'/fedHandebol/persistence/ArbitroDAO.php');
+include_once(__APP_PATH.'/persistence/ArbitroDAO.php');
 include_once(__APP_PATH.'/model/Arbitro.php');
 class ArbitroController{
 	
 	private $arbitroDAO;
 	
 	public function __construct(){
-		$this->arbitroDAO = new arbitroDAO();
+		$this->arbitroDAO = new ArbitroDAO();
 	}
 	
 	public function _listarTodos(){
