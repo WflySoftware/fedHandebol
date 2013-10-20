@@ -16,9 +16,9 @@ class JogadorDAO{
 		while($registro = $resultado->FetchNextObject()){
 			$dadosJogador = new Jogador();
 			$dadosJogador->__constructOverload($registro->ID_JOGADOR,$registro->TIME_ID_TIME,$registro->NOME,$registro->DATA_NASCIMENTO,$registro->CPF,$registro->NUMERO);
-			$retornaJogadors[] = $dadosJogador;
+			$retornaJogador[] = $dadosJogador;
 		}
-		return $retornaJogadors;
+		return $retornaJogador;
 	}
 	
 	public function inserir(Jogador $dadosJogador){
