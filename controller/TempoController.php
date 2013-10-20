@@ -15,8 +15,8 @@ class TempoController{
 	public function _consultarPorId($id){
 		return $this->tempoDAO->consultarPorId($id);
 	}
-	public function _consultarPorIdJogo($idJogo){
-		return $this->tempoDAO->consultarPorIdJogo($idJogo);
+	public function _consultarPorJogo($idJogo){
+		return $this->tempoDAO->consultarIdJogo($idJogo);
 	}
 	public function _consultarPorTipo($tipo){
 		return $this->tempoDAO->consultarPorTipo($tipo);
@@ -47,6 +47,9 @@ class TempoController{
 	}
 	public function _inserirTempo(Tempo $tempo){
 		return $this->tempoDAO->inserirTempo($tempo);
+	}
+	public function _atualizar(Tempo $tempo){
+		return $this->tempoDAO->atualizar($tempo);
 	}
 
 }

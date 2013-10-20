@@ -30,5 +30,7 @@ class TecnicoController{
 	public function _inserirTecnico(Tecnico $tecnico){
 		return $this->tecnicoDAO->inserirTecnico($tecnico);
 	}
-
+	public function _atualizar(Tecnico $tecnico){
+		return $this->tecnicoDAO->atualizar($tecnico);
+	}
 }

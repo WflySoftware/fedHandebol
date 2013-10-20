@@ -24,8 +24,11 @@ class ArbitroController{
 	public function _consultarPorCpf($cpf){
 		return $this->arbitroDAO->consultarPorCpf($cpf);
 	}
-	public function _inserirArbitro(Arbitro $arbitro){
-		return $this->arbitroDAO->inserirArbitro($arbitro);
+	public function _inserir(Arbitro $arbitro){
+		return $this->arbitroDAO->inserir($arbitro);
+	}
+	public function _atualizar(Arbitro $arbitro){
+		return $this->arbitroDAO->atualizar($arbitro);
 	}
 
 }

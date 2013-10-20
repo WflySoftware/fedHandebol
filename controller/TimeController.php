@@ -15,8 +15,8 @@ class TimeController{
 	public function _consultarPorId($id){
 		return $this->timeDAO->consultarPorId($id);
 	}
-	public function _consultarPorIdTecnico($idTecnico){
-		return $this->timeDAO->consultarPorIdTecnico($idTecnico);
+	public function _consultarPorTecnico($idTecnico){
+		return $this->timeDAO->consultarPorTecnico($idTecnico);
 	}
 	public function _consultarPorNome($nome){
 		return $this->timeDAO->consultarPorNome($nome);
@@ -41,6 +41,9 @@ class TimeController{
 	}
 	public function _inserirTime(Time $time){
 		return $this->timeDAO->inserirTime($time);
+	}
+	public function _atualizar(Time $time){
+		return $this->timeDAO->atualizar($time);
 	}
 
 }

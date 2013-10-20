@@ -12,13 +12,16 @@ class TimeJogoController{
 	public function _listarTodos(){
 		return $this->timeJogoDAO->listarTodos();
 	}
-	public function _consultarPorIdTime($idTime){
-		return $this->timeJogoDAO->consultarPorIdTime($idTime);
+	public function _consultarPorTime($idTime){
+		return $this->timeJogoDAO->consultarPorTime($idTime);
 	}
-	public function _consultarPorIdTempo($idTempo){
-		return $this->timeJogoDAO->consultarPorIdTempo($idTempo);
+	public function _consultarPorTempo($idTempo){
+		return $this->timeJogoDAO->consultarPorTempo($idTempo);
 	}
 	public function _inserirTimeJogo(TimeJogo $timeJogo){
 		return $this->timeJogoDAO->inserirTimeJogo($timeJogo);
+	}
+	public function _atualizar(TimeJogo $timeJogo){
+		return $this->timeJogoDAO->atualizar($timeJogo);
 	}
 }

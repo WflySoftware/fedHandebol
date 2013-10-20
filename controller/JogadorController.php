@@ -14,8 +14,8 @@ class JogadorController{
 	public function _consultarPorId($id){
 		return $this->jogadorDAO->consultarPorId($id);
 	}
-	public function _consultarPorIdTime($idTime){
-		return $this->jogadorDAO->consultarPorIdTime($idTime);
+	public function _consultarPorTime($idTime){
+		return $this->jogadorDAO->consultarPorTime($idTime);
 	}
 	public function _consultarPorNome($nome){
 		return $this->jogadorDAO->consultarPorNome($nome);
@@ -29,8 +29,11 @@ class JogadorController{
 	public function _consultarPorNumero($numero){
 		return $this->jogadorDAO->consultarPorNumero($numero);
 	}
-	public function _inserirJogador(Jogador $jogador){
-		return $this->jogadorDAO->inserirJogador($jogador);
+	public function _inserir(Jogador $jogador){
+		return $this->jogadorDAO->inserir($jogador);
+	}
+	public function _atualizar(Jogador $jogador){
+		return $this->jogadorDAO->atualizar($jogador);
 	}
 
 }

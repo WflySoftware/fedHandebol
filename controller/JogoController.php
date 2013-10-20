@@ -36,5 +36,7 @@ class JogoController{
 	public function _inserirJogo(Jogo $jogo){
 		return $this->jogoDAO->inserirJogo($jogo);
 	}
-
+	public function _atualizar(Jogo $jogo){
+		return $this->jogoDAO->atualizar($jogo);
+	}
 }
