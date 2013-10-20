@@ -15,11 +15,30 @@ class Tempo{
 	public function __construct(){
 	
 	}
+	public function __constructOverload($idTempo,$idJogo,$tipo,$advertencia,$punicao,$desqualificacao,$relatorio,$tiro7Metros,$tempoTecnico,$placarTime1,$placarTime2){
+		$this->idTempo = $idTempo;
+		$this->idJogo = $idJogo;
+		$this->tipo = $tipo;
+		$this->advertencia = $advertencia;
+		$this->punicao = $punicao;
+		$this->desqualificacao = $desqualificacao;
+		$this->relatorio = $relatorio;
+		$this->tiro7Metros = $tiro7Metros;
+		$this->tempoTecnico = $tempoTecnico;
+		$this->placarTime1 = $placarTime1;
+		$this->placarTime2 = $placarTime2;
+	}
 	public function __getIdTempo(){
 		return $this->idTempo;
 	}
 	public function __setIdTempo($idTempo){
 		$this->idTempo = $idTempo;
+	}
+	public function __getIdJogo(){
+		return $this->idJogo;
+	}
+	public function __setIdJogo($idJogo){
+		$this->idJogo = $idJogo;
 	}
 	public function __getTipo(){
 		return $this->tipo;

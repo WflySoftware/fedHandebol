@@ -10,6 +10,13 @@ class Tecnico
 	public function __construct(){
 		
 	}
+	public function __constructOverload($idTecnico,$nome,$endereco,$telefone,$cpf){
+		$this->idTecnico = $idTecnico;
+		$this->nome = $nome;
+		$this->endereco = $endereco;
+		$this->telefone = $telefone;
+		$this->cpf = $cpf;
+	}
 	public function __getIdTecnico(){
 		return $this->idTecnico;
 	}

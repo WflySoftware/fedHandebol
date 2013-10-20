@@ -11,10 +11,16 @@ class Arbitro
 	public function __construct(){
 
 	}
+	public function __constructOverload($idArbitro,$nome,$telefone,$cpf){
+		$this->idArbitro = $idArbitro;
+		$this->nome = $nome;
+		$this->telefone = $telefone;
+		$this->cpf = $cpf;
+	}
 	public function __getIdArbitro(){
 		return $this->idArbitro;
 	}
-	public function __setIdTecnico($idArbitro){
+	public function __setIdArbitro($idArbitro){
 		$this->idArbitro = $idArbitro;
 	}
 	public function __getNome(){
@@ -37,6 +43,3 @@ class Arbitro
 	}
 
 }
-
-
-

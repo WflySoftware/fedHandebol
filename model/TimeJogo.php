@@ -6,7 +6,10 @@ class TimeJogo{
 	public function __construct(){
 	
 	}
-	
+	public function __constructOverload($idTime,$idTempo){
+		$this->idTime = $idTtime;
+		$this->idTempo = $idTempo;
+	}
 	public function __getIdTime(){
 		return $this->idTime;
 	}

@@ -11,6 +11,15 @@ class Jogo{
 	public function __construct(){
 	
 	}
+	public function __constructOverload($idJogo,$espectadores,$cidade,$localizacao,$dataJogo,$duracao,$total7Metros){
+		$this->idJogo = $idJogo;
+		$this->espectadores = $espectadores;
+		$this->cidade = $cidade;
+		$this->localizacao = $localizacao;
+		$this->dataJogo = $dataJogo;
+		$this->duracao = $duracao;
+		$this->total7Metros = $total7Metros;
+	}
 	public function __getIdJogo(){
 		return $this->idJogo;
 	}
