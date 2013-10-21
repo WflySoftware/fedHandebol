@@ -9,8 +9,14 @@ class TecnicoController{
 		$this->tecnicoDAO = new TecnicoDAO();
 	}
 
-	public function _listarTodos(){
-		return $this->tecnicoDAO->listarTodos();
+	public function _listarTecnicosParaSelect(){
+		$dadosTecnico = new Tecnico();
+		$arrayDadosTecnico = $this->tecnicoDAO->listarTodos();
+		for($i=0;$i<count($arrayDadosTecnico); $i++){
+			$dadosTecnico = $arrayDadosTecnico[$i];
+			$arraySelect[] = "<option value=\"$dadosTecnico->__getIdTecnico()\">$dadosTecnico->__getNome()</option>";
+		}
+		return $arraySelect;
 	}
 	public function _consultarPorId($id){
 		return $this->tecnicoDAO->consultarPorId($id);
