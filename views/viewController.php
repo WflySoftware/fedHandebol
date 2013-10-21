@@ -18,6 +18,9 @@ switch($pagina){
 		break;		
 	case 'time':
 	include($_SERVER['DOCUMENT_ROOT'].'/fedHandebol/views/cad_Time.php');
+		break;	
+	case 'sumula':
+	include($_SERVER['DOCUMENT_ROOT'].'/fedHandebol/views/sumula.php');
 		break;
 	default:
 		include(__APP_PATH.'/views/initial.php');	

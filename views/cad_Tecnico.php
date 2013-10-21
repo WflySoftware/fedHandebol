@@ -74,3 +74,9 @@ background-color: #CC0000;
         <input type="submit" class="but but-success" name="Cadastrar" value="Cadastrar">
         <input type="reset" class="but but-error" name="apagar" value="Limpar">
 	</form>
+    
+    <datalist id="dados">
+     <option label="pão " value="Quer um pão de:" >
+     <option label="queijo" value="Quero queijo tipo:" >
+</datalist>
+
