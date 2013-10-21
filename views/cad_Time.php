@@ -61,20 +61,26 @@ background-color: #CC0000;
 }
 </style>
 	<form id="contactform" method="post" action="">
-    	<div class="field">
-        	<input type="text" class="input" name="nome" id="nome" placeholder="Nome do Jogador" required>
+        <div class="field">
+        	<input type="text" class="input" name="tecnico" id="tecnico" placeholder="Nome do Tecnico" required>
         </div>
         <div class="field">
-        	<input type="text" class="input" name="time" id="time" placeholder="Nome do Time" required>
+        	<input type="text" class="input" name="nome" id="nome" placeholder="Nome do Time" required>
         </div>
         <div class="field">
-    	<input type="date" class="input" name="data_nascimento" id="data_nascimento" placeholder="Data de nascimeto" required>
+        	<input type="text" class="input" name="categoria" id="categoria" placeholder="Categoria" required>
         </div>
         <div class="field">
-    	<input type="text" class="input" name="cpf" id="cpf" placeholder="CPF" required>
+        	<input type="text" class="input" name="endereço" id="endereço" placeholder="Edereço da sede" required>
         </div>
         <div class="field">
-    	<input type="text" class="input" name="numero" id="numero" placeholder="Numero da Camisa" required>
+        	<input type="text" class="input" name="data_fundacao" id="data_fundacao" placeholder="Data da Fundação" required>
+        </div>
+        <div class="field">
+        	<input type="text" class="input" name="presidente" id="presidente" placeholder="Nome do Presidente" required>
+        </div>
+        <div class="field">
+    	<input type="text" class="input" name="telefone" id="telefone" placeholder="Telefone" required>
         </div>
         <input type="submit" class="but but-success" name="Cadastrar" value="Cadastrar">
         <input type="reset" class="but but-error" name="apagar" value="Limpar">
