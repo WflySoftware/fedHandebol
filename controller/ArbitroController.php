@@ -8,7 +8,12 @@ class ArbitroController{
 	public function __construct(){
 		$this->arbitroDAO = new ArbitroDAO();
 	}
-	
+	public function __construct($nome,$telefone,$cpf){
+		$this->arbitroDAO = new ArbitroDAO($nome,$telefone,$cpf);
+		$this->nome = $nome;
+		$this->telefone = $telefone;
+		$this->cpf = $cpf;
+	}
 	public function _listarTodos(){
 		return $this->arbitroDAO->listarTodos();
 	}
