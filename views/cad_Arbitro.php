@@ -60,7 +60,6 @@ color: #fff;
 background-color: #CC0000;
 }
 </style>
-
 	<form id="contactform" method="post" action="">
     	<div class="field">
         	<input type="text" class="input" name="nome" id="nome" placeholder="Nome do Tecnico" required>
