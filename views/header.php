@@ -42,7 +42,7 @@ jQuery(function($){
                         <li><a href="">Fear Players</a></li>
                         <li><a href="">Punições</a></li>
             		</ul></li>
-                <li class="borda"><a href="">Sumula</a>
+                <li class="borda"><a href="?pag=sumula">Sumula</a>
                 	<ul>
                     	<li><a href="">Tela</a></li>
                         <li><a href="">Estatistica</a></li>

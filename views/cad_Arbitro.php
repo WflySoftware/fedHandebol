@@ -67,7 +67,7 @@ background-color: #CC0000;
 <center><h2> Cadastro de Arbitros</h2></center>
 	<form id="contactform" method="post" action="">
     	<div class="field">
-        	<input type="text" class="input" name="nome" id="nome" placeholder="Nome do Tecnico" required>
+        	<input type="text" class="input" name="nome" id="nome" placeholder="Nome do Arbitro" required>
         </div>
         <div class="field">
     	<input type="text" class="input" name="telefone" id="telefone" placeholder="Telefone" required>

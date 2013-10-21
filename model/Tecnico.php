@@ -3,17 +3,15 @@ class Tecnico
 {
 	private $idTecnico;
 	private $nome;
-	private $endereco;
 	private $telefone;
 	private $cpf;
 	
 	public function __construct(){
 		
 	}
-	public function __constructOverload($idTecnico,$nome,$endereco,$telefone,$cpf){
+	public function __constructOverload($idTecnico,$nome,$telefone,$cpf){
 		$this->idTecnico = $idTecnico;
 		$this->nome = $nome;
-		$this->endereco = $endereco;
 		$this->telefone = $telefone;
 		$this->cpf = $cpf;
 	}
@@ -28,12 +26,6 @@ class Tecnico
 	}
 	public function __setNome($nome){
 		$this->nome = $nome;
-	}
-	public function __getEndereco(){
-		return $this->endereco;
-	}
-	public function __setEndereco($endereco){
-		$this->endereco = $endereco;
 	}
 	public function __getTelefone(){
 		return $this->telefone;
