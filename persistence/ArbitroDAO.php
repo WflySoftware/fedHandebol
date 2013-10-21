@@ -8,11 +8,6 @@ class ArbitroDAO{
 	public function __construct(){
 		$this->conexao = new Conexao();
 	}
-	public function __construct($nome,$telefone,$cpf){
-		$this->nome = $nome;
-		$this->telefone = $telefone;
-		$this->cpf = $cpf;
-	}
 	public function listarTodos(){
 		$sql = "SELECT * FROM arbitro";
 		$resultado = $this->conexao->banco->Execute($sql);
@@ -51,14 +46,6 @@ class ArbitroDAO{
 		$dadosArbitro = new Arbitro();
 		$dadosArbitro->__constructOverload($registro->ID_ARBITRO,$registro->NOME,$registro->CPF);
 		return $dadosArbitro;
-	}
-	public function puxarDoFormulário(){
-		$arbitro = new Arbitro();
-		$nome = $POST_["nome"];
-		$telefone = $POST_["telefone"];
-		$cpf = $POST_["cpf"];
-		$arbitro->__construct($nome, $telefone, $cpf);
-		return $arbitro;
 	}
 }
 

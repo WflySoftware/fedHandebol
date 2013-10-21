@@ -1,4 +1,8 @@
-﻿<!--corpo-->
+﻿<?php 
+	include_once(__APP_PATH.'/mds2013/view/ArbitroView.php');
+	$arbitroVW = new ArbitroView();
+?>
+<!--corpo-->
 <style type="text/css">
 .input{
     font-family: Arial, Verdana;

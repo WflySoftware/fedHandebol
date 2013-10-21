@@ -11,11 +11,6 @@ class Arbitro
 	public function __construct(){
 
 	}
-	public function __construct($nome,$telefone,$cpf){
-		$this->nome = $nome;
-		$this->telefone = $telefone;
-		$this->cpf = $cpf;
-	}
 	public function __constructOverload($idArbitro,$nome,$telefone,$cpf){
 		$this->idArbitro = $idArbitro;
 		$this->nome = $nome;

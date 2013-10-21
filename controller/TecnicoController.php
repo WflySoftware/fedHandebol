@@ -18,15 +18,6 @@ class TecnicoController{
 	public function _consultarPorNome($nome){
 		return $this->tecnicoDAO->consultarPorNome($nome);
 	}
-	public function _consultarPorEndereco($endereco){
-		return $this->tecnicoDAO->consultarPorEndereco($endereco);
-	}
-	public function _consultarPorTelefone($telefone){
-		return $this->tecnicoDAO->consultarPorTelefone($telefone);
-	}
-	public function _consultarPorCpf($cpf){
-		return $this->tecnicoDAO->consultarPorCpf($cpf);
-	}
 	public function _inserirTecnico(Tecnico $tecnico){
 		return $this->tecnicoDAO->inserirTecnico($tecnico);
 	}

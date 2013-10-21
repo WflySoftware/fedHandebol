@@ -20,15 +20,6 @@ class JogadorController{
 	public function _consultarPorNome($nome){
 		return $this->jogadorDAO->consultarPorNome($nome);
 	}
-	public function _consultarPorDataDeNascimento($dataNascimento){
-		return $this->jogadorDAO->consultarPorDataDeNascimento($dataNascimento);
-	}
-	public function _consultarPorCpf($cpf){
-		return $this->jogadorDAO->consultarPorCpf($cpf);
-	}
-	public function _consultarPorNumero($numero){
-		return $this->jogadorDAO->consultarPorNumero($numero);
-	}
 	public function _inserir(Jogador $jogador){
 		return $this->jogadorDAO->inserir($jogador);
 	}

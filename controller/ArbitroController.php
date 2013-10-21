@@ -8,12 +8,6 @@ class ArbitroController{
 	public function __construct(){
 		$this->arbitroDAO = new ArbitroDAO();
 	}
-	public function __construct($nome,$telefone,$cpf){
-		$this->arbitroDAO = new ArbitroDAO($nome,$telefone,$cpf);
-		$this->nome = $nome;
-		$this->telefone = $telefone;
-		$this->cpf = $cpf;
-	}
 	public function _listarTodos(){
 		return $this->arbitroDAO->listarTodos();
 	}
@@ -23,17 +17,16 @@ class ArbitroController{
 	public function _consultarPorNome($nome){
 		return $this->arbitroDAO->consultarPorNome($nome);
 	}
-	public function _consultarPorTelefone($telefone){
-		return $this->arbitroDAO->consultarPorTelefone($telefone);
-	}
-	public function _consultarPorCpf($cpf){
-		return $this->arbitroDAO->consultarPorCpf($cpf);
-	}
 	public function _inserir(Arbitro $arbitro){
 		return $this->arbitroDAO->inserir($arbitro);
 	}
 	public function _atualizar(Arbitro $arbitro){
 		return $this->arbitroDAO->atualizar($arbitro);
+	}
+	public function _salvar(Arbitro $dadosArbitro){
+		$arbitro = new ArbitroDAO();
+		$arbitro->__constructOverload(0,$dadosArbitro->__getNome(), $dadosArbitro->__getTelefone(), $dadosArbitro->__getCpf());
+		$arbitro->salvar();
 	}
 
 }

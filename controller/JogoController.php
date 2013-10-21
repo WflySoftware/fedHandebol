@@ -15,23 +15,8 @@ class JogoController{
 	public function _consultarPorId($id){
 		return $this->jogoDAO->consultarPorId($id);
 	}
-	public function _consultarPorEspectadores($espectadores){
-		return $this->jogoDAO->consultarPorEspectadores($espectadores);
-	}
-	public function _consultarPorCidade($cidade){
-		return $this->jogoDAO->consultarPorCidade($cidade);
-	}
-	public function _consultarPorLocalizacao($localizacao){
-		return $this->jogoDAO->consultarPorLocalizacao($localizacao);
-	}
 	public function _consultarPorDataJogo($dataJogo){
 		return $this->jogoDAO->consultarPorDataJogo($dataJogo);
-	}
-	public function _consultarPorDuracao($duracao){
-		return $this->jogoDAO->consultarPorDuracao($duracao);
-	}
-	public function _consultarPorTotal7Metros($total7Metros){
-		return $this->jogoDAO->consultarPorTotal7Metros($total7Metros);
 	}
 	public function _inserirJogo(Jogo $jogo){
 		return $this->jogoDAO->inserirJogo($jogo);
