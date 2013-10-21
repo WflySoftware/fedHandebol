@@ -14,19 +14,19 @@ class TecnicoDAO{
 		$resultado = $this->conexao->banco->Execute($sql);
 		while($registro = $resultado->FetchNextObject()){
 			$dadosTecnico = new Tecnico();
-			$dadosTecnico->__constructOverload($registro->ID_TECNICO,$registro->NOME,$registro->ENDERECO,$registro->TELEFONE,$registro->CPF);
+			$dadosTecnico->__constructOverload($registro->ID_TECNICO,$registro->NOME,$registro->TELEFONE,$registro->CPF);
 			$retornaTecnico[] = $dadosTecnico;
 		}
 		return $retornaTecnico;
 	}
 	
 	public function inserir(Tecnico $dadosTecnico){
-		$sql = "INSERT INTO tecnico (nome,endereco,telefone,cpf) VALUES ('{$dadosTecnico->__getNome()}','{$dadosTecnico->__getEndereco()}','{$dadosTecnico->__getTelefone()}','{$dadosTecnico->__getCpf()}')";
+		$sql = "INSERT INTO tecnico (nome,telefone,cpf) VALUES ('{$dadosTecnico->__getNome()}','{$dadosTecnico->__getTelefone()}','{$dadosTecnico->__getCpf()}')";
 		$this->conexao->banco->Execute($sql);
 	}
 	
 	public function atualizar(Tecnico $dadosTecnico){
-		$sql = "UPDATE tecnico SET nome='{$dadosTecnico->__getNome()}',endereco='{$dadosTecnico->__getEndereco()}', telefone='{$dadosTecnico->__getTelefone()}', cpf='{$dadosTecnico->__getCpf()}' WHERE id_tecnico='{$dadosTecnico->__getIdTecnico()}' ";
+		$sql = "UPDATE tecnico SET nome='{$dadosTecnico->__getNome()}', telefone='{$dadosTecnico->__getTelefone()}', cpf='{$dadosTecnico->__getCpf()}' WHERE id_tecnico='{$dadosTecnico->__getIdTecnico()}' ";
 		$this->conexao->banco->Execute($sql);
 		return $dadosTecnico;
 	}
@@ -36,7 +36,7 @@ class TecnicoDAO{
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
 		$dadosTecnico = new Tecnico();
-		$dadosTecnico->__constructOverload($registro->ID_TECNICO,$registro->NOME,$registro->ENDERECO,$registro->TELEFONE,$registro->CPF);
+		$dadosTecnico->__constructOverload($registro->ID_TECNICO,$registro->NOME,$registro->TELEFONE,$registro->CPF);
 		return $dadosTecnico;
 	}
 	
@@ -45,7 +45,7 @@ class TecnicoDAO{
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
 		$dadosTecnico = new Tecnico();
-		$dadosTecnico->__constructOverload($registro->ID_TECNICO,$registro->NOME,$registro->ENDERECO,$registro->TELEFONE,$registro->CPF);
+		$dadosTecnico->__constructOverload($registro->ID_TECNICO,$registro->NOME,$registro->TELEFONE,$registro->CPF);
 		return $dadosTecnico;
 	}
 }
