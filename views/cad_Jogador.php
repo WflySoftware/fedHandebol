@@ -60,6 +60,7 @@ color: #fff;
 background-color: #CC0000;
 }
 </style>
+<center><h2> Cadastro de Jogadores</h2></center>
 	<form id="contactform" method="post" action="">
     	<div class="field">
         	<input type="text" class="input" name="nome" id="nome" placeholder="Nome do Jogador" required>

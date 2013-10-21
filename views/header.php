@@ -1,9 +1,8 @@
 <!doctype html>
 <html>
 	<head>
-		<title>RadarCriminal | Mapa de Ocorrências no DF.</title>
+		<title>Federação de Hendeboll</title>
 		<?php require_once 'import.php'; ?>
-
 <script type="text/javascript">
 jQuery(function($){
 	$("#telefone").mask("(99)9999-9999"); //CPF
