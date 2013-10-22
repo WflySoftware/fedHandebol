@@ -18,6 +18,9 @@
 td{
 	width: 30px;
 }
+.td{
+	width: 30px;
+}
 .input{
     font-family: Arial, Verdana;
     font-size: 14px;
@@ -26,7 +29,7 @@ td{
     width: 200px;
     color: #797979;
 	margin-bottom: 10px;
-	   -moz-border-radius: 4px;
+	-moz-border-radius: 4px;
     -webkit-border-radius: 4px;
     border-radius: 4px;
 }
@@ -79,8 +82,8 @@ background-color: #CC0000;
 }
 </style>
 <h2 style="margin: 0 auto; width: 1024px; text-align:center;">INICIAR JOGO  No.:</h2>
-<form method="post" action="">
-<table class="medidas" border=0 style=" border-bottom: 1px solid #CCC; padding: 4px;">
+<form method="post" style="margin: 0 auto;" action="">
+<table class="medidas" border="0" style="border-bottom: 1px solid #CCC; padding: 4px;">
 <tr>
 	<td></td>
     <td><small>Equipe Local</small></td>
@@ -120,10 +123,9 @@ background-color: #CC0000;
 <div id="but">
 <input type="submit" name"iniciar-jogo" class="but but-error align-but" value="Limpar">
 <input type="submit" name"iniciar-jogo" class="but but-success align-but" value="Iniciar">
-
 <div id="clear"></div>
 </div>
-</form>
+
 <table class="medidas" border="0" style=" border-bottom: 1px solid #CCC; padding: 4px;">
 	<tr>
     	<td></td>
@@ -160,38 +162,68 @@ background-color: #CC0000;
         <td class="fundo"></td>
     </tr>
 </table>
-<table class="medidas" border="0">
-	<tr>
-    	<td></td>
-        <td><small>A</small></td>
-        <td><small>Tempo Técnico - Equipe A</small></td>
-        <td><small>Tempo Técnico - Equipe B</small></td>
-        <td></td>
-        <td><small>B</small></td>
-    </tr>
-	<tr>
-        <td><small>n° de 7 Metros</small></td>
-        <td class="fundo"></td>
-        <td> 
-        	<tr>
-        		<td  class="fundo">I</td>
-        		<td  class="fundo">II</td>
-        		<td  class="fundo">III</td>
-           	</tr>
-        </td>
-       
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-</table>
-<table class="medidas" boder=1>
-	<thead>
-    	<tr><th><small>A</small></th>
-        	<th><small>Tempo Técnico - Equipe A</small></th>
-            <th><small>Tempo Técnico - Equipe B</small></th>
-        	<th></th>
-            <th><small>B</small></th>
+<table class="medidas" boder="0">
+       <thead>
+        <tr>
+        	<th id="a" class="td"></th>
+        	<th id="b"><small>A</small></th>
+        	<th id="c"  colspan="3"><small>Tempo Técnico - Equipe A</small></th>
+            <th id="d" colspan="3"><small>Tempo Técnico - Equipe B</small></th>
+        	<th id="e"></th>
+            <th id="f"><small>B</small></th>
         </tr>
-    </thead>
+       </thead>
+       <tfoot>
+    	<tr>
+        	<th class="td" id="a1" hearders="a"><small>n° de 7 Metros</small></th>
+            <th class="fundo td" id="b1" hearders="b"></th>
+            <th class="fundo td" id="c1" hearders="c">I</th>
+            <th class="fundo td" id="c2" hearders="c">II</th>
+            <th class="fundo td" id="c3" hearders="c">III</th>
+            <th class="fundo td" id="d1" hearders="d">I</th>
+            <th class="fundo td" id="d2" hearders="d">II</th>
+            <th class="fundo td" id="d3" hearders="d">III</th>
+            <th class="td" id="e1" hearders="e"><small>n° de 7 Metros</small></th>
+            <th class="fundo td" id="f1" hearders="f"></th>
+         </tr>
+       </tfoot>
 </table>
+<table class="medidas" boder="1">
+	<thead>
+    	<tr>
+        	<td><small>N°</small></td>
+            <td><small>Equipe <b>- A -</b></small></td>
+            <td><small>G</small></td>
+            <td><small>A</small></td>
+            <td><small>2'</small></td>
+            <td><small>D</small></td>
+            <td><small>D+R</small></td>
+            <td><small>N°</small></td>
+            <td><small>Equipe <b>- B -</b></small></td>
+            <td><small>G</small></td>
+            <td><small>A</small></td>
+            <td><small>2'</small></td>
+            <td><small>D</small></td>
+            <td><small>D+R</small></td>
+		</tr>
+	</thead>
+    <tfoot>
+    	<tr>
+        	<td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+		</tr>
+	</tfoot>
+</table>
+</form>

@@ -11,4 +11,4 @@
 		<![endif]-->
 		<link rel="stylesheet" href="./views/assets/styles.css"/>
         <link rel="stylesheet" href="./views/assets/efeito-menu.css"/>
-		<link rel="stylesheet" href="./views/assets/tabela.css" media="screen" />
+		<!--<link rel="stylesheet" href="./views/assets/tabela.css" media="screen" />-->
