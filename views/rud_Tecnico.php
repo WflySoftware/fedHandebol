@@ -4,7 +4,6 @@
 ?>	
 	<script src="./views/js/jquery.tablesorter.min.js"></script>
     <script src="./views/js/jquery.tablesorter.pager.js"></script>
-    <form method="post" action="exemplo.html" id="frm-filtro">
 <style>
 h1{
 	font-size:40px;
@@ -123,12 +122,12 @@ table tbody tr.selected td{
       </tbody>
     </table>
     
-    <div id="pager" class="pager">
+    <div id="pager" class="pager" align="center">
     	<form style="margin: 0 auto">
 				<span>
 					Exibir <select class="pagesize">
-							<option selected="selected"  value="1">1</option>
-							<option value="2">2</option>
+							<option selected="selected"  value="10">10</option>
+							<option value="20">20</option>
 							<option value="30">30</option>
 							<option  value="40">40</option>
 					</select> registros

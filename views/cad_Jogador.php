@@ -70,7 +70,7 @@ $jogadorVW = new JogadorView();
         	<input type="text" class="input" name="nome" id="nome" placeholder="Nome do Jogador" required>
         </div>
         <div class="field">
-        		<select class="input" name="time" id="time" required>
+        	<select class="input" name="time" id="time" required>
 	        	<?php 
 	        		$options = $jogadorVW->listarTimesPorSelect();
 	        		for($i=0;$i<count($options);$i++){
