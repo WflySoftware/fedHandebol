@@ -14,7 +14,7 @@ switch($pagina){
 		include(__APP_PATH.'/views/rud_Jogador.php');
 		break;		
 	case 'arbitro':
-		include(__APP_PATH.'/views/cad_Arbitro.php');
+		include(__APP_PATH.'/views/rud_Arbitro.php');
 		break;		
 	case 'time':
 		include(__APP_PATH.'/views/cad_Time.php');
