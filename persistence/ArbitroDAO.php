@@ -13,7 +13,7 @@ class ArbitroDAO{
 		$resultado = $this->conexao->banco->Execute($sql);
 		while($registro = $resultado->FetchNextObject()){
 			$dadosArbitro = new Arbitro();
-			$dadosArbitro->__constructOverload($registro->ID_ARBITRO,$registro->NOME,$registro->CPF);
+			$dadosArbitro->__constructOverload($registro->ID_ARBITRO,$registro->NOME,$registro->TELEFONE,$registro->CPF);
 			$retornaArbitros[] = $dadosArbitro;
 		}
 		return $retornaArbitros;
@@ -46,6 +46,10 @@ class ArbitroDAO{
 		$dadosArbitro = new Arbitro();
 		$dadosArbitro->__constructOverload($registro->ID_ARBITRO,$registro->NOME,$registro->CPF);
 		return $dadosArbitro;
+	}
+	public function excluir($id){
+		$sql = "DELETE FROM arbitro WHERE id_arbitro= '{$id}' ";
+		$resultado = $this->conexao->banco->Execute($sql);
 	}
 }
 

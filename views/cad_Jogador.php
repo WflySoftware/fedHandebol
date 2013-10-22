@@ -70,13 +70,13 @@ $jogadorVW = new JogadorView();
         	<input type="text" class="input" name="nome" id="nome" placeholder="Nome do Jogador" required>
         </div>
         <div class="field">
-        		<select class="input" name="time" id="time" required>
-	        	<?php 
-	        		$options = $jogadorVW->listarTimesPorSelect();
-	        		for($i=0;$i<count($options);$i++){
-						echo $options[$i];
-					}
-	        	?>
+        	<select class="input" name="idTime" id="idTime" required>
+        	<?php 
+        		$options = $jogadorVW->listarTimesParaSelect();
+        		for($i=0;$i<count($options);$i++){
+					echo $options[$i];
+				}
+        	?>
         	</select>
         </div>
         <div class="field">

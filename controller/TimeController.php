@@ -15,6 +15,7 @@ class TimeController{
 			$dadosTime = $arrayDadosTime[$i];
 			$arraySelect[] = "<option value=\"".$dadosTime->__getIdTime()."\">".$dadosTime->__getNome()."</option>";
 		}
+		print_r(lol);
 		return $arraySelect;
 	}
 	public function _listarTimeParaTabela(){

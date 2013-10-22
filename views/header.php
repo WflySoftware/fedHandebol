@@ -39,6 +39,7 @@
                     </ul>
                 	</li>
                 	<li class="borda"><a href="./index.php">Painel Principal</a></li>
+	                    </li>
             	</ul>
         	</nav>
 		</div>

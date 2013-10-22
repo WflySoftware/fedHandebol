@@ -31,7 +31,7 @@ class TecnicoController{
           			<td>".$dadosTecnico->__getTelefone()."</td>
           			<td>".$dadosTecnico->__getCpf()."</td>
           			<td>
-            			<a href=\"#\"><img src=\"./views/images/edit.png\" width=\"16\" height=\"16\" /></a>
+            			<a href=\"?pag=\"><img src=\"./views/images/edit.png\" width=\"16\" height=\"16\" /></a>
             			<a href=\"#\"><img src=\"./views/images/delete.png\" width=\"16\" height=\"16\" /></a>
           			</td>
 			</tr>";

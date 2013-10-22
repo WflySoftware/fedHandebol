@@ -11,4 +11,13 @@ class ArbitroView{
 		$this->arbitroCO->_salvar($formulario['nome'], $formulario['telefone'], $formulario['cpf']);
 		echo "Dados inseridos com sucesso";
 	}
+	public function atualizar($nome,$telefone,$cpf){
+		return $this->arbitroCO->_atualizar($arbitro);
+	}
+	public function excluir($id){
+		return $this->arbitroCO->_excluir($id);
+	}
+	public function listarArbitrosParaTabela(){
+		return $this->arbitroCO->_listarArbitrosParaTabela();
+	}
 }
