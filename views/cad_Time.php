@@ -68,7 +68,12 @@ $timeVW = new TimeView();
 	<form id="contactform" method="post" action="">
         <div class="field">
         	<select class="input" name="idTecnico" id="idTecnico" required>
-        	<?php ?>
+        	<?php 
+        		$options = $timeVW->listarTecnicosPorSelect();
+        		for($i=0;$i<count($options);$i++){
+					echo $options[$i];
+				}
+        	?>
         	</select>
         </div>
         <div class="field">

@@ -14,7 +14,9 @@ class TecnicoController{
 		$arrayDadosTecnico = $this->tecnicoDAO->listarTodos();
 		for($i=0;$i<count($arrayDadosTecnico); $i++){
 			$dadosTecnico = $arrayDadosTecnico[$i];
-			$arraySelect[] = "<option value=\"$dadosTecnico->__getIdTecnico()\">$dadosTecnico->__getNome()</option>";
+			$id = $dadosTecnico->__getIdTecnico();
+			$nome = $dadosTecnico->__getNome();
+			$arraySelect[] = "<option value=\"$id\">$nome</option>";
 		}
 		return $arraySelect;
 	}

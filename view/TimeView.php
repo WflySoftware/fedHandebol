@@ -19,6 +19,6 @@ class TimeView{
 	}
 	public function listarTecnicosPorSelect(){
 		$tecnicoCO = new TecnicoController();
-		$tecnicoCO->_listarTecnicosParaSelect();
+		return $tecnicoCO->_listarTecnicosParaSelect();
 	}
 }
