@@ -92,9 +92,6 @@ table tbody tr.selected td{
 	padding:10px;
 	width: 630px;
 }
-.align{
-	margin: 0 auto;
-}
 </style>
     <form class="medida" style="margin: 0 auto" method="post" action="exemplo.html" id="frm-filtro">
       <p>
@@ -123,13 +120,17 @@ table tbody tr.selected td{
         	?> 
       </tbody>
     </table>
-    
-    <div id="pager" class="pager align">
+
+    <div id="pager" class="pager">
     	<form style="margin: 0 auto;">
+
+    <div id="pager" class="pager" align="center">
+    	<form style="margin: 0 auto">
+
 				<span>
 					Exibir <select class="pagesize">
-							<option selected="selected"  value="1">1</option>
-							<option value="2">2</option>
+							<option selected="selected"  value="10">10</option>
+							<option value="20">20</option>
 							<option value="30">30</option>
 							<option  value="40">40</option>
 					</select> registros
