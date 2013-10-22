@@ -18,8 +18,10 @@ class TimeController{
 	public function _consultarPorNome($nome){
 		return $this->timeDAO->consultarPorNome($nome);
 	}
-	public function _inserirTime(Time $time){
-		return $this->timeDAO->inserirTime($time);
+	public function _salvar($idTecnico,$nome,$categoria,$endereco,$dataFundacao,$presidente,$telefone){
+		$dadosTime = new Time();
+		$dadosTime->__constructOverload(0, $idTecnico, $nome, $categoria, $endereco, $dataFundacao, $presidente, $telefone);
+		return $this->timeDAO->inserir($dadosTime);
 	}
 	public function _atualizar(Time $time){
 		return $this->timeDAO->atualizar($time);

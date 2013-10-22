@@ -17,4 +17,7 @@ class TecnicoView{
 	public function excluir($id){
 		
 	}
+	public function listarTecnicosParaTabela(){
+		return $this->tecnicoCO->_listarTecnicosParaTabela();
+	}
 }

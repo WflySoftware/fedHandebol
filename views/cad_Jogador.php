@@ -15,11 +15,11 @@
 .hint{
     display:none;
 }
-/*.field:hover .hint {;
+.field:hover .hint {;
 	margin: 0 auto
     position: absolute;
     display: block;
-    margin: -10px 0 0 200px;
+    margin: -20px 0 0 200px;
     color: #999;
     padding: 7px 10px;
     background: rgba(0, 0, 0, 0.6);
@@ -27,10 +27,10 @@
     -moz-border-radius: 7px;
     -webkit-border-radius: 7px;
     border-radius: 7px;
-}*/
+}
 #contactform {
     color: #999;
-    width: 500px;
+    width: 400px;
     padding: 20px;
     overflow:auto;
 	margin: 0 auto;
@@ -74,6 +74,7 @@ $jogadorVW = new JogadorView();
         </div>
         <div class="field">
     	<input type="date" class="input" name="data_nascimento" id="data_nascimento" placeholder="Data de nascimeto" required>
+        <p class="hint">Informe a data de nascimento</p>
         </div>
         <div class="field">
     	<input type="text" class="input" name="cpf" id="cpf" placeholder="CPF" required>

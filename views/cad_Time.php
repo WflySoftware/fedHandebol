@@ -60,10 +60,21 @@ color: #fff;
 background-color: #CC0000;
 }
 </style>
+<?php 
+require_once __APP_PATH.'/view/TimeView.php';
+$timeVW = new TimeView();	
+?>
 <center><h2> Cadastro de Times</h2></center>
 	<form id="contactform" method="post" action="">
         <div class="field">
-        	<input type="text" class="input" name="tecnico" id="tecnico" placeholder="Nome do Tecnico" required>
+        	<select class="input" name="idTecnico" id="idTecnico" required>
+        	<?php 
+        		$options = $timeVW->listarTecnicosPorSelect();
+        		for($i=0;$i<count($options);$i++){
+					echo $options[$i];
+				}
+        	?>
+        	</select>
         </div>
         <div class="field">
         	<input type="text" class="input" name="nome" id="nome" placeholder="Nome do Time" required>
@@ -72,10 +83,10 @@ background-color: #CC0000;
         	<input type="text" class="input" name="categoria" id="categoria" placeholder="Categoria" required>
         </div>
         <div class="field">
-        	<input type="text" class="input" name="endereço" id="endereço" placeholder="Edereço da sede" required>
+        	<input type="text" class="input" name="endereco" id="endereco" placeholder="Endereço da sede" required>
         </div>
         <div class="field">
-        	<input type="text" class="input" name="data_fundacao" id="data_fundacao" placeholder="Data da Fundação" required>
+        	<input type="text" class="input" name="dataFundacao" id="dataFundacao" placeholder="Data da Fundação" required>
         </div>
         <div class="field">
         	<input type="text" class="input" name="presidente" id="presidente" placeholder="Nome do Presidente" required>
@@ -86,3 +97,8 @@ background-color: #CC0000;
         <input type="submit" class="but but-success" name="Cadastrar" value="Cadastrar">
         <input type="reset" class="but but-error" name="apagar" value="Limpar">
 	</form>
+<?php 
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+	$timeVW->salvar();
+}
+?>

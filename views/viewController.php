@@ -8,19 +8,22 @@ switch($pagina){
 		include(__APP_PATH.'/views/type.php');
 		break;
 	case 'tecnico':
-		include($_SERVER['DOCUMENT_ROOT'].'/fedHandebol/views/cad_Tecnico.php');
+		include(__APP_PATH.'/views/cad_Tecnico.php');
 		break;
 	case 'jogador':
-		include($_SERVER['DOCUMENT_ROOT'].'/fedHandebol/views/cad_Jogador.php');
+		include(__APP_PATH.'/views/cad_Jogador.php');
 		break;		
 	case 'arbitro':
-	include($_SERVER['DOCUMENT_ROOT'].'/fedHandebol/views/cad_Arbitro.php');
+		include(__APP_PATH.'/views/cad_Arbitro.php');
 		break;		
 	case 'time':
-	include($_SERVER['DOCUMENT_ROOT'].'/fedHandebol/views/cad_Time.php');
+		include(__APP_PATH.'/views/cad_Time.php');
 		break;	
 	case 'sumula':
-	include($_SERVER['DOCUMENT_ROOT'].'/fedHandebol/views/sumula.php');
+		include(__APP_PATH.'/views/sumula.php');
+		break;
+	case 'consultarTecnico':
+		include(__APP_PATH.'/views/rud_Tecnico.php');	
 		break;
 	default:
 		include(__APP_PATH.'/views/initial.php');	

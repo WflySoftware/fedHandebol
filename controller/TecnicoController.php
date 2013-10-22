@@ -9,8 +9,34 @@ class TecnicoController{
 		$this->tecnicoDAO = new TecnicoDAO();
 	}
 
-	public function _listarTodos(){
-		return $this->tecnicoDAO->listarTodos();
+	public function _listarTecnicosParaSelect(){
+		$dadosTecnico = new Tecnico();
+		$arrayDadosTecnico = $this->tecnicoDAO->listarTodos();
+		for($i=0;$i<count($arrayDadosTecnico); $i++){
+			$dadosTecnico = $arrayDadosTecnico[$i];
+			$arraySelect[] = "<option value=\"".$dadosTecnico->__getIdTecnico()."\">".$dadosTecnico->__getNome()."</option>";
+		}
+		return $arraySelect;
+	}
+	public function _listarTecnicosParaTabela(){
+		$dadosTecnico = new Tecnico();
+		$arrayDadosTecnico = $this->tecnicoDAO->listarTodos();
+		for($i=0;$i<count($arrayDadosTecnico); $i++){
+			$dadosTecnico = $arrayDadosTecnico[$i];
+			$arrayTr[] = " 
+			<tr>
+          			<td><input type=\"checkbox\" value=\"1\" name=\"marcar[]\" /></td>
+					<td>".$dadosTecnico->__getIdTecnico()."</td>
+          			<td>".$dadosTecnico->__getNome()."</td>
+          			<td>".$dadosTecnico->__getTelefone()."</td>
+          			<td>".$dadosTecnico->__getCpf()."</td>
+          			<td>
+            			<a href=\"#\"><img src=\"./views/images/edit.png\" width=\"16\" height=\"16\" /></a>
+            			<a href=\"#\"><img src=\"./views/images/delete.png\" width=\"16\" height=\"16\" /></a>
+          			</td>
+			</tr>";
+		}
+		return $arrayTr;
 	}
 	public function _consultarPorId($id){
 		return $this->tecnicoDAO->consultarPorId($id);
