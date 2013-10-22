@@ -25,6 +25,9 @@ switch($pagina){
 	case 'consultarTecnico':
 		include(__APP_PATH.'/views/rud_Tecnico.php');	
 		break;
+	case 'editarArbitro':
+		include(__APP_PATH.'/views/rud_Arbitro.php');
+		break;
 	default:
 		include(__APP_PATH.'/views/initial.php');	
 }

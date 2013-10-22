@@ -8,6 +8,26 @@ class ArbitroController{
 	public function __construct(){
 		$this->arbitroDAO = new ArbitroDAO();
 	}
+	public function _listarArbitrosParaTabela(){
+		$dadosArbitro = new Arbitro();
+		$arrayDadosArbitro = $this->arbitroDAO->listarTodos();
+		for($i=0;$i<count($arrayDadosArbitro); $i++){
+			$dadosArbitro = $arrayDadosArbitro[$i];
+			$arrayTr[] = "
+			<tr>
+          			<td><input type=\"checkbox\" value=\"1\" name=\"marcar[]\" /></td>
+					<td>".$dadosArbitro->__getIdArbitro()."</td>
+          			<td>".$dadosArbitro->__getNome()."</td>
+          			<td>".$dadosArbitro->__getTelefone()."</td>
+          			<td>".$dadosArbitro->__getCpf()."</td>
+          			<td>
+            			<a href=\"?pag=arbitro&action=edit\"><img src=\"./views/images/edit.png\" width=\"16\" height=\"16\" /></a>
+            			<a href=\"#\"><img src=\"./views/images/delete.png\" width=\"16\" height=\"16\" /></a>
+          			</td>
+			</tr>";
+		}
+		return $arrayTr;
+	}
 	public function _listarTodos(){
 		return $this->arbitroDAO->listarTodos();
 	}
@@ -28,5 +48,7 @@ class ArbitroController{
 		$dadosArbitro->__constructOverload(0, $nome, $telefone, $cpf);
 		$this->arbitroDAO->inserir($dadosArbitro);
 	}
-
+	public function _excluir($id){
+		return $this->arbitroDAO->excluir($id);
+	}
 }

@@ -57,4 +57,8 @@ class JogadorDAO{
 		$dadosJogador->__constructOverload($registro->ID_JOGADOR,$registro->TIME_ID_TIME,$registro->NOME,$registro->DATA_NASCIMENTO,$registro->CPF,$registro->NUMERO);
 		return $dadosJogador;
 	}
+	public function excluir($id){
+		$sql = "DELETE FROM jogador WHERE id_jogador= '{$id}' ";
+		$resultado = $this->conexao->banco->Execute($sql);
+	}
 }
