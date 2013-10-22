@@ -1,7 +1,4 @@
-﻿<?php 
-	include_once(__APP_PATH.'/mds2013/view/ArbitroView.php');
-	$arbitroVW = new ArbitroView();
-?>
+﻿
 <!--corpo-->
 <style type="text/css">
 .input{
@@ -64,6 +61,10 @@ color: #fff;
 background-color: #CC0000;
 }
 </style>
+<?php 
+require_once __APP_PATH.'/view/ArbitroView.php';
+$arbitroVW = new ArbitroView();	
+?>
 <center><h2> Cadastro de Arbitros</h2></center>
 	<form id="contactform" method="post" action="">
     	<div class="field">
@@ -78,3 +79,8 @@ background-color: #CC0000;
         <input type="submit" class="but but-success" name="Cadastrar" value="Cadastrar">
         <input type="reset" class="but but-error" name="apagar" value="Limpar">
 	</form>
+<?php 
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+	$arbitroVW->salvar();
+}
+?>
