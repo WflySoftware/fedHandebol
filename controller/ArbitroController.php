@@ -23,10 +23,10 @@ class ArbitroController{
 	public function _atualizar(Arbitro $arbitro){
 		return $this->arbitroDAO->atualizar($arbitro);
 	}
-	public function _salvar(Arbitro $dadosArbitro){
-		$arbitro = new ArbitroDAO();
-		$arbitro->__constructOverload(0,$dadosArbitro->__getNome(), $dadosArbitro->__getTelefone(), $dadosArbitro->__getCpf());
-		$arbitro->salvar();
+	public function _salvar($nome, $telefone,$cpf){
+		$dadosArbitro = new Arbitro();
+		$dadosArbitro->__constructOverload(0, $nome, $telefone, $cpf);
+		$this->arbitroDAO->inserir($dadosArbitro);
 	}
 
 }

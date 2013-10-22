@@ -60,13 +60,24 @@ color: #fff;
 background-color: #CC0000;
 }
 </style>
+<?php 
+require_once __APP_PATH.'/view/JogadorView.php';
+$jogadorVW = new JogadorView();	
+?>
 <center><h2> Cadastro de Jogadores</h2></center>
 	<form id="contactform" method="post" action="">
     	<div class="field">
         	<input type="text" class="input" name="nome" id="nome" placeholder="Nome do Jogador" required>
         </div>
         <div class="field">
-        	<input type="text" class="input" name="time" id="time" placeholder="Nome do Time" required>
+        		<select class="input" name="time" id="time" required>
+	        	<?php 
+	        		$options = $jogadorVW->listarTimesPorSelect();
+	        		for($i=0;$i<count($options);$i++){
+						echo $options[$i];
+					}
+	        	?>
+        	</select>
         </div>
         <div class="field">
     	<input type="date" class="input" name="data_nascimento" id="data_nascimento" placeholder="Data de nascimeto" required>
@@ -81,3 +92,8 @@ background-color: #CC0000;
         <input type="submit" class="but but-success" name="Cadastrar" value="Cadastrar">
         <input type="reset" class="but but-error" name="apagar" value="Limpar">
 	</form>
+	<?php 
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+	$jogadorVW->salvar();
+}
+?>
