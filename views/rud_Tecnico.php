@@ -4,15 +4,105 @@
 ?>	
 	<script src="./views/js/jquery.tablesorter.min.js"></script>
     <script src="./views/js/jquery.tablesorter.pager.js"></script>
-    <link rel="stylesheet" href="./views/assets/tabela.css" media="screen" /> 
     <form method="post" action="exemplo.html" id="frm-filtro">
+<style>
+h1{
+	font-size:40px;
+	font-family: Georgia, "Times New Roman", serif;
+	letter-spacing:-2px;
+}
+
+a img{
+	border:none;
+}
+
+form{
+  background-color:#f2f2f2;
+  width:600px;
+  margin:10px 0 10px 0;
+  text-align:center;
+}
+
+form p{
+  padding:12px;
+}
+
+form p label{
+  color:#333;
+  font-weight:900;
+}
+
+form input{
+  padding:6px;
+  border:1px solid #ccc;
+  width:300px;
+}
+
+table{
+  width:600px;
+  border:1px solid #ccc;
+}
+
+table thead th{
+  background-color:#ad2525;
+  padding:6px;
+  color:#fff;
+  text-align:center;
+  font-size:14px;
+}
+
+table thead th.header{
+  cursor:pointer;
+}
+
+table tbody td{
+  padding:6px;
+  text-align:center;
+  color:#333;
+}
+
+table tbody tr.odd td{
+  background-color:#ffffcc;
+}
+
+table tbody tr.hover td{
+  background-color:#a9d0f5;
+}
+
+table tbody tr.selected td{
+  background-color:#a9f5a9!important;
+}
+
+.pagedisplay{
+	width:40px;
+	text-align:center;
+	border:none;
+	background-color:#f2f2f2;
+	font-weight:900;
+}
+
+#pager span{
+	font-weight:900;
+	display:inline-block;
+	margin:0 0 0 20px;
+	color:#666;
+	float:right;
+}
+
+#pager form{
+	text-align:left;
+	padding:10px;
+	width:580px;
+}
+</style>
+    <form class="medida" style="margin: 0 auto" method="post" action="exemplo.html" id="frm-filtro">
       <p>
         <label for="pesquisar">Pesquisar</label>
         <input type="text" id="pesquisar" name="pesquisar" size="30" />
       </p>
     </form>
     
-    <table  cellspacing="0" summary="Tecnicos">
+    <table style="margin: 0 auto"  cellspacing="0" summary="Tecnicos">
       <thead>
         <tr>
           <th><input type="checkbox" value="1" id="marcar-todos" name="marcar-todos" /></th>
@@ -34,7 +124,7 @@
     </table>
     
     <div id="pager" class="pager">
-    	<form>
+    	<form style="margin: 0 auto">
 				<span>
 					Exibir <select class="pagesize">
 							<option selected="selected"  value="1">1</option>
@@ -50,8 +140,7 @@
     		<img src="./views/images/next.png" class="next"/>
     		<img src="./views/images/last.png" class="last"/>
     	</form>
-    </div>
-    
+    </div>  
     <script>
     $(function(){
       

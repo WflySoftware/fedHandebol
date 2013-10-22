@@ -18,6 +18,12 @@
 td{
 	width: 30px;
 }
+.td{
+	width: 40px;
+}
+.td2{
+	width: 35px;
+}
 .input{
     font-family: Arial, Verdana;
     font-size: 14px;
@@ -26,10 +32,11 @@ td{
     width: 200px;
     color: #797979;
 	margin-bottom: 10px;
-	   -moz-border-radius: 4px;
+	-moz-border-radius: 4px;
     -webkit-border-radius: 4px;
     border-radius: 4px;
 }
+
 .input2{
     font-family: Arial, Verdana;
     font-size: 14px;
@@ -77,10 +84,16 @@ background-color: #CC0000;
 	magin-button: 10px;
 	border-bottom: 1px solid #CCC;
 }
+.tr{
+	border: 1px solid #666;
+}
+.esp{
+	margin-left: 5px;
+}
 </style>
 <h2 style="margin: 0 auto; width: 1024px; text-align:center;">INICIAR JOGO  No.:</h2>
-<form method="post" action="">
-<table class="medidas" border=0 style=" border-bottom: 1px solid #CCC; padding: 4px;">
+<form method="post" style="margin: 0 auto;" action="">
+<table class="medidas" border="0" style="border-bottom: 1px solid #CCC; padding: 4px;">
 <tr>
 	<td></td>
     <td><small>Equipe Local</small></td>
@@ -120,11 +133,10 @@ background-color: #CC0000;
 <div id="but">
 <input type="submit" name"iniciar-jogo" class="but but-error align-but" value="Limpar">
 <input type="submit" name"iniciar-jogo" class="but but-success align-but" value="Iniciar">
-
 <div id="clear"></div>
 </div>
-</form>
-<table class="medidas" border="0" style=" border-bottom: 1px solid #CCC; padding: 4px;">
+
+<table class="medidas" border="0" style=" border-bottom: 1px solid #CCC; padding: 4px; margin-bottom: 10px;">
 	<tr>
     	<td></td>
         <td><small>A</small></td>
@@ -160,38 +172,144 @@ background-color: #CC0000;
         <td class="fundo"></td>
     </tr>
 </table>
-<table class="medidas" border="0">
-	<tr>
-    	<td></td>
-        <td><small>A</small></td>
-        <td><small>Tempo Técnico - Equipe A</small></td>
-        <td><small>Tempo Técnico - Equipe B</small></td>
-        <td></td>
-        <td><small>B</small></td>
-    </tr>
-	<tr>
-        <td><small>n° de 7 Metros</small></td>
-        <td class="fundo"></td>
-        <td> 
-        	<tr>
-        		<td  class="fundo">I</td>
-        		<td  class="fundo">II</td>
-        		<td  class="fundo">III</td>
-           	</tr>
-        </td>
-       
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-</table>
-<table class="medidas" boder=1>
-	<thead>
-    	<tr><th><small>A</small></th>
-        	<th><small>Tempo Técnico - Equipe A</small></th>
-            <th><small>Tempo Técnico - Equipe B</small></th>
-        	<th></th>
-            <th><small>B</small></th>
+<table class="medidas" boder="0" style=" border-bottom: 1px solid #CCC; padding: 4px; margin-bottom: 10px;">
+       <thead>
+        <tr>
+        	<th id="a" class="td"></th>
+        	<th id="b"><small>A</small></th>
+        	<th id="c"  colspan="3"><small>Tempo Técnico - Equipe A</small></th>
+            <td></td>
+            <th id="d" colspan="3"><small>Tempo Técnico - Equipe B</small></th>
+        	<th id="e"></th>
+            <th id="f"><small>B</small></th>
         </tr>
-    </thead>
+       </thead>
+       <tfoot>
+    	<tr>
+        	<th class="td" id="a1" hearders="a"><small>n° de 7 Metros</small></th>
+            <th class="fundo td" id="b1" hearders="b"></th>
+            <th class="fundo td" id="c1" hearders="c">I</th>
+            <th class="fundo td" id="c2" hearders="c">II</th>
+            <th class="fundo td" id="c3" hearders="c">III</th>
+            <td></td>
+            <th class="fundo td" id="d1" hearders="d">I</th>
+            <th class="fundo td" id="d2" hearders="d">II</th>
+            <th class="fundo td" id="d3" hearders="d">III</th>
+            <th class="td" id="e1" hearders="e"><small>n° de 7 Metros</small></th>
+            <th class="fundo td" id="f1" hearders="f"></th>
+         </tr>
+       </tfoot>
 </table>
+<table class="medidas" boder=0   style=" border-bottom: 1px solid #CCC; padding: 4px; margin-bottom: 10px;">
+	<thead>
+    	<tr class="tr">
+        
+        	<th class="tr"><small>N°</small></th>
+            <th class="tr medida-td2"><small>Equipe <b>- A -</b></small></th>
+            <th class="tr"><small>G</small></th.
+            <th class="tr"><small>A</small></th>
+            <th class="tr"><small>2'</small></th>
+            <th class="tr"><small>D</small></th>
+            <th class="tr"><small>D+R</small></th>
+            <th></th>
+            
+            <th class="tr"><small>N°</small></th>
+            <th class="tr medida-td2"><small>Equipe <b>- B -</b></small></th>
+            <th class="tr"><small>G</small></th>
+            <th class="tr"><small>A</small></th>
+            <th class="tr"><small>2'</small></th>
+            <th class="tr"><small>D</small></th>
+            <th class="tr"><small>D+R</small></th>
+		
+        </tr>
+	</thead>
+    <tfoot>
+    	<tr>
+        	<td class="tr">1</td>
+			<td class="tr">2</td>
+            <td class="tr">3</td>
+            <td class="tr">4</td>
+            <td class="tr">5</td>
+            <td class="tr">6</td>
+            <td></td>
+            <td class="tr">7</td>
+            <td class="tr">8</td>
+            <td class="tr">9</td>
+            <td class="tr">10</td>
+            <td class="tr">11</td>
+            <td class="tr">12</td>
+            <td class="tr">13</td>
+		</tr>
+	</tfoot>
+</table>
+<table class="medidas" boder=0 >
+	<thead>
+    	<tr>
+        	<th class="tr td"><small>Of.A</small></th>
+            <th class="tr medida-td2"></th>
+            <th class="tr td2"></th>
+            <th class="tr td2"></th>
+            <th class="tr td2"></th>
+            <th class="tr td2"></th>
+            <td></td>
+            <th class="tr td"><small>Of.A</small></th>
+            <th class="tr medida-td2"></th>
+            <th class="tr td2"></th>
+            <th class="tr td2"></th>
+            <th class="tr td2"></th>
+            <th class="tr td2"></th>
+		</tr>
+	</thead>
+    <tfoot>
+    	<tr> 
+        	<th class="tr td"><small>Of. B</small></th>
+            <th class="tr medida-td2"></th>
+            <th class="tr td2"></th>
+            <th class="tr td2"></th>
+            <th class="tr td2"></th>
+            <th class="tr td2"></th>
+            <th></th>
+            <th class="tr td"> <small>Of. B</small></th>
+            <th class="tr medida-td2"></th>
+            <th class="tr td2"></th>
+            <th class="tr td2"></th>
+            <th class="tr td2"></th>
+            <th class="tr td2"></th>
+		</tr>
+    </tfoot>
+        <tfoot>
+    	<tr> 
+        	<th class="tr td"><small>Of. C</small></th>
+            <th class="tr medida-td2"></th>
+            <th class="tr td2"></th>
+            <th class="tr td2"></th>
+            <th class="tr td2"></th>
+            <th class="tr td2"></th>
+            <th></th>
+            <th class="tr td"> <small>Of. C</small></th>
+            <th class="tr medida-td2"></th>
+            <th class="tr td2"></th>
+            <th class="tr td2"></th>
+            <th class="tr td2"></th>
+            <th class="tr td2"></th>
+		</tr>
+    </tfoot>
+        <tfoot>
+    	<tr> 
+        	<th class="tr td"><small>Of. D</small></th>
+            <th class="tr medida-td2"></th>
+            <th class="tr td2"></th>
+            <th class="tr td2"></th>
+            <th class="tr td2"></th>
+            <th class="tr td2"></th>
+            <th></th>
+            <th class="tr td"> <small>Of. D</small></th>
+            <th class="tr medida-td2"></th>
+            <th class="tr td2"></th>
+            <th class="tr td2"></th>
+            <th class="tr td2"></th>
+            <th class="tr td2"></th>
+		</tr>
+    </tfoot>
+</table>
+</form>
