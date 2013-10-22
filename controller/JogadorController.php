@@ -26,9 +26,9 @@ class JogadorController{
 	public function _atualizar(Jogador $jogador){
 		return $this->jogadorDAO->atualizar($jogador);
 	}
-	public function _salvar($nome, $nomeTime,$data,$cpf,$numero){
+	public function _salvar($nome, $nomeTime,$dataNascimento,$cpf,$numero){
 		$dadosJogador = new Jogador();
-		$dadosJogador->__constructOverload(0,$idTime,$nome,$data,$cpf,$numero);
+		$dadosJogador->__constructOverload(0,$idTime,$nomeTime,$dataNascimento,$cpf,$numero);
 		$this->jogadorDAO->inserir($dadosJogador);
 	}
 

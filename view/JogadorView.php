@@ -12,4 +12,8 @@ class JogadorView{
 		$this->jogadorCO->_salvar($formulario['nome'], $formulario['time'], $formulario['data_nascimento'],$formulario['cpf'],$formulario['numero']);
 		echo "Dados inseridos com sucesso";
 	}
+	public function listarTimesPorSelect(){
+		$timeCO = new TimeController();
+		return $timeCO->_listarTecnicosParaSelect();
+	}
 }

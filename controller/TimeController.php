@@ -8,7 +8,15 @@ class TimeController{
 	public function __construct(){
 		$this->timeDAO = new TimeDAO();
 	}
-
+	public function _listarTimesParaSelect(){
+		$dadosTime = new Time();
+		$arrayDadosTime = $this->timeDAO->listarTodos();
+		for($i=0;$i<count($arrayDadosTime); $i++){
+			$dadosTime = $arrayDadosTime[$i];
+			$arraySelect[] = "<option value=\"".$dadosTime->__getIdTime()."\">".$dadosTime->__getNome()."</option>";
+		}
+		return $arraySelect;
+	}
 	public function _listarTodos(){
 		return $this->timeDAO->listarTodos();
 	}

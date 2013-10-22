@@ -70,7 +70,14 @@ $jogadorVW = new JogadorView();
         	<input type="text" class="input" name="nome" id="nome" placeholder="Nome do Jogador" required>
         </div>
         <div class="field">
-        	<input type="text" class="input" name="time" id="time" placeholder="Nome do Time" required>
+        		<select class="input" name="time" id="time" required>
+	        	<?php 
+	        		$options = $jogadorVW->listarTimesPorSelect();
+	        		for($i=0;$i<count($options);$i++){
+						echo $options[$i];
+					}
+	        	?>
+        	</select>
         </div>
         <div class="field">
     	<input type="date" class="input" name="data_nascimento" id="data_nascimento" placeholder="Data de nascimeto" required>
