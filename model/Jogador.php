@@ -12,9 +12,9 @@ class Jogador
 		
 	}
 	public function __constructOverload($idJogador,$idTime,$nome,$dataNascimento,$cpf,$numero){
-		$this->idArbitro = $idJogador;
-		$this->nome = $idTime;
-		$this->telefone = $nome;
+		$this->idJogador = $idJogador;
+		$this->idTime = $idTime;
+		$this->nome = $nome;
 		$this->dataNascimento = $dataNascimento;
 		$this->cpf = $cpf;
 		$this->numero = $numero;

@@ -16,9 +16,9 @@ class JogadorController{
 		}
 		return $arraySelect;
 	}
-	public function _listarJogadorParaTabela(){
-		$dadosJogador = new Jogagod();
-		$arrayDadosJogador = $this->jogadorDAO->listarTodos();
+	public function _listarJogadoresParaTabela(){
+		$dadosJogador = new Jogador();
+					$arrayDadosJogador = $this->jogadorDAO->listarTodos();
 		for($i=0;$i<count($arrayDadosJogador); $i++){
 			$dadosJogador = $arrayDadosJogador[$i];
 			$arrayTr[] = "
@@ -36,6 +36,8 @@ class JogadorController{
           			</td>
 			</tr>";
 		}
+		
+		return $arrayTr;
 	}
 	public function _listarTodos(){
 		return $this->jogadorDAO->listarTodos();

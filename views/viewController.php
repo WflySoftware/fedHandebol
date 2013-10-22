@@ -11,7 +11,7 @@ switch($pagina){
 		include(__APP_PATH.'/views/cad_Tecnico.php');
 		break;
 	case 'jogador':
-		include(__APP_PATH.'/views/cad_Jogador.php');
+		include(__APP_PATH.'/views/rud_Jogador.php');
 		break;		
 	case 'arbitro':
 		include(__APP_PATH.'/views/cad_Arbitro.php');

@@ -17,6 +17,9 @@ class JogadorView{
 		$timeCO = new TimeController();
 		return $timeCO->_listarTimesParaSelect();
 	}
+	public function listarJogadoresParaTabela(){
+		return $this->jogadorCO->_listarJogadoresParaTabela();
+	}
 	public function atualizar(Jogador $dadosJogador){
 		return $this->atualizar($dadosJogador);
 	}
