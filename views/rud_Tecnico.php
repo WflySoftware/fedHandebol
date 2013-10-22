@@ -4,7 +4,6 @@
 ?>	
 	<script src="./views/js/jquery.tablesorter.min.js"></script>
     <script src="./views/js/jquery.tablesorter.pager.js"></script>
-    <form method="post" action="exemplo.html" id="frm-filtro">
 <style>
 h1{
 	font-size:40px;
@@ -18,7 +17,7 @@ a img{
 
 form{
   background-color:#f2f2f2;
-  width:600px;
+  width:650px;
   margin:10px 0 10px 0;
   text-align:center;
 }
@@ -39,7 +38,7 @@ form input{
 }
 
 table{
-  width:600px;
+  width:650px;
   border:1px solid #ccc;
 }
 
@@ -80,7 +79,6 @@ table tbody tr.selected td{
 	background-color:#f2f2f2;
 	font-weight:900;
 }
-
 #pager span{
 	font-weight:900;
 	display:inline-block;
@@ -92,7 +90,10 @@ table tbody tr.selected td{
 #pager form{
 	text-align:left;
 	padding:10px;
-	width:580px;
+	width: 630px;
+}
+.align{
+	margin: 0 auto;
 }
 </style>
     <form class="medida" style="margin: 0 auto" method="post" action="exemplo.html" id="frm-filtro">
@@ -123,8 +124,8 @@ table tbody tr.selected td{
       </tbody>
     </table>
     
-    <div id="pager" class="pager">
-    	<form style="margin: 0 auto">
+    <div id="pager" class="pager align">
+    	<form style="margin: 0 auto;">
 				<span>
 					Exibir <select class="pagesize">
 							<option selected="selected"  value="1">1</option>
@@ -196,5 +197,5 @@ table tbody tr.selected td{
         });
       
     });
-    </script>
+</script>
     
