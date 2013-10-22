@@ -1,7 +1,10 @@
 <?php 
-require_once __APP_PATH.'/view/TecnicoView.php';
-$tecnicoVW = new TecnicoView();
-?>
+	require_once __APP_PATH.'/view/TecnicoView.php';
+	$tecnicoVW = new TecnicoView();
+?>	
+	<script src="./views/js/jquery.tablesorter.min.js"></script>
+    <script src="./views/js/jquery.tablesorter.pager.js"></script>
+    <link rel="stylesheet" href="./views/assets/tabela.css" media="screen" /> 
     <form method="post" action="exemplo.html" id="frm-filtro">
       <p>
         <label for="pesquisar">Pesquisar</label>
@@ -105,3 +108,4 @@ $tecnicoVW = new TecnicoView();
       
     });
     </script>
+    

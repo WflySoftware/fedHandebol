@@ -3,13 +3,13 @@
 	<head>
 		<title>Federação de Hendeboll</title>
 		<?php require_once 'import.php'; ?>
-		<!--  <script type="text/javascript">
+		<script type="text/javascript">
 		jQuery(function($){
 			$("#telefone").mask("(99)9999-9999"); //CPF
 			$("#cpf").mask("999.999.999-99"); //Numero de Telefone
 			$("#numero").mask("99"); //Numero da Camisa
 		});
-		</script>-->
+		</script>
 	</head>
 	<body>
 		<header>
