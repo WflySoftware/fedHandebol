@@ -8,7 +8,7 @@ class TimeView{
 	}
 	public function salvar(){
 		$formulario = $_POST;
-		$this->timeCO->_salvar($formulairo['idTecnico'], $formulario['nome'], $formulario['categoria'], $formulario['endereco'], $formulario['dataFundacao'], $formulario['presidente'], $formulario['telefone']);
+		$this->timeCO->_salvar($formulario['idTecnico'], $formulario['nome'], $formulario['categoria'], $formulario['endereco'], $formulario['dataFundacao'], $formulario['presidente'], $formulario['telefone']);
 		echo "Dados inseridos com sucesso";
 	}
 	public function atualizar($id,$nome,$endereco,$telefone,$cpf){

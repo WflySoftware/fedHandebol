@@ -83,7 +83,7 @@ $timeVW = new TimeView();
         	<input type="text" class="input" name="categoria" id="categoria" placeholder="Categoria" required>
         </div>
         <div class="field">
-        	<input type="text" class="input" name="endereço" id="endereço" placeholder="Edereço da sede" required>
+        	<input type="text" class="input" name="endereco" id="endereco" placeholder="Endereço da sede" required>
         </div>
         <div class="field">
         	<input type="text" class="input" name="dataFundacao" id="dataFundacao" placeholder="Data da Fundação" required>
@@ -99,6 +99,6 @@ $timeVW = new TimeView();
 	</form>
 <?php 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-	$tecnicoVW->salvar();
+	$timeVW->salvar();
 }
 ?>
