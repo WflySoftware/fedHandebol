@@ -178,6 +178,7 @@ background-color: #CC0000;
         	<th id="a" class="td"></th>
         	<th id="b"><small>A</small></th>
         	<th id="c"  colspan="3"><small>Tempo Técnico - Equipe A</small></th>
+            <td></td>
             <th id="d" colspan="3"><small>Tempo Técnico - Equipe B</small></th>
         	<th id="e"></th>
             <th id="f"><small>B</small></th>
@@ -190,6 +191,7 @@ background-color: #CC0000;
             <th class="fundo td" id="c1" hearders="c">I</th>
             <th class="fundo td" id="c2" hearders="c">II</th>
             <th class="fundo td" id="c3" hearders="c">III</th>
+            <td></td>
             <th class="fundo td" id="d1" hearders="d">I</th>
             <th class="fundo td" id="d2" hearders="d">II</th>
             <th class="fundo td" id="d3" hearders="d">III</th>
