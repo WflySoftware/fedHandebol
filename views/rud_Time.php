@@ -113,6 +113,7 @@ table tbody tr.selected td{
           <th>Data da Fundacao</th>
           <th>Presidente</th>
           <th>Telefone</th>
+          <th>Ações</th>
         </tr>
       </thead>
       <tbody>
