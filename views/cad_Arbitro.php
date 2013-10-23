@@ -78,13 +78,12 @@ if($action == "edit"){
         <div class="field">
     	<input type="text" class="input" name="cpf" id="cpf" placeholder="Cpf" value="<?php echo $dados['cpf']?>" required>
         </div>
-        <input type="button" class="but but-success" name="Alterar" onclick="<?php $arbitroVW->atualizar($id); ?>" value="Editar">
-        <input type="reset" class="but but-error" name="apagar" value="Limpar">
+        <input type="submit" class="but but-success" name="Alterar" onclick = "window.location.href = "localhost/fedHandebol/?pag=arbitro;"" value="Editar">
 	</form>
 	</br></br>
 <?php 
 	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-		
+		$arbitroVW->atualizar($id);
 	}
 }
 else {
