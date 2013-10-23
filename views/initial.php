@@ -9,15 +9,27 @@
 	margin: 0 auto;
 }
 table{
-	margin: 0 auto;
+	float: left;
 	border: 1px solid #CCC;
-	border-radius: 3px 3px 3px 3px; 
+	border-radius: 3px 3px 3px 3px;
+	background: #F2F2F2;
 }
 tr{
 	border: 1px solid #ccc;
 }
 th{
 	border: 1px solid #ccc;
+	border-width: thin;
+}
+.th-cor{
+	background: #FFF;
+}
+.th-piqueno{
+	width: 40px;
+}
+.aling{
+	margin: 0 auto;
+	width: 1024px;
 }
 </style>
         <div id="caixa1">
@@ -38,24 +50,40 @@ th{
                 <div id="clear"></div>            
              </div>
         </div>
+      <aside class="aling"> 
         <table border=0 style="width: 600px;">
         	<thead>
             	<tr style="background: #09F; border:#09f; color: #fff;">
                 	<th>Time</th>
-                    <th>P</th>
-                    <th>V</th>
-                    <th>D</th>
-                    <th>G.F</th>
-                    <th>G.L</th>
+                    <th class="th-piqueno">P</th>
+                    <th class="th-piqueno">V</th>
+                    <th class="th-piqueno">D</th>
+                    <th class="th-piqueno">G.F</th>
+                    <th class="th-piqueno">G.L</th>
                 </tr>
             </thead>
             	<tr>
-                	<th>1</th>
-                    <th>2</th>
-                    <th>3</th>
-                    <th>4</th>
-                    <th>5</th>
+                	<th class="th-cor">1</th>
+                    <th class="th-piqueno th-cor">2</th>
+                    <th class="th-piqueno th-cor">3</th>
+                    <th class="th-piqueno th-cor">4</th>
+                    <th class="th-piqueno th-cor">5</th>
+                    <th class="th-piqueno th-cor">6</th>
                 </tr>
         </table>
-                   
+                <table border=0 style="width: 370px; margin-left: 10px;">
+        	<thead>
+            	<tr style="background: #09F; border:#09f; color: #fff; ">
+                	<th>Artilheiros</th>
+                    <th class="th-piqueno">G</th>
+                </tr>
+            </thead>
+            	<tr>
+                	<th class="th-cor">João de Juda</th>
+                    <th class="th-piqueno th-cor">2</th>
+                </tr>
+        </table>
+       <div id="clear"></div>
+       </aside>
+        
             	

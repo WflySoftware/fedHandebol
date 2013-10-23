@@ -93,6 +93,9 @@ table tbody tr.selected td{
 	width: 630px;
 }
 </style>
+<div id="medida">
+<a href="">Incluir novo tecnico</a>
+</div>
     <form class="medida" style="margin: 0 auto" method="post" action="exemplo.html" id="frm-filtro">
       <p>
         <label for="pesquisar">Pesquisar</label>

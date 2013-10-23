@@ -3,6 +3,7 @@ include_once (__APP_PATH.'/controller/TimeController.php');
 include_once (__APP_PATH.'/controller/TecnicoController.php');
 class TimeView{
 	private $timeCO;
+	
 	public function __construct(){
 		$this->timeCO = new TimeController();
 	}
@@ -20,5 +21,8 @@ class TimeView{
 	public function listarTecnicosPorSelect(){
 		$tecnicoCO = new TecnicoController();
 		return $tecnicoCO->_listarTecnicosParaSelect();
+	}
+	public function listarTimeParaTabela(){
+		return $this->timeCO->_listarTimeParaTabela();
 	}
 }
