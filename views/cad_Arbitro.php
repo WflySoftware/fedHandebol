@@ -81,6 +81,7 @@ if($action == "edit"){
         <input type="submit" class="but but-success" name="Editar" value="Editar">
         <input type="reset" class="but but-error" name="apagar" value="Limpar">
 	</form>
+	</br></br>
 <?php 
 }
 else {
