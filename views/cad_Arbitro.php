@@ -64,10 +64,10 @@ background-color: #CC0000;
 <?php 
 require_once __APP_PATH.'/view/ArbitroView.php';
 $arbitroVW = new ArbitroView();	
-if($_GET['action']== "edit"){
+if($action == "edit"){
 
 ?>
-<center><h2> Cadastro de Arbitros</h2></center>
+<center><h2> Edição de Cadastros</h2></center>
 	<form id="contactform" method="post" action="">
     	<div class="field">
         	<input type="text" class="input" name="nome" id="nome" placeholder="<?php $arbitroVW->listarNomeArbitrosParaEditar(); ?>" required>
@@ -78,7 +78,7 @@ if($_GET['action']== "edit"){
         <div class="field">
     	<input type="text" class="input" name="cpf" id="cpf" placeholder="<?php $arbitroVW->listarCpfArbitrosParaEditar();?>" required>
         </div>
-        <input type="submit" class="but but-success" name="Cadastrar" value="Cadastrar">
+        <input type="submit" class="but but-success" name="Editar" value="Editar">
         <input type="reset" class="but but-error" name="apagar" value="Limpar">
 	</form>
 <?php 

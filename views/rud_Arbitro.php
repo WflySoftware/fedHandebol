@@ -1,7 +1,8 @@
 <?php 
 	require_once __APP_PATH.'/view/ArbitroView.php';
 	$arbitroVW = new ArbitroView();
-	if($_GET['action']== "edit"){
+	$action = isset( $_GET['action'] ) ? $_GET['action'] : null;
+	if($action == "edit"){
 		include(__APP_PATH.'/views/cad_Arbitro.php');
 	}
 ?>	
