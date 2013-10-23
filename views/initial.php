@@ -51,27 +51,37 @@ th{
              </div>
         </div>
       <aside class="aling"> 
-        <table border=0 style="width: 600px;">
+      <h2 style="margin: 0 auto; width: 1024px; text-align:center; margin-top: 10px;">Tabela do campionato</h2><br/>
+        <table border=0 style="width: 650px;">
         	<thead>
             	<tr style="background: #09F; border:#09f; color: #fff;">
                 	<th>Time</th>
                     <th class="th-piqueno">P</th>
+                    <th class="th-piqueno">J</th>
                     <th class="th-piqueno">V</th>
+                    <th class="th-piqueno">E</th>
                     <th class="th-piqueno">D</th>
-                    <th class="th-piqueno">G.F</th>
-                    <th class="th-piqueno">G.L</th>
+                    <th class="th-piqueno">GP</th>
+                    <th class="th-piqueno">GC</th>
+                    <th class="th-piqueno">SG</th>
+                    <th class="th-piqueno">%</th>
                 </tr>
             </thead>
             	<tr>
-                	<th class="th-cor">1</th>
+                	<th class="th-cor">Tabajara FC</th>
                     <th class="th-piqueno th-cor">2</th>
                     <th class="th-piqueno th-cor">3</th>
                     <th class="th-piqueno th-cor">4</th>
                     <th class="th-piqueno th-cor">5</th>
                     <th class="th-piqueno th-cor">6</th>
+                    <th class="th-piqueno th-cor">7</th>
+                    <th class="th-piqueno th-cor">8</th>
+                    <th class="th-piqueno th-cor">9</th>
+                    <th class="th-piqueno th-cor">10</th>
                 </tr>
         </table>
-                <table border=0 style="width: 370px; margin-left: 10px;">
+        
+                <table border=0 style="width: 320px; margin-left: 10px;">
         	<thead>
             	<tr style="background: #09F; border:#09f; color: #fff; ">
                 	<th>Artilheiros</th>
