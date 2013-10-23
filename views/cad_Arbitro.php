@@ -64,6 +64,26 @@ background-color: #CC0000;
 <?php 
 require_once __APP_PATH.'/view/ArbitroView.php';
 $arbitroVW = new ArbitroView();	
+if($_GET['action']== "edit"){
+
+?>
+<center><h2> Cadastro de Arbitros</h2></center>
+	<form id="contactform" method="post" action="">
+    	<div class="field">
+        	<input type="text" class="input" name="nome" id="nome" placeholder="<?php $arbitroVW->listarNomeArbitrosParaEditar(); ?>" required>
+        </div>
+        <div class="field">
+    	<input type="text" class="input" name="telefone" id="telefone" placeholder="<?php $arbitroVW->listarTelefoneArbitrosParaEditar();?>" required>
+        </div>
+        <div class="field">
+    	<input type="text" class="input" name="cpf" id="cpf" placeholder="<?php $arbitroVW->listarCpfArbitrosParaEditar();?>" required>
+        </div>
+        <input type="submit" class="but but-success" name="Cadastrar" value="Cadastrar">
+        <input type="reset" class="but but-error" name="apagar" value="Limpar">
+	</form>
+<?php 
+}
+else {
 ?>
 <center><h2> Cadastro de Arbitros</h2></center>
 	<form id="contactform" method="post" action="">
@@ -79,11 +99,9 @@ $arbitroVW = new ArbitroView();
         <input type="submit" class="but but-success" name="Cadastrar" value="Cadastrar">
         <input type="reset" class="but but-error" name="apagar" value="Limpar">
 	</form>
-<?php 
+<?php
+}
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-	if($i){
-		
-	}
+	
 	$arbitroVW->salvar();
 }
-?>

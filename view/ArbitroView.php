@@ -20,4 +20,16 @@ class ArbitroView{
 	public function listarArbitrosParaTabela(){
 		return $this->arbitroCO->_listarArbitrosParaTabela();
 	}
+	public function listarArbitrosParaEditar(){
+		return $this->arbitroCO->_listarArbitrosParaEditar();
+	}
+	public function listarNomeArbitrosParaEditar(){
+		return $this->arbitroCO->_listarNomeArbitrosParaEditar();
+	}
+	public function listarTelefoneArbitrosParaEditar(){
+		return $this->arbitroCO->_listarTelefoneArbitrosParaEditar();
+	}
+	public function listarCpfArbitrosParaEditar(){
+		return $this->arbitroCO->_listarCpfArbitrosParaEditar();
+	}
 }

@@ -1,6 +1,9 @@
 <?php 
 	require_once __APP_PATH.'/view/ArbitroView.php';
 	$arbitroVW = new ArbitroView();
+	if($_GET['action']== "edit"){
+		include(__APP_PATH.'/views/cad_Arbitro.php');
+	}
 ?>	
 	<script src="./views/js/jquery.tablesorter.min.js"></script>
     <script src="./views/js/jquery.tablesorter.pager.js"></script>

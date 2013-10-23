@@ -28,6 +28,58 @@ class ArbitroController{
 		}
 		return $arrayTr;
 	}
+	public function _listarArbitrosParaEditar(){
+		$dadosArbitro = new Arbitro();
+		$auxButton = 0;
+		$arrayDadosArbitro = $this->arbitroDAO->listarTodos();
+		for($i=0;$i<count($arrayDadosArbitro); $i++){
+			$dadosArbitro = $arrayDadosArbitro[$i];
+			$auxButton ++;
+			$aux[] = $auxButton;
+			
+		}
+		echo $dadosArbitro->__getNome();
+		echo $dadosArbitro->__getTelefone();
+		echo $dadosArbitro->__getCpf();
+	}
+	public function _listarNomeArbitrosParaEditar(){
+		$dadosArbitro = new Arbitro();
+		$auxButton = 0;
+		$arrayDadosArbitro = $this->arbitroDAO->listarTodos();
+		for($i=0;$i<count($arrayDadosArbitro); $i++){
+			$dadosArbitro = $arrayDadosArbitro[$i];
+			$auxButton ++;
+			$aux[] = $auxButton;
+			
+		}
+		echo $dadosArbitro->__getNome();
+	}
+	public function _listarTelefoneArbitrosParaEditar(){
+		$dadosArbitro = new Arbitro();
+		$auxButton = 0;
+		$arrayDadosArbitro = $this->arbitroDAO->listarTodos();
+		for($i=0;$i<count($arrayDadosArbitro); $i++){
+			$dadosArbitro = $arrayDadosArbitro[$i];
+			$auxButton ++;
+			$aux[] = $auxButton;
+				
+		}
+		echo $dadosArbitro->__getTelefone();
+	}
+	public function _listarCpfArbitrosParaEditar(){
+		$dadosArbitro = new Arbitro();
+		$auxButton = 0;
+		$arrayDadosArbitro = $this->arbitroDAO->listarTodos();
+		for($i=0;$i<count($arrayDadosArbitro); $i++){
+			$dadosArbitro = $arrayDadosArbitro[$i];
+			$auxButton ++;
+			$aux[] = $auxButton;
+	
+		}
+		echo $dadosArbitro->__getCpf();
+	}
+	
+	
 	public function _listarTodos(){
 		return $this->arbitroDAO->listarTodos();
 	}
