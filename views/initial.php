@@ -55,16 +55,16 @@ th{
         <table border=0 style="width: 650px;">
         	<thead>
             	<tr style="background: #09F; border:#09f; color: #fff;">
-                	<th>Time</th>
-                    <th class="th-piqueno">P</th>
-                    <th class="th-piqueno">J</th>
-                    <th class="th-piqueno">V</th>
-                    <th class="th-piqueno">E</th>
-                    <th class="th-piqueno">D</th>
-                    <th class="th-piqueno">GP</th>
-                    <th class="th-piqueno">GC</th>
-                    <th class="th-piqueno">SG</th>
-                    <th class="th-piqueno">%</th>
+                	<th><small>Time</small></th>
+                    <th class="th-piqueno"><small>P</small></th>
+                    <th class="th-piqueno"><small>J</small></th>
+                    <th class="th-piqueno"><small>V</small></th>
+                    <th class="th-piqueno"><small>E</small></th>
+                    <th class="th-piqueno"><small>D</small></th>
+                    <th class="th-piqueno"><small>GP</small></th>
+                    <th class="th-piqueno"><small>GC</small></th>
+                    <th class="th-piqueno"><small>SG</small></th>
+                    <th class="th-piqueno"><small>%</small></th>
                 </tr>
             </thead>
             	<tr>
@@ -84,12 +84,14 @@ th{
                 <table border=0 style="width: 320px; margin-left: 10px;">
         	<thead>
             	<tr style="background: #09F; border:#09f; color: #fff; ">
-                	<th>Artilheiros</th>
-                    <th class="th-piqueno">G</th>
+                	<th><small>Artilheiros</small></th>
+                    <th><small>Time</small></th>
+                    <th class="th-piqueno"><small>G</small></th>
                 </tr>
             </thead>
             	<tr>
                 	<th class="th-cor">João de Juda</th>
+                    <th class="th-cor">Tabajara FC</th>
                     <th class="th-piqueno th-cor">2</th>
                 </tr>
         </table>

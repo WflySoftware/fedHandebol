@@ -169,7 +169,7 @@ table tbody tr.selected td{
         else $(tr).removeClass('selected');
       });
       
-      $('form').submit(function(e){ e.preventDefault(); });
+      //$('form').submit(function(e){ e.preventDefault(); });
       
       $('#pesquisar').keydown(function(){
         var encontrou = false;
