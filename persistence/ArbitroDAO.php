@@ -27,7 +27,6 @@ class ArbitroDAO{
 	public function atualizar(Arbitro $dadosArbitro){
 		$sql = "UPDATE arbitro SET nome='{$dadosArbitro->__getNome()}', telefone='{$dadosArbitro->__getTelefone()}', cpf='{$dadosArbitro->__getCpf()}' WHERE id_arbitro='{$dadosArbitro->__getIdArbitro()}' ";
 		$this->conexao->banco->Execute($sql);
-		return $dadosArbitro;
 	}
 	
 	public function consultarPorId($id){
@@ -35,7 +34,7 @@ class ArbitroDAO{
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
 		$dadosArbitro = new Arbitro();
-		$dadosArbitro->__constructOverload($registro->ID_ARBITRO,$registro->NOME,$registro->CPF);
+		$dadosArbitro->__constructOverload($registro->ID_ARBITRO,$registro->NOME,$registro->TELEFONE,$registro->CPF);
 		return $dadosArbitro;
 	}
 	

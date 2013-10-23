@@ -65,24 +65,27 @@ background-color: #CC0000;
 require_once __APP_PATH.'/view/ArbitroView.php';
 $arbitroVW = new ArbitroView();	
 if($action == "edit"){
-
+	$dados = $arbitroVW->consultarPorId($id);
 ?>
-<center><h2> Edição de Cadastros</h2></center>
+<center><h2> Alterar Cadastro</h2></center>
 	<form id="contactform" method="post" action="">
     	<div class="field">
-        	<input type="text" class="input" name="nome" id="nome" placeholder="<?php $arbitroVW->listarNomeArbitrosParaEditar(); ?>" required>
+        	<input type="text" class="input" name="nome" id="nome" placeholder="Nome" value="<?php echo $dados['nome']?>" required>
         </div>
         <div class="field">
-    	<input type="text" class="input" name="telefone" id="telefone" placeholder="<?php $arbitroVW->listarTelefoneArbitrosParaEditar();?>" required>
+    	<input type="text" class="input" name="telefone" id="telefone" placeholder="Telefone" value="<?php echo $dados['telefone']?>" required>
         </div>
         <div class="field">
-    	<input type="text" class="input" name="cpf" id="cpf" placeholder="<?php $arbitroVW->listarCpfArbitrosParaEditar();?>" required>
+    	<input type="text" class="input" name="cpf" id="cpf" placeholder="Cpf" value="<?php echo $dados['cpf']?>" required>
         </div>
-        <input type="submit" class="but but-success" name="Editar" value="Editar">
+        <input type="button" class="but but-success" name="Alterar" onclick="<?php $arbitroVW->atualizar($id); ?>" value="Editar">
         <input type="reset" class="but but-error" name="apagar" value="Limpar">
 	</form>
 	</br></br>
 <?php 
+	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+		
+	}
 }
 else {
 ?>
@@ -101,8 +104,7 @@ else {
         <input type="reset" class="but but-error" name="apagar" value="Limpar">
 	</form>
 <?php
-}
-if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-	
-	$arbitroVW->salvar();
+	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+		$arbitroVW->salvar();
+	}
 }
