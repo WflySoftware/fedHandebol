@@ -31,8 +31,8 @@ class JogadorController{
           			<td>".$dadosJogador->__getCpf()."</td>
           			<td>".$dadosJogador->__getNumero()."</td>
           			<td>
-            			<a href=\"?\"><img src=\"./views/images/edit.png\" width=\"16\" height=\"16\" /></a>
-            			<a href=\"#\"><img src=\"./views/images/delete.png\" width=\"16\" height=\"16\" /></a>
+            			<a href=\"?pag=jogador&action=edit\"><img src=\"./views/images/edit.png\" width=\"16\" height=\"16\" /></a>
+            			<a href=\"?pag=jogador&action=exclude\"><img src=\"./views/images/delete.png\" width=\"16\" height=\"16\" /></a>
           			</td>
 			</tr>";
 		}
