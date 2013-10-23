@@ -1,6 +1,5 @@
 <?php
 $pagina = isset( $_GET['pag'] ) ? $_GET['pag'] : null;
-
 switch($pagina){
 	case 'ano':
 		include(__APP_PATH.'/views/year.php');
@@ -9,7 +8,7 @@ switch($pagina){
 		include(__APP_PATH.'/views/type.php');
 		break;
 	case 'tecnico':
-		include(__APP_PATH.'/views/cad_Tecnico.php');
+		include(__APP_PATH.'/views/rud_Tecnico.php');
 		break;
 	case 'jogador':
 		include(__APP_PATH.'/views/rud_Jogador.php');
@@ -22,9 +21,6 @@ switch($pagina){
 		break;	
 	case 'sumula':
 		include(__APP_PATH.'/views/sumula.php');
-		break;
-	case 'tecnico':
-		include(__APP_PATH.'/views/rud_Tecnico.php');	
 		break;
 	case 'EditarArbitro':
 		include(__APP_PATH.'/views/cad_Arbitro.php');

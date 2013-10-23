@@ -21,70 +21,24 @@ class ArbitroController{
           			<td>".$dadosArbitro->__getTelefone()."</td>
           			<td>".$dadosArbitro->__getCpf()."</td>
           			<td>
-            			<a href=\"?pag=arbitro&action=edit\"><img src=\"./views/images/edit.png\" width=\"16\" height=\"16\" /></a>
-            			<a href=\"?pag=arbitro&action=exclude\"><img src=\"./views/images/delete.png\" width=\"16\" height=\"16\" /></a>
+            			<a href=\"?pag=arbitro&action=edit&id=".$dadosArbitro->__getIdArbitro()."\"><img src=\"./views/images/edit.png\" width=\"16\" height=\"16\" /></a>
+            			<a href=\"#\"><img src=\"./views/images/delete.png\" width=\"16\" height=\"16\" /></a>
           			</td>
 			</tr>";
 		}
 		return $arrayTr;
 	}
-	public function _listarArbitrosParaEditar(){
-		$dadosArbitro = new Arbitro();
-		$auxButton = 0;
-		$arrayDadosArbitro = $this->arbitroDAO->listarTodos();
-		for($i=0;$i<count($arrayDadosArbitro); $i++){
-			$dadosArbitro = $arrayDadosArbitro[$i];
-			$auxButton ++;
-			$aux[] = $auxButton;
-			
-		}
-		echo $dadosArbitro->__getNome();
-		echo $dadosArbitro->__getTelefone();
-		echo $dadosArbitro->__getCpf();
-	}
-	public function _listarNomeArbitrosParaEditar(){
-		$dadosArbitro = new Arbitro();
-		$auxButton = 0;
-		$arrayDadosArbitro = $this->arbitroDAO->listarTodos();
-		for($i=0;$i<count($arrayDadosArbitro); $i++){
-			$dadosArbitro = $arrayDadosArbitro[$i];
-			$auxButton ++;
-			$aux[] = $auxButton;
-			
-		}
-		echo $dadosArbitro->__getNome();
-	}
-	public function _listarTelefoneArbitrosParaEditar(){
-		$dadosArbitro = new Arbitro();
-		$auxButton = 0;
-		$arrayDadosArbitro = $this->arbitroDAO->listarTodos();
-		for($i=0;$i<count($arrayDadosArbitro); $i++){
-			$dadosArbitro = $arrayDadosArbitro[$i];
-			$auxButton ++;
-			$aux[] = $auxButton;
-				
-		}
-		echo $dadosArbitro->__getTelefone();
-	}
-	public function _listarCpfArbitrosParaEditar(){
-		$dadosArbitro = new Arbitro();
-		$auxButton = 0;
-		$arrayDadosArbitro = $this->arbitroDAO->listarTodos();
-		for($i=0;$i<count($arrayDadosArbitro); $i++){
-			$dadosArbitro = $arrayDadosArbitro[$i];
-			$auxButton ++;
-			$aux[] = $auxButton;
-	
-		}
-		echo $dadosArbitro->__getCpf();
-	}
-	
-	
 	public function _listarTodos(){
 		return $this->arbitroDAO->listarTodos();
 	}
 	public function _consultarPorId($id){
-		return $this->arbitroDAO->consultarPorId($id);
+		$dadosArbitro = new Arbitro();
+		$dadosArbitro =  $this->arbitroDAO->consultarPorId($id);
+		$arrayDados['nome'] = $dadosArbitro->__getNome();
+		$arrayDados['telefone'] = $dadosArbitro->__getTelefone();
+		$arrayDados['cpf'] = $dadosArbitro->__getCpf();
+		
+		return $arrayDados;
 	}
 	public function _consultarPorNome($nome){
 		return $this->arbitroDAO->consultarPorNome($nome);
@@ -92,8 +46,10 @@ class ArbitroController{
 	public function _inserir(Arbitro $arbitro){
 		return $this->arbitroDAO->inserir($arbitro);
 	}
-	public function _atualizar(Arbitro $arbitro){
-		return $this->arbitroDAO->atualizar($arbitro);
+	public function _atualizar($idArbitro,$nome,$telefone,$cpf){
+		$dadosArbitro = new Arbitro();
+		$dadosArbitro->__constructOverload($idArbitro, $nome, $telefone, $cpf);
+		$this->arbitroDAO->atualizar($dadosArbitro);
 	}
 	public function _salvar($nome, $telefone,$cpf){
 		$dadosArbitro = new Arbitro();

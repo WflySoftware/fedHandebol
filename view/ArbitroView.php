@@ -11,8 +11,9 @@ class ArbitroView{
 		$this->arbitroCO->_salvar($formulario['nome'], $formulario['telefone'], $formulario['cpf']);
 		echo "Dados inseridos com sucesso";
 	}
-	public function atualizar($nome,$telefone,$cpf){
-		return $this->arbitroCO->_atualizar($arbitro);
+	public function atualizar($id){
+		$formulario = $_POST;
+		return $this->arbitroCO->_atualizar($id,$formulario['nome'], $formulario['telefone'], $formulario['cpf']);
 	}
 	public function excluir($id){
 		return $this->arbitroCO->_excluir($id);
@@ -20,16 +21,7 @@ class ArbitroView{
 	public function listarArbitrosParaTabela(){
 		return $this->arbitroCO->_listarArbitrosParaTabela();
 	}
-	public function listarArbitrosParaEditar(){
-		return $this->arbitroCO->_listarArbitrosParaEditar();
-	}
-	public function listarNomeArbitrosParaEditar(){
-		return $this->arbitroCO->_listarNomeArbitrosParaEditar();
-	}
-	public function listarTelefoneArbitrosParaEditar(){
-		return $this->arbitroCO->_listarTelefoneArbitrosParaEditar();
-	}
-	public function listarCpfArbitrosParaEditar(){
-		return $this->arbitroCO->_listarCpfArbitrosParaEditar();
+	public function consultarPorId($id){
+		return $this->arbitroCO->_consultarPorId($id);
 	}
 }
