@@ -42,6 +42,7 @@ th{
         	<thead>
             	<tr style="background: #09F; border:#09f; color: #fff;">
                 	<th>Time</th>
+                    <th>P</th>
                     <th>V</th>
                     <th>D</th>
                     <th>G.F</th>
