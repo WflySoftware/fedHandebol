@@ -68,7 +68,7 @@ if($action == "edit"){
 	$dados = $arbitroVW->consultarPorId($id);
 ?>
 <center><h2> Alterar Cadastro</h2></center>
-	<form id="contactform" method="post" action="">
+	<form id="contactform" method="post" action="?pag=arbitro">
     	<div class="field">
         	<input type="text" class="input" name="nome" id="nome" placeholder="Nome" value="<?php echo $dados['nome']?>" required>
         </div>
@@ -78,9 +78,12 @@ if($action == "edit"){
         <div class="field">
     	<input type="text" class="input" name="cpf" id="cpf" placeholder="Cpf" value="<?php echo $dados['cpf']?>" required>
         </div>
-        <input type="submit" class="but but-success" name="Alterar" onclick = "window.location.href = "localhost/fedHandebol/?pag=arbitro;"" value="Editar">
+        <input type="submit" class="but but-success" name="Alterar" on value="Editar">
 	</form>
 	</br></br>
+	<script>
+	
+	</script>
 <?php 
 	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$arbitroVW->atualizar($id);
