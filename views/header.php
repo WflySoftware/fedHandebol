@@ -24,13 +24,13 @@
                         	<li><a href="?pag=time">Time</a></li>
                     	</ul>
                     </li>
-                	<li class="borda"><a href="#">Tabelas</a>
-                		<ul>
+                	<li class="borda"><a href="#">Dados do Campeonatos</a>
+                		<!--<ul>
                     		<li><a href="">Ranking de time</a></li>
                         	<li><a href="">Artilheiro</a></li>
                         	<li><a href="">Fear Players</a></li>
                         	<li><a href="">Punições</a></li>
-            			</ul>
+            			</ul>-->
                 	</li>
                 	<li class="borda"><a href="#">Jogos</a>
                 	<ul>
