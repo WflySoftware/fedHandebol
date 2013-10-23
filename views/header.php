@@ -24,7 +24,7 @@
                         	<li><a href="?pag=time">Time</a></li>
                     	</ul>
                     </li>
-                	<li class="borda"><a href="#">Campeonatos</a>
+                	<li class="borda"><a href="#">Dados do Campeonatos</a>
                 		<!--<ul>
                     		<li><a href="">Ranking de time</a></li>
                         	<li><a href="">Artilheiro</a></li>
