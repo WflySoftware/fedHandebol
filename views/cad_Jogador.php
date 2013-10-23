@@ -92,8 +92,7 @@ $jogadorVW = new JogadorView();
         <input type="submit" class="but but-success" name="Cadastrar" value="Cadastrar">
         <input type="reset" class="but but-error" name="apagar" value="Limpar">
 	</form>
-	<?php 
-if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+<?php if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$jogadorVW->salvar();
 }
 ?>

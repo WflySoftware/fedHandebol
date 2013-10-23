@@ -17,12 +17,12 @@ switch($pagina){
 		include(__APP_PATH.'/views/rud_Arbitro.php');
 		break;		
 	case 'time':
-		include(__APP_PATH.'/views/cad_Time.php');
+		include(__APP_PATH.'/views/rud_Time.php');
 		break;	
 	case 'sumula':
 		include(__APP_PATH.'/views/sumula.php');
 		break;
-	case 'consultarTecnico':
+	case 'tecnico':
 		include(__APP_PATH.'/views/rud_Tecnico.php');	
 		break;
 	case 'EditarArbitro':
