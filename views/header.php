@@ -32,8 +32,9 @@
                         	<li><a href="">Punições</a></li>
             			</ul>
                 	</li>
-                	<li class="borda"><a href="?pag=sumula">Sumula</a>
+                	<li class="borda"><a href="#">Jogos</a>
                 	<ul>
+                    	<li><a href="?pag=sumula">Iniciar Jogo</a></li>
                     	<li><a href="">Tela</a></li>
                         <li><a href="">Estatistica</a></li>
                     </ul>

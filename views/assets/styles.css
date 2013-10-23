@@ -297,3 +297,21 @@ section:after {
 	margin: o auto;
 	width: 1152px;
 }
+#butao-cliente{
+	width: 100px;
+	background: #09F;
+	border: 1px #0066FF solid;
+	height: 50px;
+	text-align: center;
+	font-size: 15px;
+	color: #FFF;
+	font-family: "ProximaNovaRegular", sans-serif;
+	border-radius: 3px;
+	/*sombra*/
+	box-shadow: 0px 0px 9px #0066FF;
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-bottom: 10px;
+	float: left;
+}
+	
