@@ -65,6 +65,7 @@ background-color: #CC0000;
 require_once __APP_PATH.'/view/ArbitroView.php';
 $arbitroVW = new ArbitroView();	
 $id = isset( $_GET['id'] ) ? $_GET['id'] : null;
+$action = isset( $_GET['action'] ) ? $_GET['action'] : null;
 if($action == "edit"){
 	$dados = $arbitroVW->consultarPorId($id);
 ?>
@@ -90,7 +91,7 @@ if($action == "edit"){
 		$arbitroVW->atualizar($id);
 	}
 }
-else {
+else {	
 ?>
 <center><h2> Cadastro de Arbitros</h2></center>
 	<form id="contactform" method="post" action="">

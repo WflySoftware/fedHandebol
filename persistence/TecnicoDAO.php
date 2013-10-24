@@ -48,4 +48,8 @@ class TecnicoDAO{
 		$dadosTecnico->__constructOverload($registro->ID_TECNICO,$registro->NOME,$registro->TELEFONE,$registro->CPF);
 		return $dadosTecnico;
 	}
+	public function excluir($id){
+		$sql = "DELETE FROM tecnico WHERE id_tecnico= '{$id}' ";
+		$resultado = $this->conexao->banco->Execute($sql);
+	}
 }

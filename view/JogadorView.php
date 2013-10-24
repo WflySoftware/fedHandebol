@@ -22,7 +22,7 @@ class JogadorView{
 	}
 	public function atualizar($id){
 		$formulario = $_POST;
-		return $this->jogadorCO->atualizar($id,$formulario['idTime'], $formulario['nome'], $formulario['data_nascimento'],$formulario['cpf'],$formulario['numero']);
+		return $this->jogadorCO->_atualizar($id,$formulario['idTime'], $formulario['nome'], $formulario['data_nascimento'],$formulario['cpf'],$formulario['numero']);
 	}
 	public function excluir($id){
 		return $this->jogadorCO->_excluir($id);

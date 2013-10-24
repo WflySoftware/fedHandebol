@@ -1,7 +1,16 @@
 <?php 
 	require_once __APP_PATH.'/view/TecnicoView.php';
 	$tecnicoVW = new TecnicoView();
-?>	
+	$action = isset( $_GET['action'] ) ? $_GET['action'] : null;
+	$id = isset( $_GET['id'] ) ? $_GET['id'] : null;
+	if($action == "edit"){
+		include(__APP_PATH.'/views/cad_Tecnico.php');
+	}
+	if($action == "exclude"){
+		$tecnicoVW->excluir($id);
+	}
+	?>
+	?>	
 	<script src="./views/js/jquery.tablesorter.min.js"></script>
     <script src="./views/js/jquery.tablesorter.pager.js"></script>
 <style>
@@ -205,7 +214,7 @@ background-color: #CC0000;
         else $(tr).removeClass('selected');
       });
       
-      $('form').submit(function(e){ e.preventDefault(); });
+      //$('form').submit(function(e){ e.preventDefault(); });
       
       $('#pesquisar').keydown(function(){
         var encontrou = false;

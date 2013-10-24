@@ -16,9 +16,12 @@ class TecnicoView{
 		return $this->tecnicoCO->_atualizar($id,$formulario['nome'], $formulario['telefone'], $formulario['cpf']);
 	}
 	public function excluir($id){
-		return $this->arbitroCO->_excluir($id);
+		return $this->tecnicoCO->_excluir($id);
 	}
 	public function listarTecnicosParaTabela(){
 		return $this->tecnicoCO->_listarTecnicosParaTabela();
+	}
+	public function consultarPorId($id){
+		return $this->tecnicoCO->_consultarPorId($id);
 	}
 }

@@ -16,7 +16,7 @@ class TimeView{
 		
 	}
 	public function excluir($id){
-		
+		return $this->timeCO->_excluir($id);
 	}
 	public function listarTecnicosPorSelect(){
 		$tecnicoCO = new TecnicoController();

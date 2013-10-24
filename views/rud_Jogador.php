@@ -7,7 +7,7 @@
 		include(__APP_PATH.'/views/cad_Jogador.php');
 	}
 	if($action == "exclude"){
-		include(__APP_PATH.'/views/confirma.php');
+		$jogadorVW->excluir($id);
 	}
 ?>	
 	<script src="./views/js/jquery.tablesorter.min.js"></script>
@@ -211,7 +211,7 @@ background-color: #CC0000;
         else $(tr).removeClass('selected');
       });
       
-      $('form').submit(function(e){ e.preventDefault(); });
+      //$('form').submit(function(e){ e.preventDefault(); });
       
       $('#pesquisar').keydown(function(){
         var encontrou = false;

@@ -33,7 +33,7 @@ class JogadorDAO{
 	}
 	
 	public function consultarPorId($id){
-		$sql = "SELECT * FROM jogador WHERE id_jogador= '{$id}'";
+		$sql = "SELECT * FROM jogador WHERE id_jogador = '{$id}'";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
 		$dadosJogador = new Jogador();

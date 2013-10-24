@@ -65,6 +65,7 @@ background-color: #CC0000;
 require_once __APP_PATH.'/view/JogadorView.php';
 $jogadorVW = new JogadorView();	
 $id = isset( $_GET['id'] ) ? $_GET['id'] : null;
+$action = isset( $_GET['action'] ) ? $_GET['action'] : null;
 if($action == "edit"){
 	$dados = $jogadorVW->consultarPorId($id);
 ?>
