@@ -68,7 +68,7 @@ if($action == "edit"){
 	$dados = $arbitroVW->consultarPorId($id);
 ?>
 <center><h2> Alterar Cadastro</h2></center>
-	<form id="contactform" method="post" action="?pag=arbitro">
+	<form id="contactform" method="post" action="">
     	<div class="field">
         	<input type="text" class="input" name="nome" id="nome" placeholder="Nome" value="<?php echo $dados['nome']?>" required>
         </div>
