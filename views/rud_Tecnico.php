@@ -92,9 +92,47 @@ table tbody tr.selected td{
 	padding:10px;
 	width: 630px;
 }
+.but {
+display: inline-block;
+background-color: #ccc;
+color: #444;
+padding: 10px 20px;
+text-decoration: none;
+box-sizing: border-box;
+font-family: Helvetica, Arial, sans-serif;
+font-size: 14px;
+border: 0px;
+border-radius: 2px;
+}
+.but:hover {
+background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,.15));
+cursor: pointer;
+}
+.but-primary{
+color: #fff;
+background-color: #0068B4;
+}
+.but-success {
+color: #fff;
+background-color: #009835;
+}
+.but-error {
+color: #fff;
+background-color: #CC0000;
+}
+#medida2{
+	margin: 0 auto;
+	width: 630px;
+	margin-bottom: 10px;
+}
+.float{
+	float: right;
+}
 </style>
-<div id="medida">
-<a href="">Incluir novo tecnico</a>
+<center><h2>Tecnicos</h2></center>
+<div id="medida2">
+<a href="?pag=cad-tecnico" class="but but-primary float">Incluir novo tecnico</a>
+<div id="clear"></div>
 </div>
     <form class="medida" style="margin: 0 auto" method="post" action="exemplo.html" id="frm-filtro">
       <p>

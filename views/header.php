@@ -18,13 +18,13 @@
         		<ul>
                 	<li class="borda borda-direita"><a href="">Cadastros</a>
                 		<ul> 
-                    		<li><a href="?pag=consultarTecnico">Tecnicos</a></li>
+                    		<li><a href="?pag=tecnico">Tecnicos</a></li>
                         	<li><a href="?pag=jogador">Jogadores</a></li>
                         	<li><a href="?pag=arbitro">Arbitro</a></li>
                         	<li><a href="?pag=time">Time</a></li>
                     	</ul>
                     </li>
-                	<li class="borda"><a href="#">Dados do Campeonatos</a>
+                	<li class="borda"><a href="?pag=campeonato">Dados do Campeonatos</a>
                 		<!--<ul>
                     		<li><a href="">Ranking de time</a></li>
                         	<li><a href="">Artilheiro</a></li>
