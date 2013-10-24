@@ -6,6 +6,9 @@
 	if($action == "edit"){
 		include(__APP_PATH.'/views/cad_Arbitro.php');
 	}
+	if($action == "exclude"){
+		include(__APP_PATH.'/views/confirma.php');
+	}
 ?>	
 	<script src="./views/js/jquery.tablesorter.min.js"></script>
     <script src="./views/js/jquery.tablesorter.pager.js"></script>

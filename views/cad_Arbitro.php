@@ -64,6 +64,7 @@ background-color: #CC0000;
 <?php 
 require_once __APP_PATH.'/view/ArbitroView.php';
 $arbitroVW = new ArbitroView();	
+$id = isset( $_GET['edit'] ) ? $_GET['edit'] : null;
 if($action == "edit"){
 	$dados = $arbitroVW->consultarPorId($id);
 ?>
