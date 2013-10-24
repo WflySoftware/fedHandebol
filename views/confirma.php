@@ -41,8 +41,28 @@ background-color: #CC0000;
 <div id="qd">
 	<div id="text1" style="margin: 0 0 10px 10px;">Comfirme exclusão</div><form method="post" action=""><input type="submit" class="but but-success" name="confirma" id="confirma" value="Confirma"> 
 </div>
-<?php 
-if(isset($_POST["confirma"])){
-	$arbitroVW->excluir($id);
+<?php
+
+
+/*if(isset($_POST["confirma"])== false){
+	
+	if($pagina = "tecnico"){
+		$tecnicoVW->excluir($id);
+	}
+	
+	if($pagina = "arbitro"){
+		$arbitroVW->excluir($id);
+	}
+	if($pagina = "time"){
+		$timeVW->excluir($id);
+	}
+	
+	if($pagina = "jogador"){
+		$jogadorVW->excluir($id);
+	}
+}*/
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+	$jogadorVW->excluir($id);
 }
+
 ?>

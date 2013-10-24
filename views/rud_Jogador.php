@@ -2,11 +2,12 @@
 	require_once __APP_PATH.'/view/JogadorView.php';
 	$jogadorVW = new JogadorView();
 	$action = isset( $_GET['action'] ) ? $_GET['action'] : null;
+	$id = isset( $_GET['id'] ) ? $_GET['id'] : null;
 	if($action == "edit"){
 		include(__APP_PATH.'/views/cad_Jogador.php');
 	}
 	if($action == "exclude"){
-		include(__APP_PATH.'/views/cad_Jogador.php');
+		include(__APP_PATH.'/views/confirma.php');
 	}
 ?>	
 	<script src="./views/js/jquery.tablesorter.min.js"></script>

@@ -11,11 +11,12 @@ class TecnicoView{
 		$this->tecnicoCO->_salvar($formulario['nome'], $formulario['telefone'], $formulario['cpf']);
 		echo "Dados inseridos com sucesso";
 	}
-	public function atualizar($id,$nome,$endereco,$telefone,$cpf){
-		
+	public function atualizar($id){
+		$formulario = $_POST;
+		return $this->tecnicoCO->_atualizar($id,$formulario['nome'], $formulario['telefone'], $formulario['cpf']);
 	}
 	public function excluir($id){
-		
+		return $this->arbitroCO->_excluir($id);
 	}
 	public function listarTecnicosParaTabela(){
 		return $this->tecnicoCO->_listarTecnicosParaTabela();

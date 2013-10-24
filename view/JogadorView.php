@@ -10,7 +10,7 @@ class JogadorView{
 	}
 	public function salvar(){
 		$formulario = $_POST;
-		$this->jogadorCO->_salvar($formulario['nome'], $formulario['time'], $formulario['data_nascimento'],$formulario['cpf'],$formulario['numero']);
+		$this->jogadorCO->_salvar($formulario['nome'], $formulario['idTime'], $formulario['data_nascimento'],$formulario['cpf'],$formulario['numero']);
 		echo "Dados inseridos com sucesso";
 	}
 	public function listarTimesParaSelect(){
@@ -20,10 +20,14 @@ class JogadorView{
 	public function listarJogadoresParaTabela(){
 		return $this->jogadorCO->_listarJogadoresParaTabela();
 	}
-	public function atualizar(Jogador $dadosJogador){
-		return $this->atualizar($dadosJogador);
+	public function atualizar($id){
+		$formulario = $_POST;
+		return $this->jogadorCO->atualizar($id,$formulario['idTime'], $formulario['nome'], $formulario['data_nascimento'],$formulario['cpf'],$formulario['numero']);
 	}
 	public function excluir($id){
 		return $this->jogadorCO->_excluir($id);
+	}
+	public function consultarPorId($id){
+		return $this->jogadorCO->_consultarPorId($id);
 	}
 }
