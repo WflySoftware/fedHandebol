@@ -25,7 +25,7 @@ a img{
 
 form{
   background-color:#f2f2f2;
-  width:600px;
+  width:650px;
   margin:10px 0 10px 0;
   text-align:center;
 }
@@ -46,7 +46,7 @@ form input{
 }
 
 table{
-  width:600px;
+  width:650px;
   border:1px solid #ccc;
 }
 
@@ -87,7 +87,6 @@ table tbody tr.selected td{
 	background-color:#f2f2f2;
 	font-weight:900;
 }
-
 #pager span{
 	font-weight:900;
 	display:inline-block;
@@ -99,9 +98,50 @@ table tbody tr.selected td{
 #pager form{
 	text-align:left;
 	padding:10px;
-	width:580px;
+	width: 630px;
+}
+.but {
+display: inline-block;
+background-color: #ccc;
+color: #444;
+padding: 10px 20px;
+text-decoration: none;
+box-sizing: border-box;
+font-family: Helvetica, Arial, sans-serif;
+font-size: 14px;
+border: 0px;
+border-radius: 2px;
+}
+.but:hover {
+background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,.15));
+cursor: pointer;
+}
+.but-primary{
+color: #fff;
+background-color: #0068B4;
+}
+.but-success {
+color: #fff;
+background-color: #009835;
+}
+.but-error {
+color: #fff;
+background-color: #CC0000;
+}
+#medida2{
+	margin: 0 auto;
+	width: 630px;
+	margin-bottom: 10px;
+}
+.float{
+	float: right;
 }
 </style>
+<center><h2>Jogadores</h2></center>
+<div id="medida2">
+<a href="?pag=cad-jogador" class="but but-primary float">Incluir novo jogador</a>
+<div id="clear"></div>
+</div>
     <form class="medida" style="margin: 0 auto" method="post" action="exemplo.html" id="frm-filtro">
       <p>
         <label for="pesquisar">Pesquisar</label>

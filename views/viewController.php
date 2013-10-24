@@ -25,6 +25,19 @@ switch($pagina){
 	case 'EditarArbitro':
 		include(__APP_PATH.'/views/cad_Arbitro.php');
 		break;
+	case 'cad-tecnico':
+		include(__APP_PATH.'/views/cad_Tecnico.php');
+		break;
+	case 'cad-jogador':
+		include(__APP_PATH.'/views/cad_Jogador.php');
+		break;
+	
+	case 'cad-time':
+		include(__APP_PATH.'/views/cad_Time.php');
+		break;
+	case 'campeonato':
+		include(__APP_PATH.'/views/campeonatos.php');
+		break;
 	default:
 		include(__APP_PATH.'/views/initial.php');	
 }
