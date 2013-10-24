@@ -108,6 +108,7 @@ th{
                     <th class="th-piqueno"><small>Adv n°</small></th>
                     <th class="th-piqueno"><small>Adv T</small></th>
                     <th class="th-piqueno"><small>Ex.T.S.</small></th>
+                    <th class="th-piqueno"><small>Ex.T.E.</small></th>
                 </tr>
             </thead>
             	<tr>
