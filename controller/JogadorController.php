@@ -62,7 +62,7 @@ public function _consultarPorId($id){
 	public function _inserir(Jogador $jogador){
 		return $this->jogadorDAO->inserir($jogador);
 	}
-public function _atualizar($idJogador,$idTime,$nome,$dataNascimento,$cpf,$numero){
+	public function _atualizar($idJogador,$idTime,$nome,$dataNascimento,$cpf,$numero){
 		$dadosJogador = new Jogador();
 		$dadosJogador->__constructOverload($idJogador,$idTime,$nome,$dataNascimento,$cpf,$numero);
 		$this->jogadorDAO->atualizar($dadosJogador);

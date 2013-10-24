@@ -47,7 +47,17 @@ class TimeController{
 		return $this->timeDAO->listarTodos();
 	}
 	public function _consultarPorId($id){
-		return $this->timeDAO->consultarPorId($id);
+		$dadosTime = new Time();
+		$dadosTime =  $this->timeDAO->consultarPorId($id);
+		$arrayDados['idTecnico'] = $dadosTime->__getIdTecnico();
+		$arrayDados['nome'] = $dadosTime->__getNome();
+		$arrayDados['categoria'] = $dadosTime->__getCategoria();
+		$arrayDados['endereco'] = $dadosTime->__getEndereco();
+		$arrayDados['dataFundacao'] = $dadosTime->__getDataFundacao();
+		$arrayDados['categoria'] = $dadosTime->__getCategoria();
+		$arrayDados['presidente'] = $dadosTime->__getPresidente();
+		$arrayDados['telefone'] = $dadosTime->__getTelefone();
+		return $arrayDados;
 	}
 	public function _consultarPorNome($nome){
 		return $this->timeDAO->consultarPorNome($nome);
@@ -57,8 +67,12 @@ class TimeController{
 		$dadosTime->__constructOverload(0, $idTecnico, $nome, $categoria, $endereco, $dataFundacao, $presidente, $telefone);
 		return $this->timeDAO->inserir($dadosTime);
 	}
-	public function _atualizar(Time $time){
-		return $this->timeDAO->atualizar($time);
+	public function _atualizar($id,$idTecnico, $nome, $categoria, $endereco, $dataFundacao, $presidente, $telefone){
+
+		$dadosTime = new Time();
+		$dadosTime->__constructOverload($id,$idTecnico, $nome, $categoria, $endereco, $dataFundacao, $presidente, $telefone);
+		$this->timeDAO->atualizar($dadosTime);
+	
 	}
 	public function _excluir($id){
 		return $this->timeDAO->excluir($id);

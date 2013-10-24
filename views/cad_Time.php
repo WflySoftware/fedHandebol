@@ -1,4 +1,5 @@
-﻿<!--corpo-->
+﻿
+<!--corpo-->
 <style type="text/css">
 .input{
     font-family: Arial, Verdana;
@@ -63,6 +64,50 @@ background-color: #CC0000;
 <?php 
 require_once __APP_PATH.'/view/TimeView.php';
 $timeVW = new TimeView();	
+$id = isset( $_GET['id'] ) ? $_GET['id'] : null;
+$action = isset( $_GET['action'] ) ? $_GET['action'] : null;
+if($action == "edit"){
+	$dados = $timeVW->consultarPorId($id);
+?>
+<center><h2> Alterar Cadastro</h2></center>
+	<form id="contactform" method="post" action="">
+        <div class="field">
+        	<select class="input" name="idTecnico" id="idTecnico" required>
+        	<?php 
+        		$options = $timeVW->listarTecnicosPorSelect();
+        		for($i=0;$i<count($options);$i++){
+					echo $options[$i];
+				}
+        	?>
+        	</select>
+        </div>
+        <div class="field">
+        	<input type="text" class="input" name="nome" id="nome" placeholder="Nome do Time" value="<?php echo $dados['nome']?>" required>
+        </div>
+        <div class="field">
+        	<input type="text" class="input" name="categoria" id="categoria" placeholder="Categoria" value="<?php echo $dados['categoria']?>" required>
+        </div>
+        <div class="field">
+        	<input type="text" class="input" name="endereco" id="endereco" placeholder="Endereço da sede" value="<?php echo $dados['endereco']?>" required>
+        </div>
+        <div class="field">
+        	<input type="text" class="input" name="dataFundacao" id="dataFundacao" placeholder="Data da Fundação" value="<?php echo $dados['dataFundacao']?>" required>
+        </div>
+        <div class="field">
+        	<input type="text" class="input" name="presidente" id="presidente" placeholder="Nome do Presidente" value="<?php echo $dados['presidente']?>" required>
+        </div>
+        <div class="field">
+    	<input type="text" class="input" name="telefone" id="telefone" placeholder="Telefone" value="<?php echo $dados['telefone']?>" required>
+        </div>
+        <input type="submit" class="but but-success" name="Cadastrar" value="Alterar">
+        <input type="reset" class="but but-error" name="apagar" value="Limpar">
+	</form>
+<?php 
+	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+		$timeVW->atualizar($id);
+	}
+}
+else {	
 ?>
 <center><h2> Cadastro de Times</h2></center>
 	<form id="contactform" method="post" action="">
@@ -97,8 +142,8 @@ $timeVW = new TimeView();
         <input type="submit" class="but but-success" name="Cadastrar" value="Cadastrar">
         <input type="reset" class="but but-error" name="apagar" value="Limpar">
 	</form>
-<?php 
-if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-	$timeVW->salvar();
+<?php
+	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+		$timeVW->salvar();
+	}
 }
-?>

@@ -22,7 +22,7 @@ class JogadorDAO{
 	}
 	
 	public function inserir(Jogador $dadosJogador){
-		$sql = "INSERT INTO jogador (time_id_time,nome,data_nascimento,cpf,numero) VALUES ('{$dadosJogador->__getIdTime()}','{$dadosJogador->__getDataNascimento()}','{$dadosJogador->__getCpf()}','{$dadosJogador->__getNumero()}')";
+		$sql = "INSERT INTO jogador (time_id_time,nome,data_nascimento,cpf,numero) VALUES ('{$dadosJogador->__getNome()}','{$dadosJogador->__getIdTime()}','{$dadosJogador->__getDataNascimento()}','{$dadosJogador->__getCpf()}','{$dadosJogador->__getNumero()}')";
 		$this->conexao->banco->Execute($sql);
 	}
 	
