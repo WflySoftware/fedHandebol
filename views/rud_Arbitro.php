@@ -7,7 +7,7 @@
 		include(__APP_PATH.'/views/cad_Arbitro.php');
 	}
 	if($action == "exclude"){
-		include(__APP_PATH.'/views/confirma.php');
+		$arbitroVW->excluir($id);
 	}
 ?>	
 	<script src="./views/js/jquery.tablesorter.min.js"></script>

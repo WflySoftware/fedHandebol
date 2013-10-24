@@ -1,6 +1,14 @@
 <?php 
 	require_once __APP_PATH.'/view/TimeView.php';
 	$timeVW = new TimeView();
+	$action = isset( $_GET['action'] ) ? $_GET['action'] : null;
+	$id = isset( $_GET['id'] ) ? $_GET['id'] : null;
+	if($action == "edit"){
+		include(__APP_PATH.'/views/cad_Time.php');
+	}
+	if($action == "exclude"){
+		$timeVW->excluir($id);
+	}
 ?>	
 	<script src="./views/js/jquery.tablesorter.min.js"></script>
     <script src="./views/js/jquery.tablesorter.pager.js"></script>

@@ -31,8 +31,8 @@ class JogadorController{
           			<td>".$dadosJogador->__getCpf()."</td>
           			<td>".$dadosJogador->__getNumero()."</td>
           			<td>
-            			<a href=\"?pag=jogador&action=edit\"><img src=\"./views/images/edit.png\" width=\"16\" height=\"16\" /></a>
-            			<a href=\"?pag=jogador&action=exclude\"><img src=\"./views/images/delete.png\" width=\"16\" height=\"16\" /></a>
+            			<a href=\"?pag=jogador&action=edit&id=".$dadosJogador->__getIdJogador()."\"><img src=\"./views/images/edit.png\" width=\"16\" height=\"16\" /></a>
+            			<a href=\"?pag=jogador&action=exclude&id=".$dadosJogador->__getIdJogador()."\"><img src=\"./views/images/delete.png\" width=\"16\" height=\"16\" /></a>
           			</td>
 			</tr>";
 		}
@@ -42,8 +42,16 @@ class JogadorController{
 	public function _listarTodos(){
 		return $this->jogadorDAO->listarTodos();
 	}
-	public function _consultarPorId($id){
-		return $this->jogadorDAO->consultarPorId($id);
+public function _consultarPorId($id){
+		$dadosJogador = new Jogador();
+		$dadosJogador =  $this->jogadorDAO->consultarPorId($id);
+		$arrayDados['nome'] = $dadosJogador->__getNome();
+		$arrayDados['idTime'] = $dadosJogador->__getIdTime();
+		$arrayDados['data_nascimento'] = $dadosJogador->__getDataNascimento();
+		$arrayDados['cpf'] = $dadosJogador->__getCpf();
+		$arrayDados['numero'] = $dadosJogador->__getNumero();
+		
+		return $arrayDados;
 	}
 	public function _consultarPorTime($idTime){
 		return $this->jogadorDAO->consultarPorTime($idTime);
@@ -54,12 +62,14 @@ class JogadorController{
 	public function _inserir(Jogador $jogador){
 		return $this->jogadorDAO->inserir($jogador);
 	}
-	public function _atualizar(Jogador $dadosJogador){
-		return $this->jogadorDAO->atualizar($dadosJogador);
-	}
-	public function _salvar($nome, $nomeTime,$dataNascimento,$cpf,$numero){
+public function _atualizar($idJogador,$idTime,$nome,$dataNascimento,$cpf,$numero){
 		$dadosJogador = new Jogador();
-		$dadosJogador->__constructOverload(0,$idTime,$nomeTime,$dataNascimento,$cpf,$numero);
+		$dadosJogador->__constructOverload($idJogador,$idTime,$nome,$dataNascimento,$cpf,$numero);
+		$this->jogadorDAO->atualizar($dadosJogador);
+	}
+	public function _salvar($nome, $idTime,$dataNascimento,$cpf,$numero){
+		$dadosJogador = new Jogador();
+		$dadosJogador->__constructOverload(0,$idTime,$nome,$dataNascimento,$cpf,$numero);
 		$this->jogadorDAO->inserir($dadosJogador);
 	}
 	public function _excluir($id){

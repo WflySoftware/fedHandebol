@@ -31,15 +31,21 @@ class TecnicoController{
           			<td>".$dadosTecnico->__getTelefone()."</td>
           			<td>".$dadosTecnico->__getCpf()."</td>
           			<td>
-            			<a href=\"?pag=\"><img src=\"./views/images/edit.png\" width=\"16\" height=\"16\" /></a>
-            			<a href=\"#\"><img src=\"./views/images/delete.png\" width=\"16\" height=\"16\" /></a>
+            			<a href=\"?pag=tecnico&action=edit&id=".$dadosTecnico->__getIdTecnico()."\"><img src=\"./views/images/edit.png\" width=\"16\" height=\"16\" /></a>
+            			<a href=\"?pag=tecnico&action=exclude&id=".$dadosTecnico->__getIdTecnico()."\"><img src=\"./views/images/delete.png\" width=\"16\" height=\"16\" /></a>
           			</td>
 			</tr>";
 		}
 		return $arrayTr;
 	}
-	public function _consultarPorId($id){
-		return $this->tecnicoDAO->consultarPorId($id);
+public function _consultarPorId($id){
+		$dadosTecnico = new Tecnico();
+		$dadosTecnico =  $this->tecnicoDAO->consultarPorId($id);
+		$arrayDados['nome'] = $dadosTecnico->__getNome();
+		$arrayDados['telefone'] = $dadosTecnico->__getTelefone();
+		$arrayDados['cpf'] = $dadosTecnico->__getCpf();
+		
+		return $arrayDados;
 	}
 	public function _consultarPorNome($nome){
 		return $this->tecnicoDAO->consultarPorNome($nome);
@@ -58,7 +64,12 @@ class TecnicoController{
 		$dadosTecnico->__constructOverload(0, $nome, $telefone, $cpf);
 		$this->tecnicoDAO->inserir($dadosTecnico);
 	}
-	public function _atualizar(Tecnico $tecnico){
-		return $this->tecnicoDAO->atualizar($tecnico);
+	public function _atualizar($idTecnico,$nome,$telefone,$cpf){
+		$dadosTecnico = new Tecnico();
+		$dadosTecnico->__constructOverload($idTecnico, $nome, $telefone, $cpf);
+		$this->tecnicoDAO->atualizar($dadosTecnico);
+	}
+	public function _excluir($id){
+		return $this->tecnicoDAO->excluir($id);
 	}
 }

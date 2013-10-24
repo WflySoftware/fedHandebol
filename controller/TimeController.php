@@ -36,8 +36,8 @@ class TimeController{
 					<td>".$dadosTime->__getPresidente()."</td>
 					<td>".$dadosTime->__getTelefone()."</td>
           			<td>
-            			<a href=\"#\"><img src=\"./views/images/edit.png\" width=\"16\" height=\"16\" /></a>
-            			<a href=\"#\"><img src=\"./views/images/delete.png\" width=\"16\" height=\"16\" /></a>
+            			<a href=\"?pag=time&action=edit&id=".$dadosTime->__getIdTime()."\"><img src=\"./views/images/edit.png\" width=\"16\" height=\"16\" /></a>
+            			<a href=\"?pag=time&action=exclude&id=".$dadosTime->__getIdTime()."\"><img src=\"./views/images/delete.png\" width=\"16\" height=\"16\" /></a>
           			</td>
 			</tr>";
 		}
@@ -60,5 +60,7 @@ class TimeController{
 	public function _atualizar(Time $time){
 		return $this->timeDAO->atualizar($time);
 	}
-
+	public function _excluir($id){
+		return $this->timeDAO->excluir($id);
+	}
 }

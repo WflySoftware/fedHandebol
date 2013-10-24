@@ -1,4 +1,5 @@
-﻿<!--corpo-->
+﻿
+<!--corpo-->
 <style type="text/css">
 .input{
     font-family: Arial, Verdana;
@@ -63,6 +64,31 @@ background-color: #CC0000;
 <?php 
 require_once __APP_PATH.'/view/TecnicoView.php';
 $tecnicoVW = new TecnicoView();	
+$id = isset( $_GET['id'] ) ? $_GET['id'] : null;
+$action = isset( $_GET['action'] ) ? $_GET['action'] : null;
+if($action == "edit"){
+	$dados = $tecnicoVW->consultarPorId($id);
+?>
+<center><h2> Alterar Cadastro</h2></center>
+	<form id="contactform" method="post" action="">
+    	<div class="field">
+        	<input type="text" class="input" name="nome" id="nome" placeholder="Nome do Tecnico" value="<?php echo $dados['nome']?>" required>
+        </div>
+        <div class="field">
+    	<input type="text" class="input" name="telefone" id="telefone" placeholder="Telefone"value="<?php echo $dados['telefone']?>" required>
+        </div>
+        <div class="field">
+    	<input type="text" class="input" name="cpf" id="cpf" placeholder="CPF" value="<?php echo $dados['cpf']?>"required>
+        </div>
+        <input type="submit" class="but but-success" name="Cadastrar" value="Editar">
+        <input type="reset" class="but but-error" name="apagar" value="Limpar">
+	</form>
+<?php 
+	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+		$tecnicoVW->atualizar($id);
+	}
+}
+else {	
 ?>
 <center><h2> Cadastro de Tecnicos</h2></center>
 	<form id="contactform" method="post" action="">
@@ -78,8 +104,8 @@ $tecnicoVW = new TecnicoView();
         <input type="submit" class="but but-success" name="Cadastrar" value="Cadastrar">
         <input type="reset" class="but but-error" name="apagar" value="Limpar">
 	</form>
-<?php 
-if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-	$tecnicoVW->salvar();
+<?php
+	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+		$tecnico->salvar();
+	}
 }
-?>
