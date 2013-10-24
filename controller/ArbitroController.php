@@ -22,7 +22,7 @@ class ArbitroController{
           			<td>".$dadosArbitro->__getCpf()."</td>
           			<td>
             			<a href=\"?pag=arbitro&action=edit&id=".$dadosArbitro->__getIdArbitro()."\"><img src=\"./views/images/edit.png\" width=\"16\" height=\"16\" /></a>
-            			<a href=\"#\"><img src=\"./views/images/delete.png\" width=\"16\" height=\"16\" /></a>
+            			<a href=\"?pag=arbitro&action=exclude&id=".$dadosArbitro->__getIdArbitro()."\"><img src=\"./views/images/delete.png\" width=\"16\" height=\"16\" /></a>
           			</td>
 			</tr>";
 		}

@@ -18,7 +18,7 @@
         		<ul>
                 	<li class="borda borda-direita"><a href="">Cadastros</a>
                 		<ul> 
-                    		<li><a href="?pag=consultarTecnico">Tecnicos</a></li>
+                    		<li><a href="?pag=tecnico">Tecnicos</a></li>
                         	<li><a href="?pag=jogador">Jogadores</a></li>
                         	<li><a href="?pag=arbitro">Arbitro</a></li>
                         	<li><a href="?pag=time">Time</a></li>

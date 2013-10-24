@@ -41,3 +41,8 @@ background-color: #CC0000;
 <div id="qd">
 	<div id="text1" style="margin: 0 0 10px 10px;">Comfirme exclusão</div><form method="post" action=""><input type="submit" class="but but-success" name="confirma" id="confirma" value="Confirma"> 
 </div>
+<?php 
+if(isset($_POST["confirma"])){
+	$arbitroVW->excluir($id);
+}
+?>
