@@ -20,9 +20,21 @@ CREATE TABLE tecnico (
 CREATE TABLE arbitro (
   id_arbitro INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
   nome VARCHAR(100) NULL,
-  telefone INTEGER UNSIGNED NULL,
-  cpf INTEGER UNSIGNED NULL,
+  telefone VARCHAR(15) NULL,
+  cpf VARCHAR(16) NULL,
   PRIMARY KEY(id_arbitro)
+);
+
+CREATE TABLE tempo (
+  id_tempo INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  jogo_id_jogo INTEGER UNSIGNED NOT NULL,
+  tiro_7metros INTEGER UNSIGNED NULL,
+  tempo_tecnico INTEGER UNSIGNED NULL,
+  placar_time1 INTEGER UNSIGNED NULL,
+  placar_time2 INTEGER UNSIGNED NULL,
+  tipo INTEGER UNSIGNED NULL,
+  PRIMARY KEY(id_tempo),
+  INDEX tempo_FKIndex1(jogo_id_jogo)
 );
 
 CREATE TABLE time (
@@ -38,20 +50,12 @@ CREATE TABLE time (
   INDEX time_FKIndex1(tecnico_id_tecnico)
 );
 
-CREATE TABLE tempo (
-  id_tempo INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+CREATE TABLE jogo_time (
   jogo_id_jogo INTEGER UNSIGNED NOT NULL,
-  tipo INTEGER UNSIGNED NULL,
-  advertencia INTEGER UNSIGNED NULL,
-  punicao INTEGER UNSIGNED NULL,
-  desqualificacao INTEGER UNSIGNED NULL,
-  relatorio INTEGER UNSIGNED NULL,
-  tiro_7metros INTEGER UNSIGNED NULL,
-  tempo_tecnico INTEGER UNSIGNED NULL,
-  placar_time1 INTEGER UNSIGNED NULL,
-  placar_time2 INTEGER UNSIGNED NULL,
-  PRIMARY KEY(id_tempo),
-  INDEX tempo_FKIndex1(jogo_id_jogo)
+  time_id_time INTEGER UNSIGNED NOT NULL,
+  PRIMARY KEY(jogo_id_jogo, time_id_time),
+  INDEX jogo_has_time_FKIndex1(jogo_id_jogo),
+  INDEX jogo_has_time_FKIndex2(time_id_time)
 );
 
 CREATE TABLE jogador (
@@ -59,18 +63,23 @@ CREATE TABLE jogador (
   time_id_time INTEGER UNSIGNED NOT NULL,
   nome VARCHAR(100) NULL,
   data_nascimento DATE NULL,
-  cpf INTEGER UNSIGNED NULL,
+  cpf VARCHAR(16) NULL,
   numero INTEGER UNSIGNED NULL,
   PRIMARY KEY(id_jogador),
   INDEX jogador_FKIndex1(time_id_time)
 );
 
-CREATE TABLE time_jogo (
-  time_id_time INTEGER UNSIGNED NOT NULL,
+CREATE TABLE dados (
+  id_dados INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  jogador_id_jogador INTEGER UNSIGNED NOT NULL,
   tempo_id_tempo INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(time_id_time, tempo_id_tempo),
-  INDEX time_has_tempo_FKIndex1(time_id_time),
-  INDEX time_has_tempo_FKIndex2(tempo_id_tempo)
+  advertencia INTEGER UNSIGNED NULL,
+  punicao INTEGER UNSIGNED NULL,
+  desqualificacao INTEGER UNSIGNED NULL,
+  relatorio INTEGER UNSIGNED NULL,
+  PRIMARY KEY(id_dados),
+  INDEX dados_FKIndex1(tempo_id_tempo),
+  INDEX dados_FKIndex2(jogador_id_jogador)
 );
 
 
