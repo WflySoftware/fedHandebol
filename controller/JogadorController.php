@@ -82,5 +82,24 @@ public function _consultarPorId($id){
 	public function _excluir($id){
 		return $this->jogadorDAO->excluir($id);
 	}
-
+	public function _contarRegistrosJogador(){
+		return $this->jogadorDAO->contarRegistrosJogador();
+	}
+	public function _listarArtilheiros(){
+		$arrayArtilheiro = $this->jogadorDAO->listarArtilheiros();
+		$arrayTr[]= "
+		 <tr style=\"background: #09F; border:#09f; color: #fff; \">
+		 <th><small>Artilheiros</small></th>
+		 <th><small>Time</small></th>
+		 <th class=\"th-piqueno\"><small>G</small></th>
+		 </tr>
+		 </thead>
+		 <tr>
+		 <th class=\"th-cor\">".$mainVW->listarArtilheiros()->NOME_JOGADOR."</th>
+		                     <th class=\"th-cor\">".$mainVW->listarArtilheiros()->NOME_TIME."</th>
+		                     <th class=\"th-piqueno th-cor\">".$mainVW->listarArtilheiros()->GOL."</th>
+		                 </tr>";
+		 
+		return $artilheiros;
+	}
 }

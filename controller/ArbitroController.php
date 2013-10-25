@@ -59,4 +59,7 @@ class ArbitroController{
 	public function _excluir($id){
 		return $this->arbitroDAO->excluir($id);
 	}
+	public function _contarRegistrosArbitro(){
+		return $this->arbitroDAO->contarRegistrosArbitro();
+	}
 }

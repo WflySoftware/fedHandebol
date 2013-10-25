@@ -50,5 +50,11 @@ class ArbitroDAO{
 		$sql = "DELETE FROM arbitro WHERE id_arbitro= '{$id}' ";
 		$resultado = $this->conexao->banco->Execute($sql);
 	}
+	public function contarRegistrosArbitro(){
+		$sql = "SELECT COUNT(*) as contagem FROM arbitro";
+		$resultado = $this->conexao->banco->Execute($sql);
+		$registro = $resultado->FetchNextObject();
+		return $registro->CONTAGEM;
+	}
 }
 

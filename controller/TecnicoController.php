@@ -63,4 +63,7 @@ public function _consultarPorId($id){
 	public function _excluir($id){
 		return $this->tecnicoDAO->excluir($id);
 	}
+	public function _contarRegistrosTecnico(){
+		return $this->tecnicoDAO->contarRegistrosTecnico();
+	}
 }

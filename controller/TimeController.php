@@ -77,4 +77,7 @@ class TimeController{
 	public function _excluir($id){
 		return $this->timeDAO->excluir($id);
 	}
+	public function _contarRegistrosTime(){
+		return $this->timeDAO->contarRegistrosTime();
+	}
 }

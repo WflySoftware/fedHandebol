@@ -52,4 +52,10 @@ class TecnicoDAO{
 		$sql = "DELETE FROM tecnico WHERE id_tecnico= '{$id}' ";
 		$resultado = $this->conexao->banco->Execute($sql);
 	}
+	public function contarRegistrosTecnico(){
+		$sql = "SELECT COUNT(*) as contagem FROM tecnico";
+		$resultado = $this->conexao->banco->Execute($sql);
+		$registro = $resultado->FetchNextObject();
+		return $registro->CONTAGEM;
+	}
 }

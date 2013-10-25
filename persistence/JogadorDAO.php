@@ -61,4 +61,22 @@ class JogadorDAO{
 		$sql = "DELETE FROM jogador WHERE id_jogador= '{$id}' ";
 		$resultado = $this->conexao->banco->Execute($sql);
 	}
+	public function contarRegistrosJogador(){
+		$sql = "SELECT COUNT(*) as contagem FROM jogador";
+		$resultado = $this->conexao->banco->Execute($sql);
+		$registro = $resultado->FetchNextObject();
+		return $registro->CONTAGEM;
+	}
+	public function listarArtilheiros(){
+		$sql = "SELECT j.nome AS nome_jogador, t.nome AS nome_time, d.gol
+				FROM jogador j, dados d, time t
+				WHERE j.id_jogador = d.jogador_id_jogador
+				AND j.time_id_time = t.id_time
+				ORDER BY d.gol DESC";
+		$resultado = $this->conexao->banco->Execute($sql);
+		while($registro = $resultado->FetchNextObject()){
+			$arrayArtilheiro[] = $registro;
+		}	
+		return $arrayArtilheiros;
+	}
 }

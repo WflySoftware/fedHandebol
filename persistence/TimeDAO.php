@@ -53,4 +53,10 @@ class TimeDAO{
 		$sql = "DELETE FROM time WHERE id_time= '{$id}' ";
 		$resultado = $this->conexao->banco->Execute($sql);
 	}
+	public function contarRegistrosTime(){
+		$sql = "SELECT COUNT(*) as contagem FROM time";
+		$resultado = $this->conexao->banco->Execute($sql);
+		$registro = $resultado->FetchNextObject();
+		return $registro->CONTAGEM;
+	}
 }

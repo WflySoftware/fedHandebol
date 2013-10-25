@@ -1,4 +1,8 @@
-<?php ?>
+<?php 
+include_once(__APP_PATH.'/view/MainView.php');
+$mainVW = new MainView();
+
+?>
 <style>
 #caixa1{
 	margin: 0 auto;
@@ -33,25 +37,25 @@ th{
 }
 </style>
         <div id="caixa1">
-        <h2 style="margin: 0 auto; width: 1024px; text-align:center;">Garficos</h2><br/>
+        <h2 style="margin: 0 auto; width: 1024px; text-align:center;">Graficos</h2><br/>
          	<div id="graficos">
             	<div id="butao-cliente">
-                	12<br />Time
+                	<?php echo $mainVW->contarRegistrosTime();?><br />TIMES
                 </div>
                 <div id="butao-cliente">
-                	100<br />Jogadores
+                	<?php echo $mainVW->contarRegistrosJogador();?><br />JOGADORES
                 </div>
                 <div id="butao-cliente">
-                	10<br />tecnico
+                	<?php echo $mainVW->contarRegistrosTecnico();?><br />TECNICOS
                 </div>
                 <div id="butao-cliente">
-                	5<br />Arbritos
+                	<?php echo $mainVW->contarRegistrosArbitro();?><br />ARBITROS
                 </div>
                 <div id="clear"></div>            
              </div>
         </div>
       <aside class="aling"> 
-      <h2 style="margin: 0 auto; width: 1024px; text-align:center; margin-top: 10px;">Tabela do campionato</h2><br/>
+      <h2 style="margin: 0 auto; width: 1024px; text-align:center; margin-top: 10px;">Tabela do campeonato</h2><br/>
         <table border=0 style="width: 650px;">
         	<thead>
             	<tr style="background: #09F; border:#09f; color: #fff;">
@@ -81,7 +85,7 @@ th{
                 </tr>
         </table>
         
-                <table border=0 style="width: 320px; margin-left: 10px;">
+        <table border=0 style="width: 320px; margin-left: 10px;">
         	<thead>
             	<tr style="background: #09F; border:#09f; color: #fff; ">
                 	<th><small>Artilheiros</small></th>
@@ -90,9 +94,9 @@ th{
                 </tr>
             </thead>
             	<tr>
-                	<th class="th-cor">João de Juda</th>
-                    <th class="th-cor">Tabajara FC</th>
-                    <th class="th-piqueno th-cor">2</th>
+                	<th class="th-cor"><?php echo $mainVW->listarArtilheiros()->NOME_JOGADOR?></th>
+                    <th class="th-cor"><?php echo $mainVW->listarArtilheiros()->NOME_TIME?></th>
+                    <th class="th-piqueno th-cor"><?php echo $mainVW->listarArtilheiros()->GOL?></th>
                 </tr>
         </table>
        <div id="clear"></div>
