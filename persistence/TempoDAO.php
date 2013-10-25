@@ -49,4 +49,8 @@ class TempoDAO{
 		$dadosTempo->__constructOverload($registro->ID_TEMPO,$registro->JOGO_ID_JOGO,$registro->TIPO,$registro->ADVERTENCIA,$registro->PUNICAO,$registro->DESQUALIFICACAO,$registro->RELATORIO,$registro->TIRO_7METROS,$registro->TEMPO_TECNICO,$registro->PLACAR_TIME1,$registro->PLACAR_TIME2);
 		return $dadosTempo;
 	}
+	public function excluir($id){
+		$sql = "DELETE FROM jogador WHERE id_jogador= '{$id}' ";
+		$resultado = $this->conexao->banco->Execute($sql);
+	}
 }
