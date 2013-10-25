@@ -8,7 +8,24 @@ class TimeJogoController{
 	public function __construct(){
 		$this->timeJogoDAO = new TimeJogoDAO();
 	}
-
+	public function _listarTimeJogoParaTabela(){
+		$dadosTimeJogo = new TimeJogo();
+		$arrayDadosTimeJogo = $this->timeJogoDAO->listarTodos();
+		for($i=0;$i<count($arrayDadosTimeJogo); $i++){
+			$dadosTimeJogo = $arrayDadosTimeJogo[$i];
+			$arrayTr[] = "
+			<tr>
+          			<td><input type=\"checkbox\" value=\"1\" name=\"marcar[]\" /></td>
+					<td>".$dadosTimeJogo->__getIdJogo()."</td>
+          			<td>".$dadosTimeJogo->__getIdTime()."</td>
+          			<td>
+            			<a href=\"?pag=timeJogo&action=edit&id=".$dadosTimeJogo->__getTimeJogo()."\"><img src=\"./views/images/edit.png\" width=\"16\" height=\"16\" /></a>
+            			<a href=\"?pag=timeJogo&action=exclude&id=".$dadosTimeJogo->__getTimeJogo()."\"><img src=\"./views/images/delete.png\" width=\"16\" height=\"16\" /></a>
+          			</td>
+			</tr>";
+		}
+		return $arrayTr;
+	}
 	public function _listarTodos(){
 		return $this->timeJogoDAO->listarTodos();
 	}
@@ -19,9 +36,19 @@ class TimeJogoController{
 		return $this->timeJogoDAO->consultarPorTempo($idTempo);
 	}
 	public function _inserirTimeJogo(TimeJogo $timeJogo){
-		return $this->timeJogoDAO->inserirTimeJogo($timeJogo);
+		return $this->timeJogoDAO->inserir($timeJogo);
 	}
-	public function _atualizar(TimeJogo $timeJogo){
-		return $this->timeJogoDAO->atualizar($timeJogo);
+	public function _atualizar($idJogo,$idTime){
+		$dadosTimeJogo = new TimeJogo();
+		$dadosTimeJogo->__constructOverload($idJogo, $idTime);
+		$this->timeJogoDAO->atualizar($dadosTimeJogo);
+	}
+	public function _salvar($idJogo,$idTime){
+		$dadosTimeJogo = new TimeJogo();
+		$dadosTimeJogo->__constructOverload($idJogo,$idTime);
+		$this->timeJogoDAO->inserir(dadosTimeJogo);
+	}
+	public function _excluir($id){
+		return $this->timeJogoDAO->excluir($id);
 	}
 }

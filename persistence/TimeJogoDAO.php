@@ -28,7 +28,7 @@ class TimeJogoDAO{
 		$sql = "UPDATE jogo_time SET jogo_id_jogo='{$dadosTimeJogo->__getIdJogo()}', time_id_time='{$dadosTimeJogo->__getIdTime()}' ";
 		$this->conexao->banco->Execute($sql);
 	}
-	public function consultarPorIdTime($idTime){
+	public function consultarPorTime($idTime){
 		$sql = "SELECT * FROM time_jogo WHERE time_id_time= '{$idTime}'";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
@@ -37,7 +37,7 @@ class TimeJogoDAO{
 		return $dadosTimeJogo;
 	}
 	
-	public function consultarPorIdTempo($idTempo){
+	public function consultarPorTempo($idTempo){
 			$sql = "SELECT * FROM time_jogo WHERE tempo_id_tempo= '{$idTempo}'";
 			$resultado = $this->conexao->banco->Execute($sql);
 			$registro = $resultado->FetchNextObject();
