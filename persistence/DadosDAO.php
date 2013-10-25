@@ -55,6 +55,14 @@ class DadosDAO{
 		$dadosDados->__constructOverload($registro->ID_DADOS,$registro->JOGADOR_ID_JOGADOR,$registro->TEMPO_ID_TEMPO,$registro->ADVERTENCIA,$registro->PUNICAO,$registro->DESQUALIFICACAO,$registro->RELATORIO);
 		return $dadosDados;
 	}
+	public function consultarPorRelatorio($relatorio){
+		$sql = "SELECT * FROM dados WHERE relatorio= '{$relatorio}'";
+		$resultado = $this->conexao->banco->Execute($sql);
+		$registro = $resultado->FetchNextObject();
+		$dadosDados = new Dados();
+		$dadosDados->__constructOverload($registro->ID_DADOS,$registro->JOGADOR_ID_JOGADOR,$registro->TEMPO_ID_TEMPO,$registro->ADVERTENCIA,$registro->PUNICAO,$registro->DESQUALIFICACAO,$registro->RELATORIO);
+		return $dadosDados;
+	}
 	public function excluir($id){
 		$sql = "DELETE FROM dados WHERE id_dados= '{$id}' ";
 		$resultado = $this->conexao->banco->Execute($sql);

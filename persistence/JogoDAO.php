@@ -48,4 +48,8 @@ class JogoDAO{
 		$dadosJogo->__constructOverload($registro->ID_JOGO,$registro->ESPECTADORES,$registro->CIDADE,$registro->LOCALIZACAO,$registro->DATA_JOGO,$registro->DURACAO,$registro->TOTAL_7METROS);
 		return $dadosJogo;
 	}
+	public function excluir($id){
+		$sql = "DELETE FROM arbitro WHERE id_arbitro= '{$id}' ";
+		$resultado = $this->conexao->banco->Execute($sql);
+	}
 }
