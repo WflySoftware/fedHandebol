@@ -86,18 +86,18 @@ th{
         </table>
         
         <table border=0 style="width: 320px; margin-left: 10px;">
-        	<thead>
-            	<tr style="background: #09F; border:#09f; color: #fff; ">
-                	<th><small>Artilheiros</small></th>
-                    <th><small>Time</small></th>
-                    <th class="th-piqueno"><small>G</small></th>
-                </tr>
-            </thead>
-            	<tr>
-                	<th class="th-cor"><?php echo $mainVW->listarArtilheiros()->NOME_JOGADOR?></th>
-                    <th class="th-cor"><?php echo $mainVW->listarArtilheiros()->NOME_TIME?></th>
-                    <th class="th-piqueno th-cor"><?php echo $mainVW->listarArtilheiros()->GOL?></th>
-                </tr>
+        	 <tr style="background: #09F; border:#09f; color: #fff; ">
+			 <th><small>Artilheiros</small></th>
+			 <th><small>Time</small></th>
+			 <th class=\"th-piqueno\"><small>G</small></th>
+			 </tr>
+			 </thead>
+        	<?php 
+        		$tr = $mainVW->listarArtilheiros();
+        		for($i=0;$i<count($tr);$i++){
+					echo $tr[$i];
+				}
+        	?> 
         </table>
        <div id="clear"></div>
        </aside>

@@ -75,8 +75,26 @@ class JogadorDAO{
 				ORDER BY d.gol DESC";
 		$resultado = $this->conexao->banco->Execute($sql);
 		while($registro = $resultado->FetchNextObject()){
-			$arrayArtilheiro[] = $registro;
+			$artilheiro['nome'] = $registro->NOME_JOGADOR;
+			$artilheiro['time'] = $registro->NOME_TIME;
+			$artilheiro['gols'] = $registro->GOL;
+			$arrayArtilheiro[] = $artilheiro;
 		}	
-		return $arrayArtilheiros;
+		return $arrayArtilheiro;
+	}
+	public function listarFearPlayers(){
+		$sql = "SELECT j.nome AS nome_jogador, t.nome AS nome_time, (d.advertencia + d.punicao + d.desqualificacao + d.relatorio) AS faltas
+				FROM dados d, jogador j, time t
+				WHERE d.jogador_id_jogador = j.id_jogador
+				ORDER BY faltas ASC";
+		$resultado = $this->conexao->banco->Execute($sql);
+		while($registro = $resultado->FetchNextObject()){
+			$fear['nome'] = $registro->NOME_JOGADOR;
+			$fear['time'] = $registro->NOME_TIME;
+			$fear['faltas'] = $registro->FALTAS;
+			$arrayFear[] = $fear;
+		}
+		
+		return $arrayFear;
 	}
 }

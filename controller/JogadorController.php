@@ -18,7 +18,7 @@ class JogadorController{
 	}
 	public function _listarJogadoresParaTabela(){
 		$dadosJogador = new Jogador();
-					$arrayDadosJogador = $this->jogadorDAO->listarTodos();
+		$arrayDadosJogador = $this->jogadorDAO->listarTodos();
 		for($i=0;$i<count($arrayDadosJogador); $i++){
 			$dadosJogador = $arrayDadosJogador[$i];
 			$arrayTr[] = "
@@ -87,19 +87,30 @@ public function _consultarPorId($id){
 	}
 	public function _listarArtilheiros(){
 		$arrayArtilheiro = $this->jogadorDAO->listarArtilheiros();
-		$arrayTr[]= "
-		 <tr style=\"background: #09F; border:#09f; color: #fff; \">
-		 <th><small>Artilheiros</small></th>
-		 <th><small>Time</small></th>
-		 <th class=\"th-piqueno\"><small>G</small></th>
-		 </tr>
-		 </thead>
-		 <tr>
-		 <th class=\"th-cor\">".$mainVW->listarArtilheiros()->NOME_JOGADOR."</th>
-		                     <th class=\"th-cor\">".$mainVW->listarArtilheiros()->NOME_TIME."</th>
-		                     <th class=\"th-piqueno th-cor\">".$mainVW->listarArtilheiros()->GOL."</th>
-		                 </tr>";
-		 
-		return $artilheiros;
+		for($i=0;$i<count($arrayArtilheiro);$i++){
+			$dadosArtilheiro = $arrayArtilheiro[$i];
+			$arrayTr[]= "
+			
+			 <tr>
+			 <th class=\"th-cor\">".$dadosArtilheiro['nome']."</th>
+			                     <th class=\"th-cor\">".$dadosArtilheiro['time']."</th>
+			                     <th class=\"th-piqueno th-cor\">".$dadosArtilheiro['gols']."</th>
+			                 </tr>";
+		}
+		return $arrayTr;
+	}
+	public function _listarFearPlayers(){
+		$arrayFear = $this->jogadorDAO->listarFearPlayers();
+		for($i=0;$i<count($arrayFear);$i++){
+			$dadosFear= $arrayFear[$i];
+			$arrayTr[]= "
+		
+			 				<tr>
+								 <th class=\"th-cor\">".$dadosFear['nome']."</th>
+			                     <th class=\"th-cor\">".$dadosFear['time']."</th>
+			                     <th class=\"th-piqueno th-cor\">".$dadosFear['faltas']."</th>
+			                 </tr>";
+		}
+		return $arrayTr;
 	}
 }

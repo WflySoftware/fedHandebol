@@ -31,4 +31,7 @@ class MainView{
 	public function listarArtilheiros(){
 		return $this->jogadorCO->_listarArtilheiros();
 	}
+	public function listarFearPlayers(){
+		return $this->jogadorCO->_listarFearPlayers();
+	}
 }

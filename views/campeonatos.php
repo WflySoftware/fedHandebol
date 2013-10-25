@@ -1,4 +1,9 @@
-﻿<style>
+﻿<?php 
+include_once(__APP_PATH.'/view/MainView.php');
+$mainVW = new MainView();
+
+?>
+<style>
 #caixa1{
 	margin: 0 auto;
 	width: 1024px;
@@ -74,11 +79,12 @@ th{
                     <th class="th-piqueno"><small>G</small></th>
                 </tr>
             </thead>
-            	<tr>
-                	<th class="th-cor">João de Juda</th>
-                    <th class="th-cor">Tabajara FC</th>
-                    <th class="th-piqueno th-cor">2</th>
-                </tr>
+            	<?php 
+        		$tr = $mainVW->listarArtilheiros();
+        		for($i=0;$i<count($tr);$i++){
+					echo $tr[$i];
+				}
+        		?> 
         </table>
         </aside>
         <aside style="float: left; text-align:center">
@@ -88,34 +94,15 @@ th{
             	<tr style="background: #09F; border:#09f; color: #fff; ">
                 	<th><small>Jogador</small></th>
                     <th><small>Time</small></th>
-                    <th class="th-piqueno"><small>G</small></th>
+                    <th class="th-piqueno"><small>F</small></th>
                 </tr>
             </thead>
-            	<tr>
-                	<th class="th-cor">João de Juda</th>
-                    <th class="th-cor">Tabajara FC</th>
-                    <th class="th-piqueno th-cor">2</th>
-                </tr>
-        </table>
-        </aside>
-        <aside style="float: left; text-align:center">
-        <table border=0 style="width: 320px; margin-left: 10px;">
-          
-        	<thead><h2><small>Punições</small></h2>
-            	<tr style="background: #09F; border:#09f; color: #fff; ">
-                	<th><small>Jogador</small></th>
-                    <th><small>Time</small></th>
-                    <th class="th-piqueno"><small>Adv n°</small></th>
-                    <th class="th-piqueno"><small>Adv T</small></th>
-                    <th class="th-piqueno"><small>Ex.T.S.</small></th>
-                    <th class="th-piqueno"><small>Ex.T.E.</small></th>
-                </tr>
-            </thead>
-            	<tr>
-                	<th class="th-cor">Av n°</th>
-                    <th class="th-cor">Tabajara FC</th>
-                    <th class="th-piqueno th-cor">2</th>
-                </tr>
+            	<?php 
+        		$tr = $mainVW->listarFearPlayers();
+        		for($i=0;$i<count($tr);$i++){
+					echo $tr[$i];
+				}
+        		?> 
         </table>
         </aside>
        <div id="clear"></div>
