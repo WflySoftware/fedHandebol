@@ -40,10 +40,10 @@ class Dados{
 	public function __setIdTempo($idTempo){
 		$this->idTempo= $idTempo;
 	}
-	public function __getIdAdvertencia(){
+	public function __getAdvertencia(){
 		return $this->advertencia;
 	}
-	public function __setIdAdvertencia($advertencia){
+	public function __setAdvertencia($advertencia){
 		$this->advertencia= $advertencia;
 	}
 	public function __getPunicao(){
