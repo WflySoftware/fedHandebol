@@ -20,7 +20,14 @@ class TimeJogoDAO{
 		}
 		return $retornaTimeJogo;
 	}
-	
+	public function inserir(TimeJogo $dadosTimeJogo){
+		$sql = "INSERT INTO jogo_time (jogo_id_jogo,time_id_time) VALUES ('{$dadosTimeJogo->__getIdJogo()}','{$dadosTimeJogo->__getIdTime()}')";
+		$this->conexao->banco->Execute($sql);
+	}
+	public function atualizar(TimeJogo $dadosTimeJogo){
+		$sql = "UPDATE jogo_time SET jogo_id_jogo='{$dadosTimeJogo->__getIdJogo()}', time_id_time='{$dadosTimeJogo->__getIdTime()}' ";
+		$this->conexao->banco->Execute($sql);
+	}
 	public function consultarPorIdTime($idTime){
 		$sql = "SELECT * FROM time_jogo WHERE time_id_time= '{$idTime}'";
 		$resultado = $this->conexao->banco->Execute($sql);
@@ -37,5 +44,9 @@ class TimeJogoDAO{
 			$dadosTimeJogo = new TimeJogo();
 			$dadosTimeJogo->__constructOverload($registro->TIME_ID_TIME,$registro->TEMPO_ID_TEMPO);
 			return $dadosTimeJogo;
+		}
+		public function excluir($id){
+			$sql = "DELETE FROM jogo_time WHERE jogo_id_jogo= '{$id}' ";
+			$resultado = $this->conexao->banco->Execute($sql);
 		}
 }
