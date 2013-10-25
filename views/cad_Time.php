@@ -91,7 +91,8 @@ if($action == "edit"){
         	<input type="text" class="input" name="endereco" id="endereco" placeholder="Endereço da sede" value="<?php echo $dados['endereco']?>" required>
         </div>
         <div class="field">
-        	<input type="text" class="input" name="dataFundacao" id="dataFundacao" placeholder="Data da Fundação" value="<?php echo $dados['dataFundacao']?>" required>
+        	<input type="date" class="input" name="dataFundacao" id="dataFundacao" placeholder="Data da Fundação" value="<?php echo $dados['dataFundacao']?>" required>
+            
         </div>
         <div class="field">
         	<input type="text" class="input" name="presidente" id="presidente" placeholder="Nome do Presidente" value="<?php echo $dados['presidente']?>" required>
