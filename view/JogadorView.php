@@ -10,7 +10,7 @@ class JogadorView{
 	}
 	public function salvar(){
 		$formulario = $_POST;
-		$this->jogadorCO->_salvar($formulario['nome'], $formulario['idTime'], $formulario['data_nascimento'],$formulario['cpf'],$formulario['numero']);
+		$this->jogadorCO->_salvar($formulario['idTime'],$formulario['nome'], $formulario['data_nascimento'],$formulario['cpf'],$formulario['numero']);
 		echo "Dados inseridos com sucesso";
 	}
 	public function listarTimesParaSelect(){
