@@ -23,6 +23,7 @@ class DadosController{
           			<td>".$dadosDados->__getPunicao()."</td>
           			<td>".$dadosDados->__getDesqualificacao()."</td>
           			<td>".$dadosDados->__getRelatorio()."</td>
+          			<td>".$dadosDados->__getGol()."</td>		
           			<td>
             			<a href=\"?pag=dados&action=edit&id=".$dadosDados->__getIdDados()."\"><img src=\"./views/images/edit.png\" width=\"16\" height=\"16\" /></a>
             			<a href=\"?pag=dados&action=exclude&id=".$dadosDados->__getIdDados()."\"><img src=\"./views/images/delete.png\" width=\"16\" height=\"16\" /></a>

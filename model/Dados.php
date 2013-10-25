@@ -8,12 +8,13 @@ class Dados{
 	private $punicao;
 	private $desqualificacao;
 	private $relatorio;
+	private $gol;
 
 
 	public function __construct(){
 
 	}
-	public function __constructOverload($idDados,$idJogador,$idTempo,$advertencia,$punicao,$desqualificacao,$relatorio){
+	public function __constructOverload($idDados,$idJogador,$idTempo,$advertencia,$punicao,$desqualificacao,$relatorio,$gol){
 		$this->idDados = $idDados;
 		$this->idJogador = $idJogador;
 		$this->idTempo = $idTempo;
@@ -21,6 +22,7 @@ class Dados{
 		$this->punicao = $punicao;
 		$this->desqualificacao = desqualificacao;
 		$this->relatorio = $relatorio;
+		$this->gol = $gol;
 	}
 	public function __getIdDados(){
 		return $this->idDados;
@@ -63,6 +65,12 @@ class Dados{
 	}
 	public function __setRelatorio($relatorio){
 		$this->relatorio= $relatorio;
+	}
+	public function __getGol(){
+		return $this->gol;
+	}
+	public function __setGol($gol){
+		$this->gol= $gol;
 	}
 }
 	
