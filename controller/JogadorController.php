@@ -57,7 +57,14 @@ public function _consultarPorId($id){
 		return $this->jogadorDAO->consultarPorTime($idTime);
 	}
 	public function _consultarPorNome($nome){
-		return $this->jogadorDAO->consultarPorNome($nome);
+		$dadosJogador = new Jogador();
+		$dadosJogador =  $this->jogadorDAO->consultarPorNome($id);
+		$arrayDados['idTime'] = $dadosJogador->__getIdTime();
+		$arrayDados['data_nascimento'] = $dadosJogador->__getDataNascimento();
+		$arrayDados['cpf'] = $dadosJogador->__getCpf();
+		$arrayDados['numero'] = $dadosJogador->__getNumero();
+		
+		return $arrayDados;
 	}
 	public function _inserir(Jogador $jogador){
 		return $this->jogadorDAO->inserir($jogador);

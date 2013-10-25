@@ -82,7 +82,7 @@ class Tempo{
 	public function __setTempoTecnico($tempoTecnico){
 		$this->tempoTecnico = $tempoTecnico;
 	}
-	public function __getplacarTime1(){
+	public function __getPlacarTime1(){
 		return $this->placarTime1;
 	}
 	public function __setPlacarTime1($placarTime1){
