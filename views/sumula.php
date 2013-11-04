@@ -3,6 +3,8 @@
 	margin: 0 auto;
 	width: 1024px;
 	text-align: center;
+	border-bottom: 1px solid #CCC;
+	padding: 4px;
 }
 .fundo{
 	background: #CCC;
@@ -110,7 +112,7 @@ $jogadorVW = new JogadorView();
 ?>
 <h2 style="margin: 0 auto; width: 1024px; text-align:center;">INICIAR JOGO  No.:</h2>
 <form method="post" style="margin: 0 auto;" action="">
-<table class="medidas" border="0" style="border-bottom: 1px solid #CCC; padding: 4px;">
+<table class="medidas" border="0">
 <tr>
 	<td></td>
     <td><small>Equipe Local</small></td>
@@ -160,16 +162,9 @@ $jogadorVW = new JogadorView();
 </tr>
 <tr>
 	<td class="medida-td2">
-		<select class="input" name="idTime" id="idTime" required>
-        	<?php 
-        		$options = $jogadorVW->listarTimesParaSelect();
-        		for($i=0;$i<count($options);$i++){
-					echo $options[$i];
-				}
-        	?>
-	    </select>
+		<input class="input" type="text" name="cidade" id="cidade" placeholder="Nome da cidade">
 	</td>
-    <td class="medida-td2"><select class="input"><option>local1</option><option>local2</option><option>local2</option></select></td>
+    <td class="medida-td2"><input class="input" type="text" name="local" id="local" placeholder="Nome do local"></td>
     <td class="medida-td1"><input class="input2" type="date" name="data" id="data"></td>
     <td class="medida-td1"><input class="input2" type="time" name="hora" id="hora"></td>
     <td></td>
