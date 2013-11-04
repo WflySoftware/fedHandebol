@@ -89,6 +89,12 @@ background-color: #009835;
 color: #fff;
 background-color: #CC0000;
 }
+.but-cron {
+color: #fff;
+background-color: #000;
+width: 190px;
+height: 50px;
+}
 .align-but{
 	float: right;
 }
@@ -109,6 +115,7 @@ background-color: #CC0000;
 <?php 
 require_once __APP_PATH.'/view/JogadorView.php';
 include_once ('/cronometro/cronometro.php');
+include_once ('/contadorGols/contador.php');
 $jogadorVW = new JogadorView();	
 ?>
 
