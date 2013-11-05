@@ -9,6 +9,10 @@
 .fundo{
 	background: #CCC;
 }
+aside{
+ width: 300px;
+ float: left;
+}
 .medida-td1{
 	width: 100px;
 	text-align: center;
@@ -18,6 +22,9 @@
 	text-align: center;
 }
 td{
+	width: 30px;
+}
+th{
 	width: 30px;
 }
 .td{
@@ -135,7 +142,7 @@ $jogadorVW = new JogadorView();
 <tr>
 	<td>A</td>
 	<td>
-		<select class="input" name="idTime" id="idTime" required>
+		<select class="input" name="idTimeA" id="idTimeA" required>
 	        	<?php 
 	        		$options = $jogadorVW->listarTimesParaSelect();
 	        		for($i=0;$i<count($options);$i++){
@@ -147,7 +154,7 @@ $jogadorVW = new JogadorView();
     <td><small>Versos</small></td>
 	<td>B</td>
    <td>
-		<select class="input" name="idTime" id="idTime" required>
+		<select class="input" name="idTimeB" id="idTimeB" required>
 	        	<?php 
 	        		$options = $jogadorVW->listarTimesParaSelect();
 	        		for($i=0;$i<count($options);$i++){
@@ -170,7 +177,8 @@ $jogadorVW = new JogadorView();
 	<td class="medida-td2"><small>Hora</small></td>
     <td></td>
     <td class="medida-td2"><small>Duração</small></td>
-</tr>
+
+    </tr>
 <tr>
 	<td class="medida-td2">
 		<input class="input" type="text" name="cidade" id="cidade" placeholder="Nome da cidade">
@@ -181,6 +189,7 @@ $jogadorVW = new JogadorView();
     <td></td>
     <td class="medida-td1"><input class="input2" type="time" name="duracao" id="duracao"></td>
 </tr>
+</form>
 </table>
 <div id="but">
 <input type="submit" name"iniciar-jogo" class="but but-error align-but" value="Limpar">
@@ -277,6 +286,7 @@ $jogadorVW = new JogadorView();
     <td></td>
     </tr>
 </table>
+
 <table class="medidas" boder="0" style=" border-bottom: 1px solid #CCC; padding: 4px; margin-bottom: 10px;">
        <thead>
         <tr>
@@ -308,47 +318,55 @@ $jogadorVW = new JogadorView();
       	 </tr>	
        </tfoot>
 </table>
+
 <table class="medidas" boder=0   style=" border-bottom: 1px solid #CCC; padding: 4px; margin-bottom: 10px;">
-	<thead>
+	<aside>
     	<tr class="tr">
-        
-        	<th class="tr"><small>N°</small></th>
+    		<th class="tr"><small>Nº</small></th>
             <th class="tr medida-td2"><small>Equipe <b>- A -</b></small></th>
-            <th class="tr"><small>G</small></th.
-            <th class="tr"><small>A</small></th>
-            <th class="tr"><small>2'</small></th>
-            <th class="tr"><small>D</small></th>
-            <th class="tr"><small>D+R</small></th>
-            <th></th>
-            
-            <th class="tr"><small>N°</small></th>
-            <th class="tr medida-td2"><small>Equipe <b>- B -</b></small></th>
             <th class="tr"><small>G</small></th>
             <th class="tr"><small>A</small></th>
             <th class="tr"><small>2'</small></th>
             <th class="tr"><small>D</small></th>
-            <th class="tr"><small>D+R</small></th>
-		
+            <th class="tr"><small>D+R</small></th>            
         </tr>
-	</thead>
-    <tfoot>
-    	<tr>
-        	<td class="tr">1</td>
-			<td class="tr">2</td>
-            <td class="tr">3</td>
-            <td class="tr">4</td>
-            <td class="tr">5</td>
-            <td class="tr">6</td>
-            <td></td>
-            <td class="tr">7</td>
-            <td class="tr">8</td>
-            <td class="tr">9</td>
-            <td class="tr">10</td>
-            <td class="tr">11</td>
-            <td class="tr">12</td>
-            <td class="tr">13</td>
-		</tr>
-	</tfoot>
+     <?php 
+    		
+				if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+						$timeA = $_POST['idTimeA'];
+						$tr = $jogadorVW->listarJogadoresParaSumula($timeA);
+						for($i=0;$i<count($tr);$i++){
+							echo $tr[$i];
+					}
+        		}
+        ?> 
+     </aside>
+     <aside style="float: right; width: 300px;" >
+		 <tr>
+			 <th class="tr"><small>N°</small></th>
+			            <th class="tr medida-td2"><small>Equipe <b>- B -</b></small></th>
+			            <th class="tr"><small>G</small></th>
+			            <th class="tr"><small>A</small></th>
+			            <th class="tr"><small>2'</small></th>
+			            <th class="tr"><small>D</small></th>
+			            <th class="tr"><small>D+R</small></th>
+		</tr>		
+<?php 
+				if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+						$timeB = $_POST['idTimeB'];
+						$tr = $jogadorVW->listarJogadoresParaSumula($timeB);
+						for($i=0;$i<count($tr);$i++){
+							echo $tr[$i];
+					}
+        		}
+        ?> 
+    </aside>
+    
+    	
+	
+	
+    	
+	
 </table>
 <table class="medidas" boder=0 >
 	<thead>
@@ -420,4 +438,4 @@ $jogadorVW = new JogadorView();
 		</tr>
     </tfoot>
 </table>
-</form>
+

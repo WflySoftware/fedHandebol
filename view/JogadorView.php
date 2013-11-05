@@ -20,6 +20,9 @@ class JogadorView{
 	public function listarJogadoresParaTabela(){
 		return $this->jogadorCO->_listarJogadoresParaTabela();
 	}
+	public function listarJogadoresParaSumula($time){
+		return $this->jogadorCO->_listarJogadoresParaSumula($time);
+	}
 	public function atualizar($id){
 		$formulario = $_POST;
 		return $this->jogadorCO->_atualizar($id,$formulario['idTime'], $formulario['nome'], $formulario['data_nascimento'],$formulario['cpf'],$formulario['numero']);

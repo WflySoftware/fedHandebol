@@ -39,6 +39,32 @@ class JogadorController{
 		
 		return $arrayTr;
 	}
+	public function _listarJogadoresParaSumula($time){;
+
+		$dadosJogador = new Jogador();
+		$arrayDadosJogador = $this->jogadorDAO->listarTodos();
+		for($i=0;$i<count($arrayDadosJogador); $i++){
+			$dadosJogador = $arrayDadosJogador[$i];
+			if($dadosJogador->__getIdTime() == $time){
+				$jogadorTime[] = $dadosJogador;
+			}
+		}
+		for($i=0;$i<count($jogadorTime); $i++){
+			$dadosJogadorTime = $jogadorTime[$i];
+			$arrayTr[] = "
+			<tr>
+	          	<th class=\"tr\">".$dadosJogadorTime->__getNumero()."</th>
+				<th class=\"tr\">".$dadosJogadorTime->__getNome()."</th>
+	            <th class=\"tr\">3</th>
+	            <th class=\"tr\">4</th>
+	            <th class=\"tr\">5</th>
+	            <th class=\"tr\">6</th>
+				<th class=\"tr\">7</th>					
+	           
+			</tr>";
+		}
+		return $arrayTr;	
+	}
 	public function _listarTodos(){
 		return $this->jogadorDAO->listarTodos();
 	}
