@@ -54,7 +54,11 @@ class JogadorController{
 			$arrayTr[] = "
 							
 				<tr>
-	          	<th class=\"tr\">".$dadosJogadorTime->__getNumero()."</th>
+	          	<th>
+				<input id=\"acrescenta\" class=\"but but-gol \" type=\"button\" style=\"float:left;\" value=\"GOL\" onclick=\"contGol = acrescentarGol(contGol);\">
+				<input id=\"decrementa\" class=\"but but-retirarGol align-but\" type=\"button\" value=\"retirar\" onclick=\"contGol = decrementarGol(contGol);\">
+				</th>
+				<th class=\"tr\">".$dadosJogadorTime->__getNumero()."</th>
 				<th class=\"tr\">".$dadosJogadorTime->__getNome()."</th>
 	            <th class=\"tr\">3</th>
 	            <th class=\"tr\">4</th>

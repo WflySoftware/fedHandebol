@@ -102,6 +102,20 @@ background-color: #000;
 width: 120px;
 height: 50px;
 }
+.but-gol {
+color: #fff;
+background-color: #009835;
+width: 40px;
+height: 20px;
+padding: 1px 1px;
+}
+.but-retirarGol {
+color: #fff;
+background-color: #CC0000;
+width: 40px;
+height: 20px;
+padding: 1px 1px;
+}
 .align-but{
 	float: right;
 }
@@ -330,6 +344,8 @@ $jogadorVW = new JogadorView();
 <table class="medidas" boder=0   style=" border-bottom: 1px solid #CCC; padding: 4px; margin-bottom: 10px;">
 	<aside>
     	<tr class="tr">
+    		<th></th>
+    		
     		<th class="tr"><small>Nº</small></th>
             <th class="tr medida-td2"><small>Equipe <b>- A -</b></small></th>
             <th class="tr"><small>G</small></th>
@@ -348,24 +364,29 @@ $jogadorVW = new JogadorView();
 					}
         		}
         ?> 
+     
      </aside>
      <aside style="float: right; width: 300px;" >
 		 <tr>
-			 <th class="tr"><small>N°</small></th>
+		  				<th></th>
+			         
+			 			<th class="tr"><small>N°</small></th>
+			          
 			            <th class="tr medida-td2"><small>Equipe <b>- B -</b></small></th>
 			            <th class="tr"><small>G</small></th>
 			            <th class="tr"><small>A</small></th>
 			            <th class="tr"><small>2'</small></th>
 			            <th class="tr"><small>D</small></th>
 			            <th class="tr"><small>D+R</small></th>
-		</tr>		
+		</tr>
+		
 		<?php 
 				if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 						$timeB = $_POST['idTimeB'];
 						$tr = $jogadorVW->listarJogadoresParaSumula($timeB);
 						for($i=0;$i<count($tr);$i++){
 							echo $tr[$i];
-					}
+												}
         		}
         ?> 
     </aside>
