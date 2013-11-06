@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="./views/cronometro/cronometro.css" type="text/css" media="screen" />
 <script src="./views/cronometro/cronometro.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"> </script>
+
 </head>
 <body>
 <p><b>CRONOMETRO:</b></p>

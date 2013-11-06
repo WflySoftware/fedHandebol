@@ -99,7 +99,7 @@ background-color: #CC0000;
 .but-cron {
 color: #fff;
 background-color: #000;
-width: 190px;
+width: 120px;
 height: 50px;
 }
 .align-but{
@@ -125,7 +125,7 @@ include_once ('/cronometro/cronometro.php');
 include_once ('/contadorGols/contador.php');
 $jogadorVW = new JogadorView();	
 ?>
-
+<script src="./views/cronometro/cronometro.js"></script>
 
 <h2 style="margin: 0 auto; width: 1024px; text-align:center;">INICIAR JOGO  No.:</h2>
 
@@ -199,10 +199,11 @@ $jogadorVW = new JogadorView();
 
 <table class="medidas" border="0" style=" border-bottom: 1px solid #CCC; padding: 4px; margin-bottom: 10px;">
 	<tr>
-    	
-        <td><small>A</small></td>
-       	<td></td>
-        <td><small>B</small></td>
+    	<div>
+	        <td><small>A</small></td>
+	       	<td></td>
+	        <td><small>B</small></td>
+        </div>
         <td></td>
         <td><small>A</small></td>
         <td></td>
@@ -301,15 +302,15 @@ $jogadorVW = new JogadorView();
        </thead>
        <tfoot>
     	<tr>
-        	
+        	<script src="./views/cronometro/cronometro.js"></script>
             <th><input type="text" class="inputCaixa" name="7MetrosA" id="7MetrosA" placeholder="Nº" style="text-align: center;"  required></th>
-            <th class="fundo td" id="c1" hearders="c">I</th>
-            <th class="fundo td" id="c2" hearders="c">II</th>
-            <th class="fundo td" id="c3" hearders="c">III</th>
+            <th><input id="volta"class="but but-cron" type="button" value="I" onclick="volta();"></th>
+            <th><input id="volta"class="but but-cron" type="button" value="II" onclick="volta();"></th>
+            <th><input id="volta"class="but but-cron" type="button" value="III" onclick="volta();"></th>
             <td></td>
-            <th class="fundo td" id="d1" hearders="d">I</th>
-            <th class="fundo td" id="d2" hearders="d">II</th>
-            <th class="fundo td" id="d3" hearders="d">III</th>
+            <th><input id="volta"class="but but-cron" type="button" value="I" onclick="volta();"></th>
+            <th><input id="volta"class="but but-cron" type="button" value="II" onclick="volta();"></th>
+            <th><input id="volta"class="but but-cron" type="button" value="III" onclick="volta();"></th>
             
              <th><input type="text" class="inputCaixa" name="7MetrosB" id="7MetrosB" placeholder="Nº" style="text-align: center;"  required></th>
          </tr>
@@ -351,7 +352,7 @@ $jogadorVW = new JogadorView();
 			            <th class="tr"><small>D</small></th>
 			            <th class="tr"><small>D+R</small></th>
 		</tr>		
-<?php 
+		<?php 
 				if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 						$timeB = $_POST['idTimeB'];
 						$tr = $jogadorVW->listarJogadoresParaSumula($timeB);
@@ -361,12 +362,6 @@ $jogadorVW = new JogadorView();
         		}
         ?> 
     </aside>
-    
-    	
-	
-	
-    	
-	
 </table>
 <table class="medidas" boder=0 >
 	<thead>

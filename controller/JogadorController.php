@@ -52,7 +52,8 @@ class JogadorController{
 		for($i=0;$i<count($jogadorTime); $i++){
 			$dadosJogadorTime = $jogadorTime[$i];
 			$arrayTr[] = "
-			<tr>
+							
+				<tr>
 	          	<th class=\"tr\">".$dadosJogadorTime->__getNumero()."</th>
 				<th class=\"tr\">".$dadosJogadorTime->__getNome()."</th>
 	            <th class=\"tr\">3</th>
