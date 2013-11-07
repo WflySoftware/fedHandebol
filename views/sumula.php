@@ -212,13 +212,14 @@ $jogadorVW = new JogadorView();
 </div>
 
 <table class="medidas" border="0" style=" border-bottom: 1px solid #CCC; padding: 4px; margin-bottom: 10px;">
+	 <script src="./views/contadorGolsTimes.js"></script>
 	<tr>
     	<div>
-	        <td><small>A</small></td>
-	       	<td></td>
+	        <td><small>A  </small></td>
+	       	<td id="golsTimeA"></td>
 	        <td><small>B</small></td>
         </div>
-        <td></td>
+        <td id="golsTimeB"></td>
         <td><small>A</small></td>
         <td></td>
     	<td><small>B</small></td>
@@ -370,6 +371,7 @@ $jogadorVW = new JogadorView();
      <aside style="float: right; width: 300px;" >
 		 <tr>
 		  				<th></th>
+		  				<script>timeGolsTimeA = 0;timeGolsTimeB = 0;</script>
 			         
 			 			<th class="tr"><small>N°</small></th>
 			          
@@ -392,3 +394,4 @@ $jogadorVW = new JogadorView();
         ?> 
     </aside>
 </table>
+<input type="submit" value="PROXIMO TEMPO" class="but but-success">
