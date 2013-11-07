@@ -15,6 +15,7 @@
 		<header>
     	<div id="medida">
             <nav>
+            <img src="./views/images/imagemFED.jpg" width="100" height="100" style="padding: 4px 10px;" >
         		<ul>
                 	<li class="borda borda-direita"><a href="">Cadastros</a>
                 		<ul> 
@@ -41,6 +42,7 @@
                 	</li>
                 	<li class="borda"><a href="./index.php">Painel Principal</a></li>
 	                    </li>
+	                    
             	</ul>
         	</nav>
 		</div>

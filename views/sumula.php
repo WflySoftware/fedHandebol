@@ -245,7 +245,7 @@ $jogadorVW = new JogadorView();
         <td>
         	<input type="text" class="inputCaixa" name="placarB" id="placarB" placeholder="Nº" style="text-align: center;"  required>
         </td>
-       <td><img src="./views/images/star.png" width="47" height="47" ></td>
+       <td><img src="./views/images/imagemFED.jpg" width="47" height="47" ></td>
         <td>
         	<input type="text" class="inputCaixa" name="placarA" id="placarA" placeholder="Nº" style="text-align: center;"  required>
         </td>
@@ -253,7 +253,7 @@ $jogadorVW = new JogadorView();
         <td>
         	<input type="text" class="inputCaixa" name="placarB" id="placarB" placeholder="Nº" style="text-align: center;"  required>
         </td>
-        <td><img src="./views/images/star.png" width="47" height="47" ></td>
+        <td><img src="./views/images/imagemFED.jpg" width="47" height="47" ></td>
         <td>
         	<input type="text" class="inputCaixa" name="placarA" id="placarA" placeholder="Nº" style="text-align: center;"  required>
         </td>
@@ -261,7 +261,7 @@ $jogadorVW = new JogadorView();
         <td>
         	<input type="text" class="inputCaixa" name="placarB" id="placarB" placeholder="Nº" style="text-align: center;"  required>
         </td>
-       <td><img src="./views/images/star.png" width="47" height="47" ></td>
+       <td><img src="./views/images/imagemFED.jpg" width="47" height="47" ></td>
     	<td>
         	<input type="text" class="inputCaixa" name="placarA" id="placarA" placeholder="Nº" style="text-align: center;"  required>
         </td>
@@ -269,7 +269,7 @@ $jogadorVW = new JogadorView();
         <td>
         	<input type="text" class="inputCaixa" name="placarB" id="placarB" placeholder="Nº" style="text-align: center;"  required>
         </td>
-        <td><img src="./views/images/star.png" width="47" height="47" ></td>
+        <td><img src="./views/images/imagemFED.jpg" width="47" height="47" ></td>
         <td>
         	<input type="text" class="inputCaixa" name="placarA" id="placarA" placeholder="Nº" style="text-align: center;"  required>
         </td>
