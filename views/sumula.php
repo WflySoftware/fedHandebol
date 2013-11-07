@@ -348,11 +348,12 @@ $jogadorVW = new JogadorView();
     		
     		<th class="tr"><small>Nº</small></th>
             <th class="tr medida-td2"><small>Equipe <b>- A -</b></small></th>
-            <th class="tr"><small>G</small></th>
-            <th class="tr"><small>A</small></th>
-            <th class="tr"><small>2'</small></th>
-            <th class="tr"><small>D</small></th>
-            <th class="tr"><small>D+R</small></th>            
+            <th class="tr" colspan="2"><small>G</small></th>
+            <th class="tr" colspan="2"><small>A</small></th>
+            <th class="tr" colspan="2"><small>2'</small></th>
+            <th class="tr" colspan="2"><small>D</small></th>
+            <th class="tr" colspan="2"><small>D+R</small></th>    
+                  
         </tr>
      <?php 
     		
@@ -373,11 +374,11 @@ $jogadorVW = new JogadorView();
 			 			<th class="tr"><small>N°</small></th>
 			          
 			            <th class="tr medida-td2"><small>Equipe <b>- B -</b></small></th>
-			            <th class="tr"><small>G</small></th>
-			            <th class="tr"><small>A</small></th>
-			            <th class="tr"><small>2'</small></th>
-			            <th class="tr"><small>D</small></th>
-			            <th class="tr"><small>D+R</small></th>
+			            <th class="tr" colspan="2"><small>G</small></th>
+			            <th class="tr" colspan="2"><small>A</small></th>
+			            <th class="tr" colspan="2"><small>2'</small></th>
+			            <th class="tr" colspan="2"><small>D</small></th>
+			            <th class="tr" colspan="2"><small>D+R</small></th>
 		</tr>
 		
 		<?php 

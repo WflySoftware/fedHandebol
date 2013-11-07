@@ -40,7 +40,7 @@ class JogadorController{
 		return $arrayTr;
 	}
 	public function _listarJogadoresParaSumula($time){;
-
+		$idJogador[0] = -1;
 		$dadosJogador = new Jogador();
 		$arrayDadosJogador = $this->jogadorDAO->listarTodos();
 		for($i=0;$i<count($arrayDadosJogador); $i++){
@@ -49,22 +49,44 @@ class JogadorController{
 				$jogadorTime[] = $dadosJogador;
 			}
 		}
+		
 		for($i=0;$i<count($jogadorTime); $i++){
 			$dadosJogadorTime = $jogadorTime[$i];
 			$arrayTr[] = "
 							
 				<tr>
 	          	<th>
-				<input id=\"acrescenta\" class=\"but but-gol \" type=\"button\" style=\"float:left;\" value=\"GOL\" onclick=\"contGol = acrescentarGol(contGol);\">
-				<input id=\"decrementa\" class=\"but but-retirarGol align-but\" type=\"button\" value=\"retirar\" onclick=\"contGol = decrementarGol(contGol);\">
 				</th>
 				<th class=\"tr\">".$dadosJogadorTime->__getNumero()."</th>
 				<th class=\"tr\">".$dadosJogadorTime->__getNome()."</th>
-	            <th class=\"tr\">3</th>
-	            <th class=\"tr\">4</th>
-	            <th class=\"tr\">5</th>
-	            <th class=\"tr\">6</th>
-				<th class=\"tr\">7</th>					
+	            <th class=\"tr\" id =\"golJogador$i\">0</th>
+	            <th>
+	             	<script>var contGol$i = 0</script>
+		            <input id=\"acrescenta\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contGol$i++;document.getElementById('golJogador$i').innerHTML=contGol$i;\">
+					<input id=\"decrementa\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contGol$i--;document.getElementById('golJogador$i').innerHTML=contGol$i;\"></th></th>
+		            <th class=\"tr\" id=\"jogadorA$i\">0
+	            </th>
+	            <th>
+		            <script>var contA$i = 0</script>
+					<input id=\"acrescenta\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contA$i++;document.getElementById('jogadorA$i').innerHTML=contA$i;\">
+					<input id=\"decrementa\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contA$i--;document.getElementById('jogadorA$i').innerHTML=contA$i;\"></th>
+	            	<th class=\"tr\" id=\"jogadorDoisMinutos$i\">0
+	            </th>
+		            <th><script>var contDoisMinutos$i = 0</script>
+					<input id=\"acrescenta\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contDoisMinutos$i++;document.getElementById('jogadorDoisMinutos$i').innerHTML=contDoisMinutos$i;\">
+					<input id=\"decrementa\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contDoisMinutos$i--;document.getElementById('jogadorDoisMinutos$i').innerHTML=contDoisMinutos$i;\"></th>
+		            <th class=\"tr\" id=\"jogadorD$i\">0
+	            </th>
+	            <th>
+		            <script>var contD$i = 0</script>
+					<input id=\"acrescenta\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contD$i++;document.getElementById('jogadorD$i').innerHTML=contD$i;\">
+					<input id=\"decrementa\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contD$i--;document.getElementById('jogadorD$i').innerHTML=contD$i;\"></th>
+					<th class=\"tr\" id=\"jogadorDR$i\">0
+				</th>
+				<th><script>var contDR$i = 0</script>
+				<input id=\"acrescenta\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contDR$i++;document.getElementById('jogadorDR$i').innerHTML=contDR$i;\">
+				<input id=\"decrementa\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contDR$i--;document.getElementById('jogadorDR$i').innerHTML=contDR$i;\">
+				</th>				
 	           
 			</tr>";
 		}
