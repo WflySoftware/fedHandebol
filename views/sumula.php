@@ -136,7 +136,7 @@ padding: 1px 1px;
 <?php 
 require_once __APP_PATH.'/view/JogadorView.php';
 include_once ('/cronometro/cronometro.php');
-include_once ('/contadorGols/contador.php');
+
 $jogadorVW = new JogadorView();	
 ?>
 <script src="./views/cronometro/cronometro.js"></script>
@@ -359,7 +359,7 @@ $jogadorVW = new JogadorView();
     		
 				if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 						$timeA = $_POST['idTimeA'];
-						$tr = $jogadorVW->listarJogadoresParaSumula($timeA);
+						$tr = $jogadorVW->listarJogadoresParaSumulaTimeA($timeA);
 						for($i=0;$i<count($tr);$i++){
 							echo $tr[$i];
 					}
@@ -384,7 +384,7 @@ $jogadorVW = new JogadorView();
 		<?php 
 				if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 						$timeB = $_POST['idTimeB'];
-						$tr = $jogadorVW->listarJogadoresParaSumula($timeB);
+						$tr = $jogadorVW->listarJogadoresParaSumulaTimeB($timeB);
 						for($i=0;$i<count($tr);$i++){
 							echo $tr[$i];
 												}

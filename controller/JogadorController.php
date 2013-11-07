@@ -39,7 +39,7 @@ class JogadorController{
 		
 		return $arrayTr;
 	}
-	public function _listarJogadoresParaSumula($time){;
+	public function _listarJogadoresParaSumulaTimeA($time){;
 		$idJogador[0] = -1;
 		$dadosJogador = new Jogador();
 		$arrayDadosJogador = $this->jogadorDAO->listarTodos();
@@ -59,38 +59,93 @@ class JogadorController{
 				</th>
 				<th class=\"tr\">".$dadosJogadorTime->__getNumero()."</th>
 				<th class=\"tr\">".$dadosJogadorTime->__getNome()."</th>
-	            <th class=\"tr\" id =\"golJogador$i\">0</th>
+	            <th class=\"tr\" id =\"golJogadorTimeA$i\">0</th>
 	            <th>
-	             	<script>var contGol$i = 0</script>
-		            <input id=\"acrescenta\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contGol$i++;document.getElementById('golJogador$i').innerHTML=contGol$i;\">
-					<input id=\"decrementa\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contGol$i--;document.getElementById('golJogador$i').innerHTML=contGol$i;\"></th></th>
-		            <th class=\"tr\" id=\"jogadorA$i\">0
+	             	<script>var contGolTimeA$i = 0</script>
+		            <input id=\"acrescenta\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contGolTimeA$i++;document.getElementById('golJogadorTimeA$i').innerHTML=contGolTimeA$i;\">
+					<input id=\"decrementa\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contGolTimeA$i--;document.getElementById('golJogadorTimeA$i').innerHTML=contGolTimeA$i;\"></th></th>
+		            <th class=\"tr\" id=\"jogadorATimeA$i\">0
 	            </th>
 	            <th>
-		            <script>var contA$i = 0</script>
-					<input id=\"acrescenta\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contA$i++;document.getElementById('jogadorA$i').innerHTML=contA$i;\">
-					<input id=\"decrementa\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contA$i--;document.getElementById('jogadorA$i').innerHTML=contA$i;\"></th>
-	            	<th class=\"tr\" id=\"jogadorDoisMinutos$i\">0
+		            <script>var contATimeA$i = 0</script>
+					<input id=\"acrescenta\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contATimeA$i++;document.getElementById('jogadorATimeA$i').innerHTML=contATimeA$i;\">
+					<input id=\"decrementa\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contATimeA$i--;document.getElementById('jogadorATimeA$i').innerHTML=contATimeA$i;\"></th>
+	            	<th class=\"tr\" id=\"jogadorDoisMinutosTimeA$i\">0
 	            </th>
-		            <th><script>var contDoisMinutos$i = 0</script>
-					<input id=\"acrescenta\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contDoisMinutos$i++;document.getElementById('jogadorDoisMinutos$i').innerHTML=contDoisMinutos$i;\">
-					<input id=\"decrementa\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contDoisMinutos$i--;document.getElementById('jogadorDoisMinutos$i').innerHTML=contDoisMinutos$i;\"></th>
-		            <th class=\"tr\" id=\"jogadorD$i\">0
+		            <th><script>var contDoisMinutosTimeA$i = 0</script>
+					<input id=\"acrescenta\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contDoisMinutosTimeA$i++;document.getElementById('jogadorDoisMinutosTimeA$i').innerHTML=contDoisMinutosTimeA$i;\">
+					<input id=\"decrementa\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contDoisMinutosTimeA$i--;document.getElementById('jogadorDoisMinutosTimeA$i').innerHTML=contDoisMinutosTimeA$i;\"></th>
+		            <th class=\"tr\" id=\"jogadorDTimeA$i\">0
 	            </th>
 	            <th>
-		            <script>var contD$i = 0</script>
-					<input id=\"acrescenta\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contD$i++;document.getElementById('jogadorD$i').innerHTML=contD$i;\">
-					<input id=\"decrementa\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contD$i--;document.getElementById('jogadorD$i').innerHTML=contD$i;\"></th>
-					<th class=\"tr\" id=\"jogadorDR$i\">0
+		            <script>var contDTimeA$i = 0</script>
+					<input id=\"acrescenta\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contDTimeA$i++;document.getElementById('jogadorDTimeA$i').innerHTML=contDTimeA$i;\">
+					<input id=\"decrementa\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contDTimeA$i--;document.getElementById('jogadorDTimeA$i').innerHTML=contDTimeA$i;\"></th>
+					<th class=\"tr\" id=\"jogadorDRTimeA$i\">0
 				</th>
-				<th><script>var contDR$i = 0</script>
-				<input id=\"acrescenta\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contDR$i++;document.getElementById('jogadorDR$i').innerHTML=contDR$i;\">
-				<input id=\"decrementa\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contDR$i--;document.getElementById('jogadorDR$i').innerHTML=contDR$i;\">
+				<th><script>var contDRTimeA$i = 0</script>
+				<input id=\"acrescenta\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contDRTimeA$i++;document.getElementById('jogadorDRTimeA$i').innerHTML=contDRTimeA$i;\">
+				<input id=\"decrementa\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contDRTimeA$i--;document.getElementById('jogadorDRTimeA$i').innerHTML=contDRTimeA$i;\">
 				</th>				
 	           
 			</tr>";
 		}
+		
 		return $arrayTr;	
+	}
+	public function _listarJogadoresParaSumulaTimeB($time){;
+	$idJogador[0] = -1;
+	$dadosJogador = new Jogador();
+	$arrayDadosJogador = $this->jogadorDAO->listarTodos();
+	for($i=0;$i<count($arrayDadosJogador); $i++){
+		$dadosJogador = $arrayDadosJogador[$i];
+		if($dadosJogador->__getIdTime() == $time){
+			$jogadorTime[] = $dadosJogador;
+		}
+	}
+	
+	for($i=0;$i<count($jogadorTime); $i++){
+		$dadosJogadorTime = $jogadorTime[$i];
+		$arrayTr[] = "
+				
+				<tr>
+	          	<th>
+				</th>
+				<th class=\"tr\">".$dadosJogadorTime->__getNumero()."</th>
+				<th class=\"tr\">".$dadosJogadorTime->__getNome()."</th>
+					<th class=\"tr\" id =\"golJogadorTimeB$i\">0</th>
+					<th>
+					<script>var contGolTimeB$i = 0</script>
+					<input id=\"acrescenta\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contGolTimeB$i++;document.getElementById('golJogadorTimeB$i').innerHTML=contGolTimeB$i;\">
+					<input id=\"decrementa\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contGolTimeB$i--;document.getElementById('golJogadorTimeB$i').innerHTML=contGolTimeB$i;\"></th></th>
+					<th class=\"tr\" id=\"jogadorATimeB$i\">0
+					</th>
+					<th>
+					<script>var contATimeB$i = 0</script>
+					<input id=\"acrescenta\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contATimeB$i++;document.getElementById('jogadorATimeB$i').innerHTML=contATimeB$i;\">
+					<input id=\"decrementa\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contATimeB$i--;document.getElementById('jogadorATimeB$i').innerHTML=contATimeB$i;\"></th>
+					<th class=\"tr\" id=\"jogadorDoisMinutosTimeB$i\">0
+					</th>
+					<th><script>var contDoisMinutosTimeB$i = 0</script>
+					<input id=\"acrescenta\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contDoisMinutosTimeB$i++;document.getElementById('jogadorDoisMinutosTimeB$i').innerHTML=contDoisMinutosTimeB$i;\">
+					<input id=\"decrementa\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contDoisMinutosTimeB$i--;document.getElementById('jogadorDoisMinutosTimeB$i').innerHTML=contDoisMinutosTimeB$i;\"></th>
+					<th class=\"tr\" id=\"jogadorDTimeB$i\">0
+					</th>
+					<th>
+					<script>var contDTimeB$i = 0</script>
+					<input id=\"acrescenta\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contDTimeB$i++;document.getElementById('jogadorDTimeB$i').innerHTML=contDTimeB$i;\">
+					<input id=\"decrementa\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contDTimeB$i--;document.getElementById('jogadorDTimeB$i').innerHTML=contDTimeB$i;\"></th>
+					<th class=\"tr\" id=\"jogadorDRTimeB$i\">0
+					</th>
+					<th><script>var contDRTimeB$i = 0</script>
+					<input id=\"acrescenta\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contDRTimeB$i++;document.getElementById('jogadorDRTimeB$i').innerHTML=contDRTimeB$i;\">
+					<input id=\"decrementa\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contDRTimeB$i--;document.getElementById('jogadorDRTimeB$i').innerHTML=contDRTimeB$i;\">
+					</th>
+	
+					</tr>";
+	}
+	
+	return $arrayTr;
 	}
 	public function _listarTodos(){
 		return $this->jogadorDAO->listarTodos();
