@@ -62,7 +62,7 @@ class JogadorController{
 	            <th class=\"tr\" id =\"golJogadorTimeA$i\">0</th>
 	            <th>
 	             	<script>var contGolTimeA$i = 0</script>
-		            <input id=\"acrescenta\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contGolTimeA$i++;document.getElementById('golJogadorTimeA$i').innerHTML=contGolTimeA$i;timeGolsTimeA++;inserirGolTimeA();\">
+		            <input id=\"acrescenta\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contGolTimeA$i++;document.getElementById('golJogadorTimeA$i').innerHTML=contGolTimeA$i;timeGolsTimeA++;inserirGolTimeA(tempoAtual);\">
 					<input id=\"decrementa\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contGolTimeA$i--;document.getElementById('golJogadorTimeA$i').innerHTML=contGolTimeA$i;timeGolsTimeA++;\"></th></th>
 		            <th class=\"tr\" id=\"jogadorATimeA$i\">0
 	            </th>
@@ -115,7 +115,7 @@ class JogadorController{
 					<th class=\"tr\" id =\"golJogadorTimeB$i\">0</th>
 					<th>
 					<script>var contGolTimeB$i = 0</script>
-					<input id=\"acrescenta\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contGolTimeB$i++;document.getElementById('golJogadorTimeB$i').innerHTML=contGolTimeB$i;timeGolsTimeB++;inserirGolTimeB();\">
+					<input id=\"acrescenta\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contGolTimeB$i++;document.getElementById('golJogadorTimeB$i').innerHTML=contGolTimeB$i;timeGolsTimeB++;inserirGolTimeB(tempoAtual);\">
 					<input id=\"decrementa\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contGolTimeB$i--;document.getElementById('golJogadorTimeB$i').innerHTML=contGolTimeB$i;timeGolsTimeB++;\"></th></th>
 					<th class=\"tr\" id=\"jogadorATimeB$i\">0
 					</th>

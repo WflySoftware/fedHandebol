@@ -240,43 +240,43 @@ $jogadorVW = new JogadorView();
     <tr>
     	
         <td>
-        	<input type="text" class="inputCaixa" name="placarA" id="placarA" placeholder="Nº" style="text-align: center;"  required>
+        	<input type="text" class="inputCaixa" name="placarA" id="placarATempo1" placeholder="Nº" style="text-align: center;"  required>
         </td>
         <td>X</td>
         <td>
-        	<input type="text" class="inputCaixa" name="placarB" id="placarB" placeholder="Nº" style="text-align: center;"  required>
+        	<input type="text" class="inputCaixa" name="placarB" id="placarBTempo1" placeholder="Nº" style="text-align: center;"  required>
         </td>
        <td><img src="./views/images/imagemFED.jpg" width="47" height="47" ></td>
         <td>
-        	<input type="text" class="inputCaixa" name="placarA" id="placarA" placeholder="Nº" style="text-align: center;"  required>
+        	<input type="text" class="inputCaixa" name="placarA" id="placarATempo2" placeholder="Nº" style="text-align: center;"  required>
         </td>
         <td>X</td>
         <td>
-        	<input type="text" class="inputCaixa" name="placarB" id="placarB" placeholder="Nº" style="text-align: center;"  required>
+        	<input type="text" class="inputCaixa" name="placarB" id="placarBTempo2" placeholder="Nº" style="text-align: center;"  required>
         </td>
         <td><img src="./views/images/imagemFED.jpg" width="47" height="47" ></td>
         <td>
-        	<input type="text" class="inputCaixa" name="placarA" id="placarA" placeholder="Nº" style="text-align: center;"  required>
+        	<input type="text" class="inputCaixa" name="placarA" id="placarATempo3" placeholder="Nº" style="text-align: center;"  required>
         </td>
         <td>X</td>
         <td>
-        	<input type="text" class="inputCaixa" name="placarB" id="placarB" placeholder="Nº" style="text-align: center;"  required>
+        	<input type="text" class="inputCaixa" name="placarB" id="placarBTempo3" placeholder="Nº" style="text-align: center;"  required>
         </td>
        <td><img src="./views/images/imagemFED.jpg" width="47" height="47" ></td>
     	<td>
-        	<input type="text" class="inputCaixa" name="placarA" id="placarA" placeholder="Nº" style="text-align: center;"  required>
+        	<input type="text" class="inputCaixa" name="placarA" id="placarATempo4" placeholder="Nº" style="text-align: center;"  required>
         </td>
         <td>X</td>
         <td>
-        	<input type="text" class="inputCaixa" name="placarB" id="placarB" placeholder="Nº" style="text-align: center;"  required>
+        	<input type="text" class="inputCaixa" name="placarB" id="placarBTempo4" placeholder="Nº" style="text-align: center;"  required>
         </td>
         <td><img src="./views/images/imagemFED.jpg" width="47" height="47" ></td>
         <td>
-        	<input type="text" class="inputCaixa" name="placarA" id="placarA" placeholder="Nº" style="text-align: center;"  required>
+        	<input type="text" class="inputCaixa" name="placarA" id="placarATempo5" placeholder="Nº" style="text-align: center;"  required>
         </td>
         <td>X</td>
         <td>
-        	<input type="text" class="inputCaixa" name="placarB" id="placarB" placeholder="Nº" style="text-align: center;"  required>
+        	<input type="text" class="inputCaixa" name="placarB" id="placarBTempo5" placeholder="Nº" style="text-align: center;"  required>
         </td>
     </tr>
     <tr>
@@ -394,4 +394,9 @@ $jogadorVW = new JogadorView();
         ?> 
     </aside>
 </table>
-<input type="submit" value="PROXIMO TEMPO" class="but but-success">
+
+<script>var tempoAtual = 1;</script>
+<input type="button" value="PROXIMO TEMPO" class="but but-success" onclick="tempoAtual = proximoTempo(tempoAtual);alert(tempoAtual);">
+
+
+
