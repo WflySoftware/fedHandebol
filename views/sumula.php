@@ -195,13 +195,13 @@ $jogadorVW = new JogadorView();
     </tr>
 <tr>
 	<td class="medida-td2">
-		<input class="input" type="text" name="cidade" id="cidade" placeholder="Nome da cidade">
+		<input class="input" type="text" name="cidade" id="cidade" placeholder="Nome da cidade" required>
 	</td>
-    <td class="medida-td2"><input class="input" type="text" name="local" id="local" placeholder="Nome do local"></td>
-    <td class="medida-td1"><input class="input2" type="date" name="data" id="data"></td>
-    <td class="medida-td1"><input class="input2" type="time" name="hora" id="hora"></td>
+    <td class="medida-td2"><input class="input" type="text" name="local" id="local" placeholder="Nome do local" required></td>
+    <td class="medida-td1"><input class="input2" type="date" name="data" id="data" required></td>
+    <td class="medida-td1"><input class="input2" type="time" name="hora" id="hora" required></td>
     <td></td>
-    <td class="medida-td1"><input class="input2" type="time" name="duracao" id="duracao"></td>
+    <td class="medida-td1"><input class="input2" type="time" name="duracao" id="duracao" required></td>
 </tr>
 </form>
 </table>
@@ -240,43 +240,43 @@ $jogadorVW = new JogadorView();
     <tr>
     	
         <td>
-        	<input type="text" class="inputCaixa" name="placarA" id="placarATempo1" placeholder="Nº" style="text-align: center;"  required>
+        	<input type="text" class="inputCaixa" name="placarA" id="placarATempo1" placeholder="Nº" style="text-align: center;" >
         </td>
         <td>X</td>
         <td>
-        	<input type="text" class="inputCaixa" name="placarB" id="placarBTempo1" placeholder="Nº" style="text-align: center;"  required>
+        	<input type="text" class="inputCaixa" name="placarB" id="placarBTempo1" placeholder="Nº" style="text-align: center;"  >
         </td>
        <td><img src="./views/images/imagemFED.jpg" width="47" height="47" ></td>
         <td>
-        	<input type="text" class="inputCaixa" name="placarA" id="placarATempo2" placeholder="Nº" style="text-align: center;"  required>
+        	<input type="text" class="inputCaixa" name="placarA" id="placarATempo2" placeholder="Nº" style="text-align: center;"  >
         </td>
         <td>X</td>
         <td>
-        	<input type="text" class="inputCaixa" name="placarB" id="placarBTempo2" placeholder="Nº" style="text-align: center;"  required>
+        	<input type="text" class="inputCaixa" name="placarB" id="placarBTempo2" placeholder="Nº" style="text-align: center;"  >
         </td>
         <td><img src="./views/images/imagemFED.jpg" width="47" height="47" ></td>
         <td>
-        	<input type="text" class="inputCaixa" name="placarA" id="placarATempo3" placeholder="Nº" style="text-align: center;"  required>
+        	<input type="text" class="inputCaixa" name="placarA" id="placarATempo3" placeholder="Nº" style="text-align: center;"  >
         </td>
         <td>X</td>
         <td>
-        	<input type="text" class="inputCaixa" name="placarB" id="placarBTempo3" placeholder="Nº" style="text-align: center;"  required>
+        	<input type="text" class="inputCaixa" name="placarB" id="placarBTempo3" placeholder="Nº" style="text-align: center;"  >
         </td>
        <td><img src="./views/images/imagemFED.jpg" width="47" height="47" ></td>
     	<td>
-        	<input type="text" class="inputCaixa" name="placarA" id="placarATempo4" placeholder="Nº" style="text-align: center;"  required>
+        	<input type="text" class="inputCaixa" name="placarA" id="placarATempo4" placeholder="Nº" style="text-align: center;"  >
         </td>
         <td>X</td>
         <td>
-        	<input type="text" class="inputCaixa" name="placarB" id="placarBTempo4" placeholder="Nº" style="text-align: center;"  required>
+        	<input type="text" class="inputCaixa" name="placarB" id="placarBTempo4" placeholder="Nº" style="text-align: center;"  >
         </td>
         <td><img src="./views/images/imagemFED.jpg" width="47" height="47" ></td>
         <td>
-        	<input type="text" class="inputCaixa" name="placarA" id="placarATempo5" placeholder="Nº" style="text-align: center;"  required>
+        	<input type="text" class="inputCaixa" name="placarA" id="placarATempo5" placeholder="Nº" style="text-align: center;"  >
         </td>
         <td>X</td>
         <td>
-        	<input type="text" class="inputCaixa" name="placarB" id="placarBTempo5" placeholder="Nº" style="text-align: center;"  required>
+        	<input type="text" class="inputCaixa" name="placarB" id="placarBTempo5" placeholder="Nº" style="text-align: center;"  >
         </td>
     </tr>
     <tr>
@@ -318,7 +318,7 @@ $jogadorVW = new JogadorView();
        <tfoot>
     	<tr>
         	<script src="./fedHandebol/views/cronometro/cronometro.js"></script>
-            <th><input type="text" class="inputCaixa" name="7MetrosA" id="7MetrosA" placeholder="Nº" style="text-align: center;"  required></th>
+            <th><input type="text" class="inputCaixa" name="7MetrosA" id="7MetrosA" placeholder="Nº" style="text-align: center;"  ></th>
             <th><input id="volta"class="but but-cron" type="button" value="I" onclick="document.getElementById('tempoTecnicoA1').innerHTML = document.getElementById('minuto').firstChild.data + document.getElementById('segundo').firstChild.data + document.getElementById('milisegundo').firstChild.data;"></th>
             <th><input id="volta"class="but but-cron" type="button" value="II" onclick="document.getElementById('tempoTecnicoA2').innerHTML = document.getElementById('minuto').firstChild.data + document.getElementById('segundo').firstChild.data + document.getElementById('milisegundo').firstChild.data;"></th>
             <th><input id="volta"class="but but-cron" type="button" value="III" onclick="document.getElementById('tempoTecnicoA3').innerHTML = document.getElementById('minuto').firstChild.data + document.getElementById('segundo').firstChild.data + document.getElementById('milisegundo').firstChild.data;"></th>
@@ -327,7 +327,7 @@ $jogadorVW = new JogadorView();
             <th><input id="volta"class="but but-cron" type="button" value="II" onclick="document.getElementById('tempoTecnicoB2').innerHTML = document.getElementById('minuto').firstChild.data + document.getElementById('segundo').firstChild.data + document.getElementById('milisegundo').firstChild.data;"></th>
             <th><input id="volta"class="but but-cron" type="button" value="III" onclick="document.getElementById('tempoTecnicoB3').innerHTML = document.getElementById('minuto').firstChild.data + document.getElementById('segundo').firstChild.data + document.getElementById('milisegundo').firstChild.data;"></th>
             
-             <th><input type="text" class="inputCaixa" name="7MetrosB" id="7MetrosB" placeholder="Nº" style="text-align: center;"  required></th>
+             <th><input type="text" class="inputCaixa" name="7MetrosB" id="7MetrosB" placeholder="Nº" style="text-align: center;"  ></th>
          </tr>
          <tr><th class="td" id="e1" hearders="e"><small>n° de 7 Metros</small></th>
          <th id="tempoTecnicoA1"></th>
@@ -396,7 +396,7 @@ $jogadorVW = new JogadorView();
 </table>
 
 <script>var tempoAtual = 1;</script>
-<input type="button" value="PROXIMO TEMPO" class="but but-success" onclick="tempoAtual = proximoTempo(tempoAtual);alert(tempoAtual);">
+<input type="button" value="PROXIMO TEMPO" class="but but-success" onclick="tempoAtual = proximoTempo(tempoAtual);">
 
 
 
