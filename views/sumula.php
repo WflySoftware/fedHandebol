@@ -98,8 +98,7 @@ background-color: #CC0000;
 }
 .but-cron {
 color: #fff;
-background-color: #000;
-width: 120px;
+background-color: #0068B4;
 height: 50px;
 }
 .but-gol {
@@ -246,7 +245,7 @@ $jogadorVW = new JogadorView();
         <td>
         	<input type="text" class="inputCaixa" name="placarB" id="placarBTempo1" placeholder="Nº" style="text-align: center;"  >
         </td>
-       <td><img src="./views/images/imagemFED.jpg" width="47" height="47" ></td>
+       <td style="border-left: 1px solid #ccc; width=20px;"></td>
         <td>
         	<input type="text" class="inputCaixa" name="placarA" id="placarATempo2" placeholder="Nº" style="text-align: center;"  >
         </td>

@@ -14,3 +14,13 @@ body {
 	background-color:#E6E6FA;
 	padding: 4px 4px;
 }
+#botoes{
+	float: left;
+}
+#cronometro{
+	margin: 0 auto;
+	width: 550px;
+}
+#flutuar{
+	float: left;
+}
