@@ -15,7 +15,7 @@ class TimeDAO{
 		$resultado = $this->conexao->banco->Execute($sql);
 		while($registro = $resultado->FetchNextObject()){
 			$dadosTime = new Time();
-			$dadosTime->__constructOverload($registro->ID_TIME,$registro->TECNICO_ID_TECNICO,$registro->NOME,$registro->CATEGORIA,$registro->ENDERECO,$registro->DATA_FUNDACAO,$registro->PRESIDENTE,$registro->TELEFONE);
+			$dadosTime->__constructOverload($registro->ID_TIME,$registro->TECNICO_ID_TECNICO,$registro->NOME,$registro->CATEGORIA,$registro->ENDERECO,$registro->DATA_FUNDACAO,$registro->PRESIDENTE,$registro->TELEFONE,$registro->PONTOS);
 			$retornaTime[] = $dadosTime;
 		}
 		return $retornaTime;
@@ -37,7 +37,7 @@ class TimeDAO{
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
 		$dadosTime = new Time();
-		$dadosTime->__constructOverload($registro->ID_TIME,$registro->TECNICO_ID_TECNICO,$registro->NOME,$registro->CATEGORIA,$registro->ENDERECO,$registro->DATA_FUNDACAO,$registro->PRESIDENTE,$registro->TELEFONE);
+		$dadosTime->__constructOverload($registro->ID_TIME,$registro->TECNICO_ID_TECNICO,$registro->NOME,$registro->CATEGORIA,$registro->ENDERECO,$registro->DATA_FUNDACAO,$registro->PRESIDENTE,$registro->TELEFONE,$registro->PONTOS);
 		return $dadosTime;
 	}
 	
@@ -46,7 +46,7 @@ class TimeDAO{
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
 		$dadosTime = new Time();
-		$dadosTime->__constructOverload($registro->ID_TIME,$registro->TECNICO_ID_TECNICO,$registro->NOME,$registro->CATEGORIA,$registro->ENDERECO,$registro->DATA_FUNDACAO,$registro->PRESIDENTE,$registro->TELEFONE);
+		$dadosTime->__constructOverload($registro->ID_TIME,$registro->TECNICO_ID_TECNICO,$registro->NOME,$registro->CATEGORIA,$registro->ENDERECO,$registro->DATA_FUNDACAO,$registro->PRESIDENTE,$registro->TELEFONE,$registro->PONTOS);
 		return $dadosTime;
 	}
 	public function excluir($id){

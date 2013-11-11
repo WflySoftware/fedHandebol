@@ -162,7 +162,9 @@ background-color: #CC0000;
           <th>Data da Fundacao</th>
           <th>Presidente</th>
           <th>Telefone</th>
+          <th>Pontos</th>
           <th>Ações</th>
+          
         </tr>
       </thead>
       <tbody>

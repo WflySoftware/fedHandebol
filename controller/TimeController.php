@@ -35,6 +35,7 @@ class TimeController{
           			<td>".$dadosTime->__getDataFundacao()."</td>
 					<td>".$dadosTime->__getPresidente()."</td>
 					<td>".$dadosTime->__getTelefone()."</td>
+					<td>".$dadosTime->__getPontos()."</td>
           			<td>
             			<a href=\"?pag=time&action=edit&id=".$dadosTime->__getIdTime()."\"><img src=\"./views/images/edit.png\" width=\"16\" height=\"16\" /></a>
             			<a href=\"?pag=time&action=exclude&id=".$dadosTime->__getIdTime()."\"><img src=\"./views/images/delete.png\" width=\"16\" height=\"16\" /></a>
@@ -57,6 +58,7 @@ class TimeController{
 		$arrayDados['categoria'] = $dadosTime->__getCategoria();
 		$arrayDados['presidente'] = $dadosTime->__getPresidente();
 		$arrayDados['telefone'] = $dadosTime->__getTelefone();
+		$arrayDados['pontos'] = $dadosTime->__getPontos();
 		return $arrayDados;
 	}
 	public function _consultarPorNome($nome){
@@ -64,13 +66,13 @@ class TimeController{
 	}
 	public function _salvar($idTecnico,$nome,$categoria,$endereco,$dataFundacao,$presidente,$telefone){
 		$dadosTime = new Time();
-		$dadosTime->__constructOverload(0, $idTecnico, $nome, $categoria, $endereco, $dataFundacao, $presidente, $telefone);
+		$dadosTime->__constructOverload(0, $idTecnico, $nome, $categoria, $endereco, $dataFundacao, $presidente, $telefone,0);
 		return $this->timeDAO->inserir($dadosTime);
 	}
 	public function _atualizar($id,$idTecnico, $nome, $categoria, $endereco, $dataFundacao, $presidente, $telefone){
 
 		$dadosTime = new Time();
-		$dadosTime->__constructOverload($id,$idTecnico, $nome, $categoria, $endereco, $dataFundacao, $presidente, $telefone);
+		$dadosTime->__constructOverload($id,$idTecnico, $nome, $categoria, $endereco, $dataFundacao, $presidente, $telefone,0);
 		$this->timeDAO->atualizar($dadosTime);
 	
 	}
