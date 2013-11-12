@@ -27,8 +27,6 @@ class TimeController{
 			<tr>
           			<td><input type=\"checkbox\" value=\"1\" name=\"marcar[]\" /></td>
 					
-					<td>".$dadosTime->__getIdTime()."</td>
-          			<td>".$dadosTime->__getIdTecnico()."</td>
 					<td>".$dadosTime->__getNome()."</td>
           			<td>".$dadosTime->__getCategoria()."</td>
           			<td>".$dadosTime->__getEndereco()."</td>

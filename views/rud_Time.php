@@ -154,8 +154,6 @@ background-color: #CC0000;
       <thead>
         <tr>
           <th><input type="checkbox" value="1" id="marcar-todos" name="marcar-todos" /></th>
-          <th>ID</th>
-          <th>IDTECNICO</th>
           <th>Nome</th>
           <th>Categoria</th>
           <th>Endereco</th>

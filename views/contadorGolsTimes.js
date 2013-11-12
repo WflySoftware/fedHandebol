@@ -1,18 +1,34 @@
 function inserirGolTimeA(tempoAtual){
 	switch(tempoAtual){
 		case 1:
+			if (timeGolsTimeA < 0){
+				timeGolsTimeA++;
+				
+			}
 			document.getElementById("placarATempo1").value = timeGolsTimeA;
 		break;
 		case 2:
+			if (timeGolsTimeA < 0){
+				timeGolsTimeA++;
+			}
 			document.getElementById("placarATempo2").value = timeGolsTimeA;
 		break;
 		case 3:
+			if (timeGolsTimeA < 0){
+				timeGolsTimeA++;
+			}
 			document.getElementById("placarATempo3").value = timeGolsTimeA;
 		break;
 		case 4:
+			if (timeGolsTimeA < 0){
+				timeGolsTimeA++;
+			}
 			document.getElementById("placarATempo4").value = timeGolsTimeA;
 		break;
 		case 5:
+			if (timeGolsTimeA < 0){
+				timeGolsTimeA++;
+			}
 			document.getElementById("placarATempo5").value = timeGolsTimeA;
 		break;
 	}
@@ -20,18 +36,33 @@ function inserirGolTimeA(tempoAtual){
 function inserirGolTimeB(tempoAtual){
 	switch(tempoAtual){
 		case 1:
+			if (timeGolsTimeB < 0){
+				timeGolsTimeB++;
+			}
 			document.getElementById("placarBTempo1").value = timeGolsTimeB;
 		break;
 		case 2:
+			if (timeGolsTimeB < 0){
+				timeGolsTimeB++;
+			}
 			document.getElementById("placarBTempo2").value = timeGolsTimeB;
 		break;
 		case 3:
+			if (timeGolsTimeB < 0){
+			timeGolsTimeB++;
+		}
 			document.getElementById("placarBTempo3").value = timeGolsTimeB;
 		break;
 		case 4:
+			if (timeGolsTimeB < 0){
+				timeGolsTimeB++;
+			}
 			document.getElementById("placarBTempo4").value = timeGolsTimeB;
 		break;
 		case 5:
+			if (timeGolsTimeB < 0){
+				timeGolsTimeB++;
+			}
 			document.getElementById("placarBTempo5").value = timeGolsTimeB;
 		break;
 	}
@@ -62,5 +93,8 @@ function proximoTempo(tempoAtual){
 			break;
 		}
 		return tempoAtual;
+	}
+	function desaparecerBotao(){
+		document.getElementById('decrementaGolA0').style.display = 'none';
 	}
 }

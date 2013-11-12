@@ -381,7 +381,6 @@ $jogadorVW = new JogadorView();
 			            <th class="tr" colspan="2"><small>D</small></th>
 			            <th class="tr" colspan="2"><small>D+R</small></th>
 		</tr>
-		
 		<?php 
 				if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 						$timeB = $_POST['idTimeB'];
