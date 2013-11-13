@@ -97,4 +97,12 @@ function proximoTempo(tempoAtual){
 	function desaparecerBotao(){
 		document.getElementById('decrementaGolA0').style.display = 'none';
 	}
+	function comecoDoJogo(situacao){
+		if(situacao==comeco){
+			document.getElementById('scriptCronometro').style.display = 'none';
+		}
+		else{
+			document.getElementById('scriptCronometro').style.display = 'block';
+		}
+	}
 }

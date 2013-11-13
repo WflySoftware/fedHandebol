@@ -13,6 +13,7 @@
 	</head>
 	<body>
 		<header>
+	
     	<div id="medida">
             <nav>
             <img src="./views/images/imagemFED.jpg" width="100" height="100" style="padding: 4px 10px;" >
@@ -35,7 +36,7 @@
                 	</li>
                 	<li class="borda"><a href="#">Jogos</a>
                 	<ul>
-                    	<li><a href="?pag=sumula">Iniciar Jogo</a></li>
+                    	<li><a  href="?pag=sumula">Iniciar Jogo</a></li>
                     	<li><a href="">Tela</a></li>
                         <li><a href="">Estatistica</a></li>
                     </ul>

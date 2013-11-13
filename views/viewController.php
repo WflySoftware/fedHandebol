@@ -38,6 +38,9 @@ switch($pagina){
 	case 'campeonato':
 		include(__APP_PATH.'/views/campeonatos.php');
 		break;
+		case 'duranteJogo':
+			include(__APP_PATH.'/views/duranteJogo.php');
+			break;
 	default:
 		include(__APP_PATH.'/views/initial.php');	
 }
