@@ -87,9 +87,10 @@ class TimeController{
 		$dadosTime = new Time();
 		$arrayDadosTime = $this->timeDAO->listarTodosPorPontos();
 		$tamanho = count($arrayDadosTime);
-		for($i=0,$pos=$tamanho;$i<$tamanho; $i++,$pos--){
-			
+		for($i=0;$i<$tamanho; $i++){
 			$dadosTime = $arrayDadosTime[$i];	
+			$pos=$i;
+			$pos++;
 		$arrayTr[] =" 
 			<tr>
 				<th class=\"th-piqueno th-cor\">".$pos."</th>
