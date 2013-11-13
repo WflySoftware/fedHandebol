@@ -96,6 +96,10 @@ background-color: #009835;
 color: #fff;
 background-color: #CC0000;
 }
+.but-primary{
+color: #fff;
+background-color: #0068B4;
+}
 .but-cron {
 color: #fff;
 background-color: #0068B4;
@@ -122,7 +126,7 @@ padding: 1px 1px;
 	margin: 0 auto;
 	width: 1024px;
 	margin-top: 5px;
-	magin-button: 10px;
+	margin-bottom: 10px;
 	border-bottom: 1px solid #CCC;
 }
 .tr{
@@ -130,6 +134,12 @@ padding: 1px 1px;
 }
 .esp{
 	margin-left: 5px;
+}
+.td_esp{
+    margin-right: 10px;
+}
+.tm_th{
+    
 }
 </style>
 <?php 
@@ -238,14 +248,14 @@ $jogadorVW = new JogadorView();
     </tr>
     <tr>
     	
-        <td>
+        <th>
         	<input type="text" class="inputCaixa" name="placarA" id="placarATempo1" placeholder="Nº" style="text-align: center;" >
-        </td>
+        </th>
         <td>X</td>
         <td>
         	<input type="text" class="inputCaixa" name="placarB" id="placarBTempo1" placeholder="Nº" style="text-align: center;"  >
         </td>
-       <td style="border-left: 1px solid #ccc; width=20px;"></td>
+        <td><img src="./views/images/star.png" width="47" height="47" ></td>
         <td>
         	<input type="text" class="inputCaixa" name="placarA" id="placarATempo2" placeholder="Nº" style="text-align: center;"  >
         </td>
@@ -253,7 +263,7 @@ $jogadorVW = new JogadorView();
         <td>
         	<input type="text" class="inputCaixa" name="placarB" id="placarBTempo2" placeholder="Nº" style="text-align: center;"  >
         </td>
-        <td><img src="./views/images/imagemFED.jpg" width="47" height="47" ></td>
+        <td><img src="./views/images/star.png" width="47" height="47" ></td>
         <td>
         	<input type="text" class="inputCaixa" name="placarA" id="placarATempo3" placeholder="Nº" style="text-align: center;"  >
         </td>
@@ -261,7 +271,7 @@ $jogadorVW = new JogadorView();
         <td>
         	<input type="text" class="inputCaixa" name="placarB" id="placarBTempo3" placeholder="Nº" style="text-align: center;"  >
         </td>
-       <td><img src="./views/images/imagemFED.jpg" width="47" height="47" ></td>
+       <td><img src="./views/images/star.png" width="47" height="47" ></td>
     	<td>
         	<input type="text" class="inputCaixa" name="placarA" id="placarATempo4" placeholder="Nº" style="text-align: center;"  >
         </td>
@@ -269,7 +279,7 @@ $jogadorVW = new JogadorView();
         <td>
         	<input type="text" class="inputCaixa" name="placarB" id="placarBTempo4" placeholder="Nº" style="text-align: center;"  >
         </td>
-        <td><img src="./views/images/imagemFED.jpg" width="47" height="47" ></td>
+        <td><img src="./views/images/star.png" width="47" height="47" ></td>
         <td>
         	<input type="text" class="inputCaixa" name="placarA" id="placarATempo5" placeholder="Nº" style="text-align: center;"  >
         </td>
@@ -318,13 +328,13 @@ $jogadorVW = new JogadorView();
     	<tr>
         	<script src="./fedHandebol/views/cronometro/cronometro.js"></script>
             <th><input type="text" class="inputCaixa" name="7MetrosA" id="7MetrosA" placeholder="Nº" style="text-align: center;"  ></th>
-            <th><input id="volta"class="but but-cron" type="button" value="I" onclick="document.getElementById('tempoTecnicoA1').innerHTML = document.getElementById('minuto').firstChild.data + document.getElementById('segundo').firstChild.data + document.getElementById('milisegundo').firstChild.data;"></th>
-            <th><input id="volta"class="but but-cron" type="button" value="II" onclick="document.getElementById('tempoTecnicoA2').innerHTML = document.getElementById('minuto').firstChild.data + document.getElementById('segundo').firstChild.data + document.getElementById('milisegundo').firstChild.data;"></th>
-            <th><input id="volta"class="but but-cron" type="button" value="III" onclick="document.getElementById('tempoTecnicoA3').innerHTML = document.getElementById('minuto').firstChild.data + document.getElementById('segundo').firstChild.data + document.getElementById('milisegundo').firstChild.data;"></th>
+            <th><input id="volta"class="but but-primary" type="button" value="I" onclick="document.getElementById('tempoTecnicoA1').innerHTML = document.getElementById('minuto').firstChild.data + document.getElementById('segundo').firstChild.data + document.getElementById('milisegundo').firstChild.data;"></th>
+            <th><input id="volta"class="but but-primary" type="button" value="II" onclick="document.getElementById('tempoTecnicoA2').innerHTML = document.getElementById('minuto').firstChild.data + document.getElementById('segundo').firstChild.data + document.getElementById('milisegundo').firstChild.data;"></th>
+            <th><input id="volta"class="but but-primary" type="button" value="III" onclick="document.getElementById('tempoTecnicoA3').innerHTML = document.getElementById('minuto').firstChild.data + document.getElementById('segundo').firstChild.data + document.getElementById('milisegundo').firstChild.data;"></th>
             <td></td>
-            <th><input id="volta"class="but but-cron" type="button" value="I" onclick="document.getElementById('tempoTecnicoB1').innerHTML = document.getElementById('minuto').firstChild.data + document.getElementById('segundo').firstChild.data + document.getElementById('milisegundo').firstChild.data;"></th>
-            <th><input id="volta"class="but but-cron" type="button" value="II" onclick="document.getElementById('tempoTecnicoB2').innerHTML = document.getElementById('minuto').firstChild.data + document.getElementById('segundo').firstChild.data + document.getElementById('milisegundo').firstChild.data;"></th>
-            <th><input id="volta"class="but but-cron" type="button" value="III" onclick="document.getElementById('tempoTecnicoB3').innerHTML = document.getElementById('minuto').firstChild.data + document.getElementById('segundo').firstChild.data + document.getElementById('milisegundo').firstChild.data;"></th>
+            <th><input id="volta"class="but but-primary" type="button" value="I" onclick="document.getElementById('tempoTecnicoB1').innerHTML = document.getElementById('minuto').firstChild.data + document.getElementById('segundo').firstChild.data + document.getElementById('milisegundo').firstChild.data;"></th>
+            <th><input id="volta"class="but but-primary" type="button" value="II" onclick="document.getElementById('tempoTecnicoB2').innerHTML = document.getElementById('minuto').firstChild.data + document.getElementById('segundo').firstChild.data + document.getElementById('milisegundo').firstChild.data;"></th>
+            <th><input id="volta"class="but but-primary" type="button" value="III" onclick="document.getElementById('tempoTecnicoB3').innerHTML = document.getElementById('minuto').firstChild.data + document.getElementById('segundo').firstChild.data + document.getElementById('milisegundo').firstChild.data;"></th>
             
              <th><input type="text" class="inputCaixa" name="7MetrosB" id="7MetrosB" placeholder="Nº" style="text-align: center;"  ></th>
          </tr>

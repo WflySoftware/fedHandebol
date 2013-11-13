@@ -1,5 +1,5 @@
 body {
-	font-family:Trebuchet MS;
+	font-family: Arial, Verdana;
 	font-size:14px;
 }
 .navegador {
@@ -20,7 +20,12 @@ body {
 #cronometro{
 	margin: 0 auto;
 	width: 550px;
+	height: 300px;
 }
 #flutuar{
 	float: left;
+}
+#voltas{
+	font-family: Arial, Verdana;
+	padding-bottom: 20px;
 }
