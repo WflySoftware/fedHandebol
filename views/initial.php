@@ -59,6 +59,7 @@ th{
         <table border=0 style="width: 650px;">
         	<thead>
             	<tr style="background: #09F; border:#09f; color: #fff;">
+                	<th class="th-piqueno"><small>Posicao</small></th>
                 	<th><small>Time</small></th>
                     <th class="th-piqueno"><small>P</small></th>
                     <th class="th-piqueno"><small>J</small></th>
