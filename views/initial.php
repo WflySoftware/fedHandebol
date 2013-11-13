@@ -71,18 +71,12 @@ th{
                     <th class="th-piqueno"><small>%</small></th>
                 </tr>
             </thead>
-            	<tr>
-                	<th class="th-cor">Tabajara FC</th>
-                    <th class="th-piqueno th-cor">2</th>
-                    <th class="th-piqueno th-cor">3</th>
-                    <th class="th-piqueno th-cor">4</th>
-                    <th class="th-piqueno th-cor">5</th>
-                    <th class="th-piqueno th-cor">6</th>
-                    <th class="th-piqueno th-cor">7</th>
-                    <th class="th-piqueno th-cor">8</th>
-                    <th class="th-piqueno th-cor">9</th>
-                    <th class="th-piqueno th-cor">10</th>
-                </tr>
+            	<?php 
+				$tr = $mainVW->listarTimesParaTabelaCampeonato();
+        		for($i=0;$i<count($tr);$i++){
+					echo $tr[$i];
+				}
+            	?>
         </table>
         
         <table border=0 style="width: 320px; margin-left: 10px;">

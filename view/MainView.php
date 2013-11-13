@@ -34,4 +34,7 @@ class MainView{
 	public function listarFearPlayers(){
 		return $this->jogadorCO->_listarFearPlayers();
 	}
+	public function listarTimesParaTabelaCampeonato(){
+		return $this->timeCO->_listarTimesParaTabelaCampeonato();
+	}
 }

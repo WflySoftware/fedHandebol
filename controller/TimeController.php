@@ -80,4 +80,27 @@ class TimeController{
 	public function _contarRegistrosTime(){
 		return $this->timeDAO->contarRegistrosTime();
 	}
+	public function _listarTimesParaTabelaCampeonato(){
+		$dadosTime = new Time();
+		$arrayDadosTime = $this->timeDAO->listarTodos();
+		for($i=0;$i<count($arrayDadosTime); $i++){
+			$dadosTime = $arrayDadosTime[$i];
+		$arrayTr[] =" 
+			<tr>
+				<th class=\"th-cor\">".$dadosTime->__getNome()."</th>
+				<th class=\"th-piqueno th-cor\">".$dadosTime->__getPontos()."</th>
+				<th class=\"th-piqueno th-cor\">3</th>
+				<th class=\"th-piqueno th-cor\">4</th>
+				<th class=\"th-piqueno th-cor\">5</th>
+				<th class=\"th-piqueno th-cor\">6</th>
+				<th class=\"th-piqueno th-cor\">7</th>
+				<th class=\"th-piqueno th-cor\">8</th>
+				<th class=\"th-piqueno th-cor\">9</th>
+				<th class=\"th-piqueno th-cor\">10</th>
+			</tr>
+			";
+		}
+		return $arrayTr;
+	}
+				
 }
