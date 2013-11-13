@@ -86,6 +86,7 @@ class JogadorDAO{
 		$sql = "SELECT j.nome AS nome_jogador, t.nome AS nome_time, (d.advertencia + d.punicao + d.desqualificacao + d.relatorio) AS faltas
 				FROM dados d, jogador j, time t
 				WHERE d.jogador_id_jogador = j.id_jogador
+				AND j.time_id_time = t.id_time
 				ORDER BY faltas ASC";
 		$resultado = $this->conexao->banco->Execute($sql);
 		while($registro = $resultado->FetchNextObject()){
