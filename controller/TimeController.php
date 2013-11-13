@@ -45,6 +45,9 @@ class TimeController{
 	public function _listarTodos(){
 		return $this->timeDAO->listarTodos();
 	}
+	public function _listarTodoPorPontos(){
+		return $this->timeDAO->listarTodosPorPontos();
+	}
 	public function _consultarPorId($id){
 		$dadosTime = new Time();
 		$dadosTime =  $this->timeDAO->consultarPorId($id);
@@ -80,4 +83,30 @@ class TimeController{
 	public function _contarRegistrosTime(){
 		return $this->timeDAO->contarRegistrosTime();
 	}
+	public function _listarTimesParaTabelaCampeonato(){
+		$dadosTime = new Time();
+		$arrayDadosTime = $this->timeDAO->listarTodosPorPontos();
+		$tamanho = count($arrayDadosTime);
+		for($i=0,$pos=$tamanho;$i<$tamanho; $i++,$pos--){
+			
+			$dadosTime = $arrayDadosTime[$i];	
+		$arrayTr[] =" 
+			<tr>
+				<th class=\"th-piqueno th-cor\">".$pos."</th>
+				<th class=\"th-cor\">".$dadosTime->__getNome()."</th>
+				<th class=\"th-piqueno th-cor\">".$dadosTime->__getPontos()."</th>
+				<th class=\"th-piqueno th-cor\">3</th>
+				<th class=\"th-piqueno th-cor\">4</th>
+				<th class=\"th-piqueno th-cor\">5</th>
+				<th class=\"th-piqueno th-cor\">6</th>
+				<th class=\"th-piqueno th-cor\">7</th>
+				<th class=\"th-piqueno th-cor\">8</th>
+				<th class=\"th-piqueno th-cor\">9</th>
+				<th class=\"th-piqueno th-cor\">10</th>
+			</tr>
+			";			
+		}
+		return $arrayTr;
+	}
+				
 }

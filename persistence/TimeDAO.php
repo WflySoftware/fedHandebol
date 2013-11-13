@@ -20,7 +20,16 @@ class TimeDAO{
 		}
 		return $retornaTime;
 	}
-	
+	public function listarTodosPorPontos(){
+		$sql = "SELECT * FROM time ORDER BY pontos DESC";
+		$resultado = $this->conexao->banco->Execute($sql);
+		while($registro = $resultado->FetchNextObject()){
+			$dadosTime = new Time();
+			$dadosTime->__constructOverload($registro->ID_TIME,$registro->TECNICO_ID_TECNICO,$registro->NOME,$registro->CATEGORIA,$registro->ENDERECO,$registro->DATA_FUNDACAO,$registro->PRESIDENTE,$registro->TELEFONE,$registro->PONTOS);
+			$retornaTime[] = $dadosTime;
+		}
+		return $retornaTime;
+	}
 	public function inserir(Time $dadosTime){
 		$sql = "INSERT INTO time (tecnico_id_tecnico,nome,categoria,endereco,data_fundacao,presidente,telefone) VALUES ('{$dadosTime->__getIdTecnico()}','{$dadosTime->__getNome()}','{$dadosTime->__getCategoria()}','{$dadosTime->__getEndereco()}','{$dadosTime->__getDataFundacao()}','{$dadosTime->__getPresidente()}','{$dadosTime->__getTelefone()}')";
 		$this->conexao->banco->Execute($sql);

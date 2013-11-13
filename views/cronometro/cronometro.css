@@ -19,8 +19,9 @@ body {
 }
 #cronometro{
 	margin: 0 auto;
-	width: 550px;
-	height: 300px;
+	width: 400px;
+	margin-bottom: 30px;
+
 }
 #flutuar{
 	float: left;
