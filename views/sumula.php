@@ -139,7 +139,6 @@ include_once ('/cronometro/cronometro.php');
 $jogadorVW = new JogadorView();	
 ?>
 <script src="./views/cronometro/cronometro.js"></script>
-
 <h2 style="margin: 0 auto; width: 1024px; text-align:center;">INICIAR JOGO  No.:</h2>
 
 <form method="post" style="margin: 0 auto;" action="">
