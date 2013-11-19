@@ -1,6 +1,7 @@
 <?php
 include_once(__APP_PATH.'/persistence/TimeDAO.php');
 include_once(__APP_PATH.'/model/Time.php');
+include_once(__APP_PATH.'/model/DadosTime.php');
 class TimeController{
 
 	private $timeDAO;
@@ -84,7 +85,8 @@ class TimeController{
 		return $this->timeDAO->contarRegistrosTime();
 	}
 	public function _listarTimesParaTabelaCampeonato(){
-		$dadosTime = new Time();
+		$dadosTime = new DadosTime();
+		$time = new TimeController();
 		$arrayDadosTime = $this->timeDAO->listarTodosPorPontos();
 		$tamanho = count($arrayDadosTime);
 		for($i=0;$i<$tamanho; $i++){
@@ -94,8 +96,8 @@ class TimeController{
 		$arrayTr[] =" 
 			<tr>
 				<th class=\"th-piqueno th-cor\">".$pos."</th>
-				<th class=\"th-cor\">".$dadosTime->__getNome()."</th>
-				<th class=\"th-piqueno th-cor\">".$dadosTime->__getPontos()."</th>
+				<th class=\"th-cor\">1</th>
+				<th class=\"th-piqueno th-cor\">1</th>
 				<th class=\"th-piqueno th-cor\">3</th>
 				<th class=\"th-piqueno th-cor\">4</th>
 				<th class=\"th-piqueno th-cor\">5</th>

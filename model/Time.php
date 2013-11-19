@@ -16,7 +16,7 @@ class Time
 	public function __construct(){
 
 	}
-	public function __constructOverload($idTime,$idTecnico,$nome,$categoria,$endereco,$dataFundacao,$presidente,$telefone,$pontos){
+	public function __constructOverload($idTime,$idTecnico,$nome,$categoria,$endereco,$dataFundacao,$presidente,$telefone){
 		$this->idTime = $idTime;
 		$this->idTecnico = $idTecnico;
 		$this->nome = $nome;
@@ -25,7 +25,6 @@ class Time
 		$this->dataFundacao = $dataFundacao;
 		$this->presidente = $presidente;
 		$this->telefone = $telefone;
-		$this->pontos = $pontos;
 	}
 	public function __getIdTime(){
 		return $this->idTime;

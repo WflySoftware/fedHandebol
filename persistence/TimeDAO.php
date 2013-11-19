@@ -1,6 +1,7 @@
 <?php
 include_once (__APP_PATH.'/model/Time.php');
 include_once (__APP_PATH.'/model/Tecnico.php');
+include_once (__APP_PATH.'/model/DadosTime.php');
 include_once (__APP_PATH.'/persistence/Conexao.php');
 
 class TimeDAO{
@@ -21,11 +22,14 @@ class TimeDAO{
 		return $retornaTime;
 	}
 	public function listarTodosPorPontos(){
-		$sql = "SELECT * FROM dados_campeonato ORDER BY pontos DESC";
+		$sql = "SELECT t.nome,dc.pontos,dc.jogos,dc.vitorias,dc.empates,dc.derrotas,dc.gols,dc.gols_levados
+				FROM dados_campeonato dc,time t
+				WHERE t.id_time = dc.time_id_time
+				ORDER BY dc.gols DESC;";
 		$resultado = $this->conexao->banco->Execute($sql);
 		while($registro = $resultado->FetchNextObject()){
-			$dadosTime = new Time();
-			$dadosTime->__constructOverload($registro->ID_TIME,$registro->TECNICO_ID_TECNICO,$registro->NOME,$registro->CATEGORIA,$registro->ENDERECO,$registro->DATA_FUNDACAO,$registro->PRESIDENTE,$registro->TELEFONE,$registro->PONTOS);
+			$dadosTime = new DadosTime();
+			$dadosTime->__constructOverload(0,0,$registro->PONTOS,$registro->JOGOS,$registro->VITORIAS,$registro->EMPATES,$registro->DERROTAS,$registro->GOLS,$registro->GOLS_LEVADOS);
 			$retornaTime[] = $dadosTime;
 		}
 		return $retornaTime;
