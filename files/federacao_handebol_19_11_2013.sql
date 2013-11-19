@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tempo de Geração: 14/11/2013 às 14h19min
+-- Tempo de Geração: 19/11/2013 às 23h58min
 -- Versão do Servidor: 5.5.16
 -- Versão do PHP: 5.3.8
 
@@ -87,7 +87,15 @@ CREATE TABLE IF NOT EXISTS `dados_campeonato` (
   `gols_levados` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`id_dados_campeonato`),
   KEY `dados_campeonato_FKIndex1` (`time_id_time`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Extraindo dados da tabela `dados_campeonato`
+--
+
+INSERT INTO `dados_campeonato` (`id_dados_campeonato`, `time_id_time`, `pontos`, `jogos`, `vitorias`, `empates`, `derrotas`, `gols`, `gols_levados`) VALUES
+(1, 1, 4, 13, 10, 1, 2, 10, 1),
+(2, 2, 2, 13, 5, 5, 3, 4, 1);
 
 -- --------------------------------------------------------
 
@@ -136,14 +144,39 @@ CREATE TABLE IF NOT EXISTS `jogo` (
   `duracao` double DEFAULT NULL,
   `total_7metros` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`id_jogo`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=27 ;
 
 --
 -- Extraindo dados da tabela `jogo`
 --
 
-INSERT INTO `jogo` (`id_jogo`, `espectadores`, `cidade`, `localizacao`, `data_jogo`,`hora_jogo`, `duracao`, `total_7metros`) VALUES
-(1, 100, 'Brasilia', 'Estádio Nacional', '2013-10-03', '00:00:00', 2, 8);
+INSERT INTO `jogo` (`id_jogo`, `espectadores`, `cidade`, `localizacao`, `data_jogo`, `hora_jogo`, `duracao`, `total_7metros`) VALUES
+(1, 100, 'Brasilia', 'Estádio Nacional', '2013-10-03', '00:00:00', 2, 8),
+(2, 0, '1', '1', '2013-12-31', '23:59:00', 23, 0),
+(3, 0, '1', '1', '2013-12-31', '23:59:00', 23, 0),
+(4, 0, '1', '1', '2013-12-31', '23:59:00', 23, 0),
+(5, 0, '1', '1', '2013-12-31', '23:59:00', 23, 0),
+(6, 0, '1', '1', '2013-12-31', '23:59:00', 23, 0),
+(7, 0, '1', '1', '2013-12-31', '23:59:00', 23, 0),
+(8, 0, '1', '1', '2013-12-01', '23:59:00', 23, 0),
+(9, 0, '1', '1', '2013-12-31', '23:59:00', 23, 0),
+(10, 0, '1', '1', '2013-12-31', '23:59:00', 23, 0),
+(11, 0, '11', '1', '2013-01-01', '00:00:00', 0, 0),
+(12, 0, '1', '1', '2013-12-31', '23:59:00', 23, 0),
+(13, 0, '1', '1', '2013-12-31', '23:59:00', 23, 0),
+(14, 0, '1', '1', '2013-12-31', '23:59:00', 23, 0),
+(15, 0, '1', '123', '2013-12-31', '23:59:00', 23, 0),
+(16, 0, '1', '1', '2013-12-31', '23:58:00', 22, 0),
+(17, 1, '1', '1', '2013-12-31', '23:58:00', 23, 0),
+(18, 1, '1', '1', '2013-12-31', '23:59:00', 23, 0),
+(19, 5555, '5555', '5555', '5555-05-05', '05:05:00', 5, 0),
+(20, 1, '33', '33', '3333-03-03', '03:03:00', 3, 0),
+(21, 3, '3', '3', '3333-03-03', '03:03:00', 3, 0),
+(22, 1, '1', '1', '2013-12-01', '23:59:00', 1, 0),
+(23, 1, '1', '1', '2013-12-31', '23:58:00', 1, 0),
+(24, 1, '1', '1', '2013-12-31', '23:59:00', 1, 0),
+(25, 1, '1', '11', '2013-12-31', '23:59:00', 1, 0),
+(26, 1, '1', '1', '2013-12-31', '23:59:00', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -164,6 +197,8 @@ CREATE TABLE IF NOT EXISTS `jogo_time` (
 --
 
 INSERT INTO `jogo_time` (`jogo_id_jogo`, `time_id_time`) VALUES
+(0, 1),
+(0, 2),
 (1, 1);
 
 -- --------------------------------------------------------

@@ -93,19 +93,25 @@ class TimeController{
 			$dadosTime = $arrayDadosTime[$i];	
 			$pos=$i;
 			$pos++;
+			$var = $time->_consultarPorId($dadosTime->__getIdTime());
+			$nome = $var['nome'];
+			$saldo = $dadosTime->__getGols() - $dadosTime->__getGolsLevados();
+			$porcentagem = (int)( 100*($dadosTime->__getVitorias())/($dadosTime->__getJogos()));
+			
+				
 		$arrayTr[] =" 
 			<tr>
 				<th class=\"th-piqueno th-cor\">".$pos."</th>
-				<th class=\"th-cor\">1</th>
-				<th class=\"th-piqueno th-cor\">1</th>
-				<th class=\"th-piqueno th-cor\">3</th>
-				<th class=\"th-piqueno th-cor\">4</th>
-				<th class=\"th-piqueno th-cor\">5</th>
-				<th class=\"th-piqueno th-cor\">6</th>
-				<th class=\"th-piqueno th-cor\">7</th>
-				<th class=\"th-piqueno th-cor\">8</th>
-				<th class=\"th-piqueno th-cor\">9</th>
-				<th class=\"th-piqueno th-cor\">10</th>
+				<th class=\"th-cor\">$nome</th>
+				<th class=\"th-piqueno th-cor\">".$dadosTime->__getPontos()."</th>
+				<th class=\"th-piqueno th-cor\">".$dadosTime->__getJogos()."</th>
+				<th class=\"th-piqueno th-cor\">".$dadosTime->__getVitorias()."</th>
+				<th class=\"th-piqueno th-cor\">".$dadosTime->__getEmpates()."</th>
+				<th class=\"th-piqueno th-cor\">".$dadosTime->__getDerrotas()."</th>
+				<th class=\"th-piqueno th-cor\">".$dadosTime->__getGols()."</th>
+				<th class=\"th-piqueno th-cor\">".$dadosTime->__getGolsLevados()."</th>
+				<th class=\"th-piqueno th-cor\">".$saldo."</th>
+				<th class=\"th-piqueno th-cor\">".$porcentagem."</th>
 			</tr>
 			";			
 		}
