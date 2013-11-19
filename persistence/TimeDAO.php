@@ -21,7 +21,7 @@ class TimeDAO{
 		return $retornaTime;
 	}
 	public function listarTodosPorPontos(){
-		$sql = "SELECT * FROM time ORDER BY pontos DESC";
+		$sql = "SELECT * FROM dados_campeonato ORDER BY pontos DESC";
 		$resultado = $this->conexao->banco->Execute($sql);
 		while($registro = $resultado->FetchNextObject()){
 			$dadosTime = new Time();

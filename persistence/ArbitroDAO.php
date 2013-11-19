@@ -42,8 +42,8 @@ class ArbitroDAO{
 		$sql = "SELECT * FROM arbitro WHERE nome= '{$nome}'";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
-		$dadosArbitro = new Arbitro();
-		$dadosArbitro->__constructOverload($registro->ID_ARBITRO,$registro->NOME,$registro->CPF);
+		$dadosDadosTime = new DadosTime();
+		$dadosDadosTime->__constructOverload($registro->ID_ARBITRO,$registro->NOME,$registro->CPF);
 		return $dadosArbitro;
 	}
 	public function excluir($id){

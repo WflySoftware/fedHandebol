@@ -70,6 +70,7 @@ th{
 	   -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
     border-radius: 4px;
+    text-align: center;
 }
 .but {
 display: inline-block;
@@ -144,9 +145,16 @@ padding: 1px 1px;
 </style>
 <?php 
 require_once __APP_PATH.'/view/JogadorView.php';
+require_once __APP_PATH.'/view/DadosTimeView.php';
+require_once __APP_PATH.'/view/TimeJogoView.php';
+require_once __APP_PATH.'/view/JogoView.php';
+
 
 
 $jogadorVW = new JogadorView();	
+$dadosTimeVW = new DadosTimeView();
+$timeJogoVW = new TimeJogoView();
+$jogoVW = new JogoView();
 ?>
 
 
@@ -162,7 +170,7 @@ $jogadorVW = new JogadorView();
 
 <h2 style="margin: 0 auto; width: 1024px; text-align:center;">INICIAR JOGO  No.:</h2>
 
-<form method="post" style="margin: 0 auto;" action="?pag=duranteJogo">
+<form method="post" style="margin: 0 auto;">
 <table class="medidas" border="0">
 <tr>
 	<td></td>
@@ -197,7 +205,7 @@ $jogadorVW = new JogadorView();
 	    </select>
     </td>
 	<td>
-		<input type="text" class="inputCaixa" name="espectadores" id="espectadorez" placeholder="Nº" style="text-align: center;" required>
+		<input type="text" class="inputCaixa" name="espectadores" id="espectadores" placeholder="Nº"  required>
     </td>
 </tr>
 
@@ -220,7 +228,7 @@ $jogadorVW = new JogadorView();
     <td class="medida-td1"><input class="input2" type="date" name="data" id="data" required></td>
     <td class="medida-td1"><input class="input2" type="time" name="hora" id="hora" required></td>
     <td></td>
-    <td class="medida-td1"><input class="input2" type="time" name="duracao" id="duracao" required></td>
+    <td class="medida-td1"><input class="inputCaixa" type="text" name="duracao" id="duracao" placeholder="Nº" required></td>
 </tr>
 </form>
 </table>
@@ -231,5 +239,16 @@ $jogadorVW = new JogadorView();
 </div>
 </div>
 
+<?php 
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+$idJogoAtual = $jogoVW->inserir();
+$timeJogoVW->salvar($idJogoAtual,$_POST['idTimeA']);
+$timeJogoVW->salvar($idJogoAtual,$_POST['idTimeB']);
+
+echo" <script>document.location.href='?pag=duranteJogo'</script>";
+
+}
+?>
 
 

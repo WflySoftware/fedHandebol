@@ -21,12 +21,14 @@ class JogoDAO{
 	}
 	
 	public function inserir(Jogo $dadosJogo){
-		$sql = "INSERT INTO jogo (espectadores,cidade,localizacao,data_jogo,duracao,total_7metros) VALUES ('{$dadosJogo->__getEspectadores()}','{$dadosJogo->__getCidade()}','{$dadosJogo->__getLocalizacao()}','{$dadosJogo->__getDataJogo()}','{$dadosJogo->__getDuracao()}','{$dadosJogo->__getTotal7Metros()}')";
+		$sql = "INSERT INTO jogo (espectadores,cidade,localizacao,duracao,data_jogo,hora_jogo,total_7Metros) VALUES ('{$dadosJogo->__getEspectadores()}','{$dadosJogo->__getCidade()}','{$dadosJogo->__getLocalizacao()}','{$dadosJogo->__getDuracao()}','{$dadosJogo->__getData()}','{$dadosJogo->__getHora()}','{$dadosJogo->__getTotal7Metros()}')";
 		$this->conexao->banco->Execute($sql);
+		//$id = $banco->insert_Id();
+		//return $id;
 	}
 	
 	public function atualizar(Jogo $dadosJogo){
-		$sql = "UPDATE jogo SET espectadores='{$dadosJogo->__getEspectadores()}',cidade='{$dadosJogo->__getCidade()}', localizacao='{$dadosJogo->__getLocalizacao()}', data_jogo='{$dadosJogo->__getDataJogo()}', duracao='{$dadosJogo->__getDuracao()}', total_7metros='{$dadosJogo->__getTotal7Metros()}' WHERE id_jogo='{$dadosJogo->__getIdJogo()}' ";
+		$sql = "UPDATE jogo SET espectadores='{$dadosJogo->__getEspectadores()}',cidade='{$dadosJogo->__getCidade()}', localizacao='{$dadosJogo->__getLocalizacao()}', data_jogo='{$dadosJogo->__getDataJogo()}', duracao='{$dadosJogo->__getDuracao()}' WHERE id_jogo='{$dadosJogo->__getIdJogo()}' ";
 		$this->conexao->banco->Execute($sql);
 		return $dadosJogo;
 	}

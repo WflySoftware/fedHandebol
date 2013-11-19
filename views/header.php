@@ -16,13 +16,13 @@
 	
     	<div id="medida">
             <nav>
-            <img src="./views/images/imagemFED.jpg" width="100" height="100" style="padding: 4px 10px;" >
+            <!--<img src="./views/images/imagemFED.jpg" width="100" height="100" style="padding: 4px 10px;" > -->
         		<ul>
                 	<li class="borda borda-direita"><a href="">Cadastros</a>
                 		<ul> 
                     		<li><a href="?pag=tecnico">Tecnicos</a></li>
                         	<li><a href="?pag=jogador">Jogadores</a></li>
-                        	<li><a href="?pag=arbitro">Arbitro</a></li>
+                        	<li><a href="?pag=arbitro">Arbitro</a></li> 
                         	<li><a href="?pag=time">Time</a></li>
                     	</ul>
                     </li>
@@ -37,8 +37,7 @@
                 	<li class="borda"><a href="#">Jogos</a>
                 	<ul>
                     	<li><a  href="?pag=sumula">Iniciar Jogo</a></li>
-                    	<li><a href="">Tela</a></li>
-                        <li><a href="">Estatistica</a></li>
+                
                     </ul>
                 	</li>
                 	<li class="borda"><a href="./index.php">Painel Principal</a></li>

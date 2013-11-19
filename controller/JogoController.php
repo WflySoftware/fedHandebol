@@ -49,17 +49,19 @@ class JogoController{
 	public function _consultarPorDataJogo($dataJogo){
 		return $this->jogoDAO->consultarPorDataJogo($dataJogo);
 	}
-	public function _inserir(Jogo $jogo){
-		return $this->jogoDAO->inserir($jogo);
+	public function _inserir($espectadores,$cidade,$localizacao,$data,$hora,$duracao,$total7Metros){
+		$dadosJogo = new Jogo();
+		$dadosJogo->__constructOverload(0,$espectadores,$cidade,$localizacao,$data,$hora,$duracao,$total7Metros);
+		return $this->jogoDAO->inserir($dadosJogo);
 	}
-	public function _atualizar($idJogo,$espectadores,$cidade,$localizacao,$dataJogo,$duracao,$total7Metros){
+	public function _atualizar($idJogo,$espectadores,$cidade,$localizacao,$dataJogo,$duracao){
 		$dadosJogo = new Jogo();
 		$dadosJogo->__constructOverload($idJogo,$espectadores,$cidade,$localizacao,$dataJogo,$duracao,$total7Metros);
 		$this->jogoDAO->atualizar($dadosJogo);
 	}
-	public function _salvar($espectadores,$cidade,$localizacao,$dataJogo,$duracao,$total7Metros){
+	public function _salvar($idTimeA,$idTimeB,$espectadores,$cidade,$localizacao,$data,$hora,$duracao){
 		$dadosJogo = new Jogo();
-		$dadosJogo->__constructOverload(0, $espectadores,$cidade,$localizacao,$dataJogo,$duracao,$total7Metros);
+		$dadosJogo->__constructOverload($idTimeA,$idTimeB,0, $espectadores,$cidade,$localizacao,$data,$hora,$duracao);
 		$this->jogoDAO->inserir($dadosJogo);
 	}
 	public function _excluir($id){
