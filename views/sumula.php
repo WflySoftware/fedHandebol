@@ -170,7 +170,7 @@ $jogoVW = new JogoView();
 
 <h2 style="margin: 0 auto; width: 1024px; text-align:center;">INICIAR JOGO  No.:</h2>
 
-<form method="post" style="margin: 0 auto;">
+<form method="post" style="margin: 0 auto;" >
 <table class="medidas" border="0">
 <tr>
 	<td></td>
@@ -242,13 +242,14 @@ $jogoVW = new JogoView();
 <?php 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-$idJogoAtual = $jogoVW->inserir();
-$timeJogoVW->salvar($idJogoAtual,$_POST['idTimeA']);
-$timeJogoVW->salvar($idJogoAtual,$_POST['idTimeB']);
-
-echo" <script>document.location.href='?pag=duranteJogo'</script>";
+	$timeA = $_POST['idTimeA'];
+	$timeB = $_POST['idTimeB'];
+	$idJogoAtual = $jogoVW->inserir();
+	$timeJogoVW->salvar($idJogoAtual,$_POST['idTimeA']);
+	$timeJogoVW->salvar($idJogoAtual,$_POST['idTimeB']);
+	echo" <script>document.location.href='?pag=duranteJogo&idA=".$timeA."&idB=".$timeB."'</script>";
 
 }
-?>
+
 
 

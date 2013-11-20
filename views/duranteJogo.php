@@ -144,7 +144,8 @@ padding: 1px 1px;
 <?php 
 require_once __APP_PATH.'/view/JogadorView.php';
 
-
+$idA = isset( $_GET['idA'] ) ? $_GET['idA'] : null;
+$idB = isset( $_GET['idB'] ) ? $_GET['idB'] : null;
 $jogadorVW = new JogadorView();	
 ?>
 
@@ -318,13 +319,13 @@ $jogadorVW = new JogadorView();
         </tr>
      <?php 
     		
-				if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-						$timeA = $_POST['idTimeA'];
-						$tr = $jogadorVW->listarJogadoresParaSumulaTimeA($timeA);
+				
+						
+						$tr = $jogadorVW->listarJogadoresParaSumulaTimeA($idA);
 						for($i=0;$i<count($tr);$i++){
 							echo $tr[$i];
 					}
-        		}
+        		
         ?> 
      
      </aside>
@@ -343,13 +344,13 @@ $jogadorVW = new JogadorView();
 			            <th class="tr" colspan="2"><small>D+R</small></th>
 		</tr>
 		<?php 
-				if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-						$timeB = $_POST['idTimeB'];
-						$tr = $jogadorVW->listarJogadoresParaSumulaTimeB($timeB);
+				
+						
+						$tr = $jogadorVW->listarJogadoresParaSumulaTimeB($idB);
 						for($i=0;$i<count($tr);$i++){
 							echo $tr[$i];
-												}
-        		}
+						}
+        		
         ?> 
     </aside>
 </table>

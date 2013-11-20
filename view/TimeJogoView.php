@@ -8,7 +8,6 @@ class TimeJogoView{
 		$this->timeJogoCO = new TimeJogoController();
 	}
 	public function salvar($idJogoAtual,$idTime){
-	
 		$this->timeJogoCO->_salvar($idJogoAtual,$idTime);
 	}
 }
