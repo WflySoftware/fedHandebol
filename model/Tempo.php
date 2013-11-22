@@ -15,14 +15,10 @@ class Tempo{
 	public function __construct(){
 	
 	}
-	public function __constructOverload($idTempo,$idJogo,$tipo,$advertencia,$punicao,$desqualificacao,$relatorio,$tiro7Metros,$tempoTecnico,$placarTime1,$placarTime2){
+	public function __constructOverload($idTempo,$idJogo,$tipo,$tiro7Metros,$tempoTecnico,$placarTime1,$placarTime2){
 		$this->idTempo = $idTempo;
 		$this->idJogo = $idJogo;
 		$this->tipo = $tipo;
-		$this->advertencia = $advertencia;
-		$this->punicao = $punicao;
-		$this->desqualificacao = $desqualificacao;
-		$this->relatorio = $relatorio;
 		$this->tiro7Metros = $tiro7Metros;
 		$this->tempoTecnico = $tempoTecnico;
 		$this->placarTime1 = $placarTime1;

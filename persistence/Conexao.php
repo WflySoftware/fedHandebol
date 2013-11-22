@@ -1,5 +1,5 @@
 <?php
-require_once(__APP_PATH.'/libs/adodb/adodb.inc.php');
+require_once('C:/xampp/htdocs/fedHandebol/libs/adodb/adodb.inc.php');
 
 class Conexao{
 	

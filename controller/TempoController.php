@@ -1,6 +1,6 @@
 <?php
-include_once(__APP_PATH.'/persistence/TempoDAO.php');
-include_once(__APP_PATH.'/model/Tempo.php');
+include_once('C:/xampp/htdocs/fedHandebol/persistence/TempoDAO.php');
+include_once('C:/xampp/htdocs/fedHandebol/model/Tempo.php');
 class TempoController{
 
 	private $tempoDAO;
@@ -38,13 +38,14 @@ class TempoController{
 public function _consultarPorId($id){
 		$dadosTempo= new Tempo();
 		$dadosTempo=  $this->tempoDAO->consultarPorId($id);
+		$arrayDados['idTempo'] = $dadosTempo->__getIdTempo();
 		$arrayDados['idJogo'] = $dadosTempo->__getIdJogo();
+		$arrayDados['tipo'] = $dadosTempo->__getTipo();
 		$arrayDados['tiro7Metros'] = $dadosTempo->__getTiro7Metros();
 		$arrayDados['tempoTecnico'] = $dadosTempo->__getTempoTecnico();
 		$arrayDados['placarTime1'] = $dadosTempo->__getPlacarTime1();
 		$arrayDados['placarTime2'] = $dadosTempo->__getPlacarTime2();
-		$arrayDados['tipo'] = $dadosTempo->__getTipo();
-		
+
 		return $arrayDados;
 	}
 	public function _consultarPorRelatorio($relatorio){
@@ -66,5 +67,10 @@ public function _consultarPorId($id){
 	public function _excluir($id){
 		return $this->tempoDAO->excluir($id);
 	}
-
+	public function _inserirGolTimeA(){
+		return $this->tempoDAO->inserirGolTimeA();
+	}
+	public function _inserirGolTimeB(){
+		return $this->tempoDAO->inserirGolTimeB();
+	}
 }
