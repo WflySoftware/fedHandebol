@@ -355,5 +355,36 @@ $jogadorVW = new JogadorView();
     </aside>
 </table>
 </div>
-
+<script>
+	//alert(xmlhttp.status+" status"+"\n"+xmlhttp.readyState+" ready");
+	function persistirTempo()
+	{
+	var xmlhttp;
+	/*if (document.getElementById("placarATempo1")=="")
+	  {
+	  document.getElementById("txtHint").innerHTML="";
+	  return;
+	  }*/
+	if (window.XMLHttpRequest)
+	{// code for IE7+, Firefox, Chrome, Opera, Safari
+	  xmlhttp=new XMLHttpRequest();
+	}
+	else
+	{// code for IE6, IE5
+	  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange=function()
+	  {  
+		  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		  {
+		  	alert(xmlhttp.responseText);
+		  }
+	  }
+	xmlhttp.open("GET","view/AjaxView.php",true);
+	xmlhttp.send();
+	}
+	</script>
+</head>
+<div id="myDiv"><h2>TESTE DE AJAX</h2></div>
+<button type="button" onclick="persistirTempo()">Persistir</button>
 
