@@ -357,8 +357,36 @@ $jogadorVW = new JogadorView();
 </div>
 <script>
 	//alert(xmlhttp.status+" status"+"\n"+xmlhttp.readyState+" ready");
-	function persistirTempo()
+	function persistirTempo(tempoAtual)
 	{
+		switch(tempoAtual){
+		case 1:
+			placarA = document.getElementById("placarATempo1").value;
+			placarB = document.getElementById("placarBTempo1").value;
+		break;
+		case 2:
+			placarA = document.getElementById("placarATempo2").value;
+			placarB = document.getElementById("placarBTempo2").value;
+		break;
+		case 3:
+			placarA = document.getElementById("placarATempo3").value;
+			placarB = document.getElementById("placarBTempo3").value;
+		break;
+		case 4:
+			placarA = document.getElementById("placarATempo4").value;
+			placarB = document.getElementById("placarBTempo4").value;
+		break;
+		case 5:
+			placarA = document.getElementById("placarATempo5").value;
+			placarB = document.getElementById("placarBTempo5").value;
+		break;
+		default:
+			placarA = document.getElementById("placarATempo5").value;
+			placarB = document.getElementById("placarBTempo5").value;
+		break;
+		}
+		seteMetrosA=document.getElementById("7MetrosA").value;
+		seteMetrosB=document.getElementById("7MetrosB").value;
 	var xmlhttp;
 	/*if (document.getElementById("placarATempo1")=="")
 	  {
@@ -377,14 +405,14 @@ $jogadorVW = new JogadorView();
 	  {  
 		  if (xmlhttp.readyState==4 && xmlhttp.status==200)
 		  {
-		  	alert(xmlhttp.responseText);
+		  	alert("inserido");
 		  }
 	  }
-	xmlhttp.open("GET","view/AjaxView.php",true);
+	xmlhttp.open("GET","view/AjaxView.php?placarA="+placarA+"&placarB="+placarB+"&seteMetrosA="+seteMetrosA+"&seteMetrosB="+seteMetrosB+"",true);
 	xmlhttp.send();
 	}
 	</script>
 </head>
 <div id="myDiv"><h2>TESTE DE AJAX</h2></div>
-<button type="button" onclick="persistirTempo()">Persistir</button>
+<button type="button" onclick="persistirTempo(tempoAtual)">Persistir</button>
 

@@ -61,16 +61,16 @@ public function _consultarPorId($id){
 	}
 	public function _salvar($idTempo,$idJogo,$tiro7Metros,$tempoTecnico,$placarTime1,$placarTime2,$tipo){
 		$dadosTempo= new Tempo();
-		$dadosTempo->__constructOverload(0,$idTempo,$idJogo,$tiro7Metros,$tempoTecnico,$placarTime1,$placarTime2,$tipo);
+		$dadosTempo->__constructOverload(0,$idJogo,$tiro7Metros,$tempoTecnico,$placarTime1,$placarTime2,$tipo);
 		$this->tempoDAO->inserir($dadosTempo);
 	}
 	public function _excluir($id){
 		return $this->tempoDAO->excluir($id);
 	}
-	public function _inserirGolTimeA(){
-		return $this->tempoDAO->inserirGolTimeA();
+	public function _inserirGolTimeA($placarA,$seteMetros){
+		return $this->tempoDAO->inserirGolTimeA($placarA,$seteMetros);
 	}
-	public function _inserirGolTimeB(){
-		return $this->tempoDAO->inserirGolTimeB();
+	public function _inserirGolTimeB($placarB){
+		return $this->tempoDAO->inserirGolTimeB($placarB);
 	}
 }

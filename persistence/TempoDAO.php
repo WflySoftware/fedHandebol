@@ -53,13 +53,12 @@ class TempoDAO{
 		$sql = "DELETE FROM jogador WHERE id_jogador= '{$id}' ";
 		$resultado = $this->conexao->banco->Execute($sql);
 	}
-	public function inserirGolTimeA(){
-		$sql = "UPDATE tempo SET placar_time1=313 WHERE id_tempo=1";
+	public function inserirGolTimeA($placarA,$seteMetros){
+		$sql = "UPDATE tempo SET placar_time1='{$placarA}',tiro_7metros='{$seteMetros}' WHERE id_tempo=1";
 		$resultado = $this->conexao->banco->Execute($sql);
 	}
-	public function inserirGolTimeB(){
-		$dadosTempo = new Tempo();
-		$sql = "UPDATE tempo SET placar_time2=313 WHERE id_tempo=1";
+	public function inserirGolTimeB($placarB){
+		$sql = "UPDATE tempo SET placar_time2='{$placarB}'  WHERE id_tempo=1";
 		$resultado = $this->conexao->banco->Execute($sql);
 	}
 }

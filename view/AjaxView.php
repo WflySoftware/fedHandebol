@@ -1,6 +1,12 @@
 <?php
 include_once('C:/xampp/htdocs/fedHandebol/controller/TempoController.php');
 
-$script = "<script>document.getElementById(\"placarATempo1\").value</script>";
+$placarA= $_GET["placarA"];
+$placarB= $_GET["placarB"];
+$seteMetrosA= $_GET["seteMetrosA"];
+$seteMetrosB= $_GET["seteMetrosB"];
+$seteMetros = $seteMetrosA + $seteMetrosB;
+
 $tempoCO = new TempoController();
-$tempoCO->_inserirGolTimeA();
+$tempoCO->_inserirGolTimeA($placarA,$seteMetros);
+$tempoCO->_inserirGolTimeB($placarB);
