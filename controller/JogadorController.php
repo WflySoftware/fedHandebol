@@ -62,8 +62,8 @@ class JogadorController{
 	            <th class=\"tr\" id =\"golJogadorTimeA$i\">0</th>
 	            <th>
 	             	<script>var contGolTimeA$i = 0</script>
-		            <input id=\"acrescentaGolA$i\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contGolTimeA$i++;document.getElementById('golJogadorTimeA$i').innerHTML=contGolTimeA$i;timeGolsTimeA++;inserirGolTimeA(tempoAtual);\">
-					<input id=\"decrementaGolA$i\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contGolTimeA$i--;timeGolsTimeA--;if(contGolTimeA$i<0){contGolTimeA$i++;timeGolsTimeA++;}document.getElementById('golJogadorTimeA$i').innerHTML=contGolTimeA$i;inserirGolTimeA(tempoAtual);\">
+		            <input id=\"acrescentaGolA$i\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contGolTimeA$i++;document.getElementById('golJogadorTimeA$i').innerHTML=contGolTimeA$i;timeGolsTimeA++;inserirGolTimeA(tempoAtual);persistirTempo(tempoAtual);\">
+					<input id=\"decrementaGolA$i\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contGolTimeA$i--;timeGolsTimeA--;if(contGolTimeA$i<0){contGolTimeA$i++;timeGolsTimeA++;}document.getElementById('golJogadorTimeA$i').innerHTML=contGolTimeA$i;inserirGolTimeA(tempoAtual);persistirTempo(tempoAtual);\">
 					
 					</th></th>
 		            <th class=\"tr\" id=\"jogadorATimeA$i\">0	
@@ -117,8 +117,8 @@ class JogadorController{
 					<th class=\"tr\" id =\"golJogadorTimeB$i\">0</th>
 					<th>
 					<script>var contGolTimeB$i = 0</script>
-					<input id=\"acrescenta\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contGolTimeB$i++;document.getElementById('golJogadorTimeB$i').innerHTML=contGolTimeB$i;timeGolsTimeB++;inserirGolTimeB(tempoAtual);\">
-					<input id=\"decrementa\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contGolTimeB$i--;timeGolsTimeB--;if(contGolTimeB$i<0){contGolTimeB$i++;timeGolsTimeB++;}document.getElementById('golJogadorTimeB$i').innerHTML=contGolTimeB$i;inserirGolTimeB(tempoAtual);\">
+					<input id=\"acrescenta\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contGolTimeB$i++;document.getElementById('golJogadorTimeB$i').innerHTML=contGolTimeB$i;timeGolsTimeB++;inserirGolTimeB(tempoAtual);persistirTempo(tempoAtual);\">
+					<input id=\"decrementa\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contGolTimeB$i--;timeGolsTimeB--;if(contGolTimeB$i<0){contGolTimeB$i++;timeGolsTimeB++;}document.getElementById('golJogadorTimeB$i').innerHTML=contGolTimeB$i;inserirGolTimeB(tempoAtual);persistirTempo(tempoAtual);\">
 					</th></th>
 					<th class=\"tr\" id=\"jogadorATimeB$i\">0
 					</th>

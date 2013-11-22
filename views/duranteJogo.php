@@ -188,11 +188,11 @@ $jogadorVW = new JogadorView();
     <tr>
     	
         <th>
-        	<input type="text" class="inputCaixa" name="placarA" id="placarATempo1" placeholder="N&ordm" style="text-align: center;" >
+        	<input type="text" class="inputCaixa" name="placarA" id="placarATempo1" placeholder="N&ordm" value=0 style="text-align: center;" >
         </th>
         <td>X</td>
         <td>
-        	<input type="text" class="inputCaixa" name="placarB" id="placarBTempo1" placeholder="N&ordm" style="text-align: center;"  >
+        	<input type="text" class="inputCaixa" name="placarB" id="placarBTempo1" placeholder="N&ordm" value=0 style="text-align: center;"  >
         </td>
         <td><img src="./views/images/star.png" width="47" height="47" ></td>
         <td>
@@ -279,7 +279,7 @@ $jogadorVW = new JogadorView();
        <tfoot>
     	<tr>
         	<script src="./fedHandebol/views/cronometro/cronometro.js"></script>
-            <th><input type="text" class="inputCaixa" name="7MetrosA" id="7MetrosA" placeholder="N&ordm" style="text-align: center;"  ></th>
+            <th><input type="text" class="inputCaixa" name="7MetrosA" id="7MetrosA" placeholder="N&ordm" value=0 style="text-align: center;"  ></th>
             <th><input id="volta"class="but but-primary" type="button" value="I" onclick="document.getElementById('tempoTecnicoA1').innerHTML = document.getElementById('minuto').firstChild.data + document.getElementById('segundo').firstChild.data + document.getElementById('milisegundo').firstChild.data;"></th>
             <th><input id="volta"class="but but-primary" type="button" value="II" onclick="document.getElementById('tempoTecnicoA2').innerHTML = document.getElementById('minuto').firstChild.data + document.getElementById('segundo').firstChild.data + document.getElementById('milisegundo').firstChild.data;"></th>
             <th><input id="volta"class="but but-primary" type="button" value="III" onclick="document.getElementById('tempoTecnicoA3').innerHTML = document.getElementById('minuto').firstChild.data + document.getElementById('segundo').firstChild.data + document.getElementById('milisegundo').firstChild.data;"></th>
@@ -288,7 +288,7 @@ $jogadorVW = new JogadorView();
             <th><input id="volta"class="but but-primary" type="button" value="II" onclick="document.getElementById('tempoTecnicoB2').innerHTML = document.getElementById('minuto').firstChild.data + document.getElementById('segundo').firstChild.data + document.getElementById('milisegundo').firstChild.data;"></th>
             <th><input id="volta"class="but but-primary" type="button" value="III" onclick="document.getElementById('tempoTecnicoB3').innerHTML = document.getElementById('minuto').firstChild.data + document.getElementById('segundo').firstChild.data + document.getElementById('milisegundo').firstChild.data;"></th>
             
-             <th><input type="text" class="inputCaixa" name="7MetrosB" id="7MetrosB" placeholder="N&ordm" style="text-align: center;"  ></th>
+             <th><input type="text" class="inputCaixa" name="7MetrosB" id="7MetrosB" placeholder="N&ordm" value=0 style="text-align: center;"  ></th>
          </tr>
          <tr><th class="td" id="e1" hearders="e"><small>n&ordm de 7 Metros</small></th>
          <th id="tempoTecnicoA1"></th>
@@ -302,7 +302,7 @@ $jogadorVW = new JogadorView();
       	 </tr>	
        </tfoot>
 </table>
-
+<script src="./views/ajaxGol.js"></script>
 <table class="medidas" boder=0   style=" border-bottom: 1px solid #CCC; padding: 4px; margin-bottom: 10px;">
 	<aside>
     	<tr class="tr">
@@ -355,64 +355,9 @@ $jogadorVW = new JogadorView();
     </aside>
 </table>
 </div>
-<script>
-	//alert(xmlhttp.status+" status"+"\n"+xmlhttp.readyState+" ready");
-	function persistirTempo(tempoAtual)
-	{
-		switch(tempoAtual){
-		case 1:
-			placarA = document.getElementById("placarATempo1").value;
-			placarB = document.getElementById("placarBTempo1").value;
-		break;
-		case 2:
-			placarA = document.getElementById("placarATempo2").value;
-			placarB = document.getElementById("placarBTempo2").value;
-		break;
-		case 3:
-			placarA = document.getElementById("placarATempo3").value;
-			placarB = document.getElementById("placarBTempo3").value;
-		break;
-		case 4:
-			placarA = document.getElementById("placarATempo4").value;
-			placarB = document.getElementById("placarBTempo4").value;
-		break;
-		case 5:
-			placarA = document.getElementById("placarATempo5").value;
-			placarB = document.getElementById("placarBTempo5").value;
-		break;
-		default:
-			placarA = document.getElementById("placarATempo5").value;
-			placarB = document.getElementById("placarBTempo5").value;
-		break;
-		}
-		seteMetrosA=document.getElementById("7MetrosA").value;
-		seteMetrosB=document.getElementById("7MetrosB").value;
-	var xmlhttp;
-	/*if (document.getElementById("placarATempo1")=="")
-	  {
-	  document.getElementById("txtHint").innerHTML="";
-	  return;
-	  }*/
-	if (window.XMLHttpRequest)
-	{// code for IE7+, Firefox, Chrome, Opera, Safari
-	  xmlhttp=new XMLHttpRequest();
-	}
-	else
-	{// code for IE6, IE5
-	  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-	}
-	xmlhttp.onreadystatechange=function()
-	  {  
-		  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-		  {
-		  	alert("inserido");
-		  }
-	  }
-	xmlhttp.open("GET","view/AjaxView.php?placarA="+placarA+"&placarB="+placarB+"&seteMetrosA="+seteMetrosA+"&seteMetrosB="+seteMetrosB+"",true);
-	xmlhttp.send();
-	}
-	</script>
 </head>
-<div id="myDiv"><h2>TESTE DE AJAX</h2></div>
-<button type="button" onclick="persistirTempo(tempoAtual)">Persistir</button>
 
+
+<div style="margin-left: 500px;" id="termino"><h2>TERMINAR JOGO</h2>
+<button  class ="but but-error" style=" padding:10px 73px" type="button" onclick="">terminar</button>
+</div>
