@@ -20,7 +20,7 @@ class Dados{
 		$this->idTempo = $idTempo;
 		$this->advertencia = $advertencia;
 		$this->punicao = $punicao;
-		$this->desqualificacao = desqualificacao;
+		$this->desqualificacao = $desqualificacao;
 		$this->relatorio = $relatorio;
 		$this->gol = $gol;
 	}

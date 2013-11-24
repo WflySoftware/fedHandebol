@@ -1,7 +1,7 @@
 <?php
 
-include_once (__APP_PATH.'/model/Dados.php');
-include_once (__APP_PATH.'/persistence/Conexao.php');
+include_once ('C:/xampp/htdocs/fedHandebol/model/Dados.php');
+include_once ('C:/xampp/htdocs/fedHandebol/persistence/Conexao.php');
 
 class DadosDAO{
 	private $conexao;

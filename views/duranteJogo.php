@@ -141,6 +141,7 @@ padding: 1px 1px;
     
 }
 </style>
+
 <?php 
 require_once __APP_PATH.'/view/JogadorView.php';
 
@@ -161,6 +162,7 @@ $jogadorVW = new JogadorView();
 
 <table class="medidas" border="0" >
 	 <script src="./views/contadorGolsTimes.js"></script>
+	 <script src="./views/ajaxTempo.js"></script>
 	<tr>
     	<div>
 	        <td><small>A  </small></td>
@@ -359,5 +361,5 @@ $jogadorVW = new JogadorView();
 
 
 <div style="margin-left: 500px;" id="termino"><h2>TERMINAR JOGO</h2>
-<button  class ="but but-error" style=" padding:10px 73px" type="button" onclick="">terminar</button>
+<button  class ="but but-error" style=" padding:10px 73px" type="button" onclick="persistirDados()">terminar</button>
 </div>

@@ -1,6 +1,6 @@
 <?php
-include_once(__APP_PATH.'/persistence/DadosDAO.php');
-include_once(__APP_PATH.'/model/Dados.php');
+include_once('C:/xampp/htdocs/fedHandebol/persistence/DadosDAO.php');
+include_once('C:/xampp/htdocs/fedHandebol/model/Dados.php');
 class DadosController{
 	
 	private $dadosDAO;
@@ -53,9 +53,9 @@ class DadosController{
 	public function _inserir(Dados $dados){
 		return $this->dadosDAO->inserir($dados);
 	}
-	public function _atualizar($idDados,$idJogador,$idTempo,$advertencia,$punicao,$desqualificacao,$relatorio){
+	public function _atualizar($idDados,$idJogador,$idTempo,$advertencia,$punicao,$desqualificacao,$relatorio,$gol){
 		$dadosDados = new Dados();
-		$dadosDados->__constructOverload($idDados,$idJogador,$idTempo,$advertencia,$punicao,$desqualificacao,$relatorio);
+		$dadosDados->__constructOverload($idDados,$idJogador,$idTempo,$advertencia,$punicao,$desqualificacao,$relatorio,$gol);
 		$this->dadosDAO->atualizar($dadosDados);
 	}
 	public function _salvar($idJogador,$idTempo,$advertencia,$punicao,$desqualificacao,$relatorio){

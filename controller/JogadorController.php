@@ -60,6 +60,7 @@ class JogadorController{
 				<th class=\"tr\">".$dadosJogadorTime->__getNumero()."</th>
 				<th class=\"tr\">".$dadosJogadorTime->__getNome()."</th>
 	            <th class=\"tr\" id =\"golJogadorTimeA$i\">0</th>
+	            <script>var jogadorId$i = ".$dadosJogadorTime->__getIdJogador()." </script>
 	            <th>
 	             	<script>var contGolTimeA$i = 0</script>
 		            <input id=\"acrescentaGolA$i\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contGolTimeA$i++;document.getElementById('golJogadorTimeA$i').innerHTML=contGolTimeA$i;timeGolsTimeA++;inserirGolTimeA(tempoAtual);persistirTempo(tempoAtual);\">
@@ -70,8 +71,8 @@ class JogadorController{
 	            </th>
 	            <th>
 		            <script>var contATimeA$i = 0</script>
-					<input id=\"acrescentaAA\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contATimeA$i++;document.getElementById('jogadorATimeA$i').innerHTML=contATimeA$i;\">
-					<input id=\"decrementaAA$i\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contATimeA$i--;if(contATimeA$i<0){contATimeA$i++;}document.getElementById('jogadorATimeA$i').innerHTML=contATimeA$i;\"></th>
+					<input id=\"acrescentaAA\" class=\"but but-gol \" type=\"button\"  value=\"+\" onclick=\"contATimeA$i++;document.getElementById('jogadorATimeA$i').innerHTML=contATimeA$i;persistirDados(jogadorId$i,contGolTimeA$i,contATimeA$i,contDoisMinutosTimeA$i,contDTimeA$i,contDRTimeA$i);\">
+					<input id=\"decrementaAA$i\" class=\"but but-retirarGol \" type=\"button\" value=\"-\" onclick=\"contATimeA$i--;if(contATimeA$i<0){contATimeA$i++;}document.getElementById('jogadorATimeA$i').innerHTML=contATimeA$i;persistirDados(jogadorId$i,contGolTimeA$i,contATimeA$i,contDoisMinutosTimeA$i,contDTimeA$i,contDRTimeA$i);\"></th>
 	            	<th class=\"tr\" id=\"jogadorDoisMinutosTimeA$i\">0
 	            </th>
 		            <th><script>var contDoisMinutosTimeA$i = 0</script>
