@@ -1,6 +1,6 @@
 <?php
-include_once(__APP_PATH.'/persistence/DadosTimeDAO.php');
-include_once(__APP_PATH.'/model/DadosTime.php');
+include_once('C:/xampp/htdocs/fedHandebol/persistence/DadosTimeDAO.php');
+include_once('C:/xampp/htdocs/fedHandebol/model/DadosTime.php');
 class DadosTimeController{
 	private $dadosTimeDAO;
 	
@@ -22,9 +22,9 @@ class DadosTimeController{
 	public function _inserir(DadosTime $dadosTime){
 		return $this->dadosTimeDAO->inserir($dadosTime);
 	}
-	public function _atualizar($pontos,$jogos,$vitorias,$empates,$derrotas,$gols,$golsLevados){
+	public function _atualizar($idDadosTime,$pontos,$jogos,$vitorias,$empates,$derrotas,$gols,$golsLevados){
 		$dadosDadosTime = new DadosTime();
-		$dadosDadosTime->__constructOverload($pontos,$jogos,$vitorias,$empates,$derrotas,$gols,$golsLevados);
+		$dadosDadosTime->__constructOverload(1,$idDadosTime,$pontos,$jogos,$vitorias,$empates,$derrotas,$gols,$golsLevados);
 		$this->dadosTimeDAO->atualizar($dadosDadosTime);
 	}
 	public function _excluir($id){

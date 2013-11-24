@@ -1,6 +1,6 @@
 <?php
-include_once (__APP_PATH.'/model/Arbitro.php');
-include_once (__APP_PATH.'/persistence/Conexao.php');
+include_once ('C:/xampp/htdocs/fedHandebol/model/Arbitro.php');
+include_once ('C:/xampp/htdocs/fedHandebol/persistence/Conexao.php');
 
 class DadosTimeDAO{
 	private $conexao;

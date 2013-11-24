@@ -163,6 +163,7 @@ $jogadorVW = new JogadorView();
 <table class="medidas" border="0" >
 	 <script src="./views/contadorGolsTimes.js"></script>
 	 <script src="./views/ajaxTempo.js"></script>
+	  <script src="./views/ajaxDadosCampeonato.js"></script>
 	<tr>
     	<div>
 	        <td><small>A  </small></td>
@@ -352,6 +353,7 @@ $jogadorVW = new JogadorView();
 						for($i=0;$i<count($tr);$i++){
 							echo $tr[$i];
 						}
+						
         		
         ?> 
     </aside>
@@ -361,5 +363,5 @@ $jogadorVW = new JogadorView();
 
 
 <div style="margin-left: 500px;" id="termino"><h2>TERMINAR JOGO</h2>
-<button  class ="but but-error" style=" padding:10px 73px" type="button" onclick="persistirDados()">terminar</button>
+<button  class ="but but-error" style=" padding:10px 73px" type="button" onclick="persistirDadosCampeonato();alert('Obrigado por usar o software Wfly');document.location.href='?pag=initial';">terminar</button>
 </div>

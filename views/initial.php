@@ -82,10 +82,11 @@ th{
         
         <table border=0 style="width: 320px; margin-left: 10px;">
         	 <tr style="background: #09F; border:#09f; color: #fff; ">
-			 <th><small>Artilheiros</small></th>
-			 <th><small>Time</small></th>
-			 <th class=\"th-piqueno\"><small>G</small></th>
-			 </tr>
+            		<th><small>N&ordm;</small></th>
+                	<th><small>Jogador</small></th>
+                    <th><small>Time</small></th>
+                    <th class="th-piqueno"><small>G</small></th>
+                </tr>
 			 </thead>
         	<?php 
         		$tr = $mainVW->listarArtilheiros();
