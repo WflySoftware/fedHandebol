@@ -69,6 +69,7 @@ th{
                 <h2><small>Artilheiros</small></h2>
         	<thead>
             	<tr style="background: #09F; border:#09f; color: #fff; ">
+            		<th><small>Nº</small></th>
                 	<th><small>Jogador</small></th>
                     <th><small>Time</small></th>
                     <th class="th-piqueno"><small>G</small></th>
@@ -87,6 +88,7 @@ th{
           
         	<thead><h2><small>Fear Players</small></h2>
             	<tr style="background: #09F; border:#09f; color: #fff; ">
+            		<th><small>Nº</small></th>
                 	<th><small>Jogador</small></th>
                     <th><small>Time</small></th>
                     <th class="th-piqueno"><small>F</small></th>

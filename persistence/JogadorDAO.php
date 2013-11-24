@@ -68,7 +68,7 @@ class JogadorDAO{
 		return $registro->CONTAGEM;
 	}
 	public function listarArtilheiros(){
-		$sql = "SELECT j.nome AS nome_jogador, t.nome AS nome_time, d.gol
+		$sql = "SELECT j.nome AS nome_jogador, t.nome AS nome_time, d.gol,j.numero
 				FROM jogador j, dados d, time t
 				WHERE j.id_jogador = d.jogador_id_jogador
 				AND j.time_id_time = t.id_time
@@ -78,12 +78,13 @@ class JogadorDAO{
 			$artilheiro['nome'] = $registro->NOME_JOGADOR;
 			$artilheiro['time'] = $registro->NOME_TIME;
 			$artilheiro['gols'] = $registro->GOL;
+			$artilheiro['numero'] = $registro->NUMERO;
 			$arrayArtilheiro[] = $artilheiro;
 		}	
 		return $arrayArtilheiro;
 	}
 	public function listarFearPlayers(){
-		$sql = "SELECT j.nome AS nome_jogador, t.nome AS nome_time, (d.advertencia + d.punicao + d.desqualificacao + d.relatorio) AS faltas
+		$sql = "SELECT j.nome AS nome_jogador, t.nome AS nome_time, (d.advertencia + d.punicao + d.desqualificacao + d.relatorio) AS faltas, j.numero
 				FROM dados d, jogador j, time t
 				WHERE d.jogador_id_jogador = j.id_jogador
 				AND j.time_id_time = t.id_time
@@ -93,6 +94,7 @@ class JogadorDAO{
 			$fear['nome'] = $registro->NOME_JOGADOR;
 			$fear['time'] = $registro->NOME_TIME;
 			$fear['faltas'] = $registro->FALTAS;
+			$fear['numero'] = $registro->NUMERO;
 			$arrayFear[] = $fear;
 		}
 		

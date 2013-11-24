@@ -47,8 +47,7 @@
 	  {  
 		  if (xmlhttp.readyState==4 && xmlhttp.status==200)
 		  {
-		  	alert("inserido gol");
-		  	alert(xmlhttp.responseText);
+		  	
 		  }
 	  }
 	xmlhttp.open("GET","view/AjaxView.php?placarA="+placarA+"&placarB="+placarB+"&seteMetrosA="+seteMetrosA+"&seteMetrosB="+seteMetrosB+"",true);

@@ -204,6 +204,7 @@ public function _consultarPorId($id){
 			$arrayTr[]= "
 			
 			 <tr>
+			 <th class=\"th-piqueno th-cor\">".$dadosArtilheiro['numero']."</th>
 			 <th class=\"th-cor\">".$dadosArtilheiro['nome']."</th>
 			                     <th class=\"th-cor\">".$dadosArtilheiro['time']."</th>
 			                     <th class=\"th-piqueno th-cor\">".$dadosArtilheiro['gols']."</th>
@@ -218,6 +219,7 @@ public function _consultarPorId($id){
 			$arrayTr[]= "
 		
 			 				<tr>
+							     <th class=\"th-piqueno th-cor\">".$dadosFear['numero']."</th>
 								 <th class=\"th-cor\">".$dadosFear['nome']."</th>
 			                     <th class=\"th-cor\">".$dadosFear['time']."</th>
 			                     <th class=\"th-piqueno th-cor\">".$dadosFear['faltas']."</th>
