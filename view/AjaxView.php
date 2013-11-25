@@ -8,5 +8,7 @@ $seteMetrosB= $_GET["seteMetrosB"];
 $seteMetros = $seteMetrosA + $seteMetrosB;
 
 $tempoCO = new TempoController();
-$tempoCO->_inserirGolTimeA($placarA,$seteMetros);
-$tempoCO->_inserirGolTimeB($placarB);
+$arrayTempo = $tempoCO->_listarTodos();
+$idTempoAtual = $tempoCO->_consultarUltimoRegistro();
+$tempoCO->_inserirGolTimeA($placarA,$seteMetros,$idTempoAtual);
+$tempoCO->_inserirGolTimeB($placarB,$idTempoAtual);

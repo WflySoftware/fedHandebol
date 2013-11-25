@@ -53,12 +53,17 @@ class TempoDAO{
 		$sql = "DELETE FROM jogador WHERE id_jogador= '{$id}' ";
 		$resultado = $this->conexao->banco->Execute($sql);
 	}
-	public function inserirGolTimeA($placarA,$seteMetros){
-		$sql = "UPDATE tempo SET placar_time1='{$placarA}',tiro_7metros='{$seteMetros}' WHERE id_tempo=1";
+	public function inserirGolTimeA($placarA,$seteMetros,$idTempo){
+		$sql = "UPDATE tempo SET placar_time1='{$placarA}',tiro_7metros='{$seteMetros}' WHERE id_tempo='{$idTempo}'";
 		$resultado = $this->conexao->banco->Execute($sql);
 	}
-	public function inserirGolTimeB($placarB){
-		$sql = "UPDATE tempo SET placar_time2='{$placarB}'  WHERE id_tempo=1";
+	public function inserirGolTimeB($placarB,$idTempo){
+		$sql = "UPDATE tempo SET placar_time2='{$placarB}'  WHERE id_tempo='{$idTempo}'";
 		$resultado = $this->conexao->banco->Execute($sql);
+	}
+	public function consultarUltimoRegistro(){
+		$sql = "SELECT MAX(id_tempo) AS id FROM tempo";
+		$resultado = $this->conexao->banco->Execute($sql);
+		return $resultado;
 	}
 }

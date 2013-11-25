@@ -67,10 +67,15 @@ public function _consultarPorId($id){
 	public function _excluir($id){
 		return $this->tempoDAO->excluir($id);
 	}
-	public function _inserirGolTimeA($placarA,$seteMetros){
-		return $this->tempoDAO->inserirGolTimeA($placarA,$seteMetros);
+	public function _inserirGolTimeA($placarA,$seteMetros,$idTempo){
+		return $this->tempoDAO->inserirGolTimeA($placarA,$seteMetros,$idTempo);
 	}
-	public function _inserirGolTimeB($placarB){
-		return $this->tempoDAO->inserirGolTimeB($placarB);
+	public function _inserirGolTimeB($placarB,$idTempoAtual){
+		return $this->tempoDAO->inserirGolTimeB($placarB,$idTempoAtual);
+	}
+	public function _consultarUltimoRegistro(){
+		 $resultado = $this->tempoDAO->consultarUltimoRegistro();
+		 $idTempo = $resultado->Fields('id');
+		 return $idTempo;
 	}
 }

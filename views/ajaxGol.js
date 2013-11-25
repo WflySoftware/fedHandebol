@@ -1,4 +1,3 @@
-//alert(xmlhttp.status+" status"+"\n"+xmlhttp.readyState+" ready");
 	function persistirTempo(tempoAtual)
 	{
 		switch(tempoAtual){
@@ -47,7 +46,7 @@
 	  {  
 		  if (xmlhttp.readyState==4 && xmlhttp.status==200)
 		  {
-		  	
+			  alert(xmlhttp.responseText);  	
 		  }
 	  }
 	xmlhttp.open("GET","view/AjaxView.php?placarA="+placarA+"&placarB="+placarB+"&seteMetrosA="+seteMetrosA+"&seteMetrosB="+seteMetrosB+"",true);
