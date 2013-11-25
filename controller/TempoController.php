@@ -51,8 +51,8 @@ public function _consultarPorId($id){
 	public function _consultarPorRelatorio($relatorio){
 		return $this->tempoDAO->consultarPorRelatorio($relatorio);
 	}
-	public function _inserirTempo(Tempo $tempo){
-		return $this->tempoDAO->inserirTempo($tempo);
+	public function _inserirTempo($idJogo){
+		return $this->tempoDAO->inserirTempo($idJogo);
 	}
 	public function _atualizar($idTempo,$idJogo,$tiro7Metros,$tempoTecnico,$placarTime1,$placarTime2,$tipo){
 		$dadosTempo = new Tempo();

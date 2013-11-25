@@ -249,6 +249,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$idJogoAtual = $jogoVW->inserir();
 	$timeJogoVW->salvar($idJogoAtual,$_POST['idTimeA']);
 	$timeJogoVW->salvar($idJogoAtual,$_POST['idTimeB']);
+	$jogoVW->inserirTempo($numeroJogoAtual);
 	echo" <script>document.location.href='?pag=duranteJogo&idA=".$timeA."&idB=".$timeB."'</script>";
 
 }

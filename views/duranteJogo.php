@@ -160,10 +160,12 @@ $jogadorVW = new JogadorView();
 
 
 
-<table class="medidas" border="0" >
+<div class="medidas" boder="0" style=" border-bottom: 1px solid #CCC; padding: 4px; margin-bottom: 10px;">
 	 <script src="./views/contadorGolsTimes.js"></script>
 	 <script src="./views/ajaxTempo.js"></script>
 	  <script src="./views/ajaxDadosCampeonato.js"></script>
+</div>>
+	<table class="medidas" border="0" >
 	<tr>
     	<div>
 	        <td><small>A  </small></td>

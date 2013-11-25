@@ -21,8 +21,8 @@ class TempoDAO{
 		return $retornaTempo;
 	}
 	
-	public function inserir(Tempo $dadosTempo){
-		$sql = "INSERT INTO tempo (jogo_id_jogo,tipo,tiro_7metros,tempo_tecnico,placar_time1,placar_time2) VALUES ('{$dadosTempo->__getIdJogo()}','{$dadosTempo->__getTipo()}','{$dadosTempo->__getTiro7Metros()}','{$dadosTempo->__getTempoTecnico()}','{$dadosTempo->__getplacarTime1()}','{$dadosTempo->__getPlacarTime2()}')";
+	public function inserirTempo($idJogo){
+		$sql = "INSERT INTO tempo (jogo_id_jogo,tiro_7metros,tempo_tecnico,placar_time1,placar_time2,tipo) VALUES ('{$idJogo}',0,0,0,0,0)";
 		$this->conexao->banco->Execute($sql);
 	}
 	
