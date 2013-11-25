@@ -236,7 +236,7 @@ $numeroJogoAtual = count($arrayJogos)+1;
 </form>
 </table>
 <div id="but">
-<input type="submit" name="iniciar-jogo" class="but but-error align-but" value="Limpar">
+<input type="button" name="iniciar-jogo" class="but but-error align-but" value="Limpar" onclick="window.location.href='?pag=sumula'">
 <input type="submit" name="iniciar-jogo" class="but but-success align-but" value="Iniciar">
 <div id="clear"></div>
 </div>

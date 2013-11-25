@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Federação de Hendeboll</title>
+		<title>Federação de Handebol</title>
+		<link rel="shortcut icon" href="imagemFED2.ico">
 		<?php require_once 'import.php'; ?>
 		<script type="text/javascript">
 		jQuery(function($){
