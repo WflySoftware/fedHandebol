@@ -155,6 +155,9 @@ $jogadorVW = new JogadorView();
 $dadosTimeVW = new DadosTimeView();
 $timeJogoVW = new TimeJogoView();
 $jogoVW = new JogoView();
+$arrayJogos = $jogoVW->listarTodos();
+$numeroJogoAtual = count($arrayJogos)+1;
+
 ?>
 
 
@@ -168,7 +171,7 @@ $jogoVW = new JogoView();
 
 
 
-<h2 style="margin: 0 auto; width: 1024px; text-align:center;">INICIAR JOGO  No.:</h2>
+<h2 style="margin: 0 auto; width: 1024px; text-align:center;">INICIAR JOGO  Nº <?php echo $numeroJogoAtual?></h2>
 
 <form method="post" style="margin: 0 auto;" >
 <table class="medidas" border="0">

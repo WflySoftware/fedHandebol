@@ -8,7 +8,7 @@ class JogoView{
 		$this->jogoCO = new JogoController();
 	}
 	public function listarTodos(){
-		return $this->jogoCO->listarTodos();
+		return $this->jogoCO->_listarTodos();
 	}
 	public function consultarPorId($id){
 		return $this->jogoCO->_consultarPorId($id);

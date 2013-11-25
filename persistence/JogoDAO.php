@@ -14,7 +14,7 @@ class JogoDAO{
 		$resultado = $this->conexao->banco->Execute($sql);
 		while($registro = $resultado->FetchNextObject()){
 			$dadosJogo = new Jogo();
-			$dadosJogo->__constructOverload($registro->ID_JOGO,$registro->ESPECTADORES,$registro->CIDADE,$registro->LOCALIZACAO,$registro->DATA_JOGO,$registro->DURACAO,$registro->TOTAL_7METROS);
+			$dadosJogo->__constructOverload($registro->ID_JOGO,$registro->ESPECTADORES,$registro->CIDADE,$registro->LOCALIZACAO,$registro->DATA_JOGO,$registro->HORA_JOGO,$registro->DURACAO,$registro->TOTAL_7METROS);
 			$retornaJogo[] = $dadosJogo;
 		}
 		return $retornaJogo;
