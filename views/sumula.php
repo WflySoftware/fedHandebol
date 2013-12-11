@@ -156,9 +156,9 @@ $jogadorVW = new JogadorView();
 $dadosTimeVW = new DadosTimeView();
 $timeJogoVW = new TimeJogoView();
 $jogoVW = new JogoView();
+$dadosVW = new DadosView();
 $arrayJogos = $jogoVW->listarTodos();
 $numeroJogoAtual = count($arrayJogos)+1;
-
 ?>
 
 
@@ -251,7 +251,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$timeJogoVW->salvar($idJogoAtual,$_POST['idTimeA']);
 	$timeJogoVW->salvar($idJogoAtual,$_POST['idTimeB']);
 	$jogoVW->inserirTempo($numeroJogoAtual);
-	
+	$idTempoInserido = mysql_insert_id();
+	$dadosVW->inserir($idTempoInserido,$timeA,$timeB);
 	echo" <script>document.location.href='?pag=duranteJogo&idA=".$timeA."&idB=".$timeB."'</script>";
 
 }

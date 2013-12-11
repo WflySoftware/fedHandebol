@@ -1,6 +1,9 @@
 <?php
 include_once('C:/xampp/htdocs/fedHandebol/persistence/DadosDAO.php');
 include_once('C:/xampp/htdocs/fedHandebol/model/Dados.php');
+include_once('C:/xampp/htdocs/fedHandebol/model/Jogador.php');
+include_once('C:/xampp/htdocs/fedHandebol/controller/JogadorController.php');
+include_once('C:/xampp/htdocs/fedHandebol/controller/TimeController.php');
 class DadosController{
 	
 	private $dadosDAO;
@@ -50,8 +53,21 @@ class DadosController{
 		$dadosDados = $this->dadosDAO->consultarPorRelatorio($relatorio);
 		return $dadosDados;
 	}
-	public function _inserir(Dados $dados){
-		return $this->dadosDAO->inserir($dados);
+	public function _inserir($idTempoInserido,$idTimeA,$idTimeB){
+		$dadosTimeA = new Dados();
+		$dadosTimeB = new Dados();
+		$timeCO = new TimeController();
+		$timeA = $timeCO->_listarTodosJogadores($idTimeA);
+		$timeB = $timeCO->_listarTodosJogadores($idTimeB);
+		
+		for($i=0;$i<count($timeA);$i++){
+			$dadosTimeA->__constructOverload(0,$timeA[$i]->__getIdJogador() , $idTempoInserido, 0,0,0,0,0);
+			$this->dadosDAO->inserir($dadosTimeA);
+		}
+		for($i=0;$i<count($timeB);$i++){
+			$dadosTimeB->__constructOverload(0,$timeB[$i]->__getIdJogador() , $idTempoInserido, 0,0,0,0,0);
+			$this->dadosDAO->inserir($dadosTimeB);
+		}
 	}
 	public function _atualizar($idDados,$idJogador,$idTempo,$advertencia,$punicao,$desqualificacao,$relatorio,$gol){
 		$dadosDados = new Dados();

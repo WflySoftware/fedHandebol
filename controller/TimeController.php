@@ -19,6 +19,9 @@ class TimeController{
 		print_r(lol);
 		return $arraySelect;
 	}
+	public function _listarTodosJogadores($idTime){
+		return $this->timeDAO->listarTodosJogadores($idTime);
+	}
 	public function _listarTimeParaTabela(){
 		$dadosTime = new Time();
 		$arrayDadosTime = $this->timeDAO->listarTodos();

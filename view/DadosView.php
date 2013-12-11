@@ -10,8 +10,8 @@ class DadosView{
 	public function consultarPorId($id){
 		return $this->dadosCO->_consultarPorId($id);
 	}
-	public function inserir(){
-		return $this->dadosCO->_inserir($dadosTime);
+	public function inserir($idTempoInserido,$idTimeA,$idTimeB){
+		return $this->dadosCO->_inserir($idTempoInserido,$idTimeA,$idTimeB);
 	}
 	public function atualizar($id){
 		$formulario = $_POST;

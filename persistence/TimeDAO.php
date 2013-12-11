@@ -1,6 +1,7 @@
 <?php
 include_once (__APP_PATH.'/model/Time.php');
 include_once (__APP_PATH.'/model/Tecnico.php');
+include_once (__APP_PATH.'/model/Jogador.php');
 include_once (__APP_PATH.'/model/DadosTime.php');
 include_once (__APP_PATH.'/persistence/Conexao.php');
 
@@ -20,6 +21,16 @@ class TimeDAO{
 			$retornaTime[] = $dadosTime;
 		}
 		return $retornaTime;
+	}
+	public function listarTodosJogadores($idTime){
+		$sql = "SELECT * FROM jogador WHERE time_id_time = '{$idTime}'";
+		$resultado = $this->conexao->banco->Execute($sql);
+		while($registro = $resultado->FetchNextObject()){
+			$dadosJogador = new Jogador();
+			$dadosJogador->__constructOverload($registro->ID_JOGADOR,$registro->TIME_ID_TIME,$registro->NOME,$registro->DATA_NASCIMENTO,$registro->CPF,$registro->NUMERO);
+			$retornaJogador[] = $dadosJogador;
+		}
+		return $retornaJogador;
 	}
 	public function listarTodosPorPontos(){
 		$sql = "SELECT t.id_time,dc.pontos,dc.jogos,dc.vitorias,dc.empates,dc.derrotas,dc.gols,dc.gols_levados
