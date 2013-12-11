@@ -148,6 +148,7 @@ require_once __APP_PATH.'/view/JogadorView.php';
 require_once __APP_PATH.'/view/DadosTimeView.php';
 require_once __APP_PATH.'/view/TimeJogoView.php';
 require_once __APP_PATH.'/view/JogoView.php';
+require_once __APP_PATH.'/view/DadosView.php';
 
 
 
@@ -250,6 +251,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$timeJogoVW->salvar($idJogoAtual,$_POST['idTimeA']);
 	$timeJogoVW->salvar($idJogoAtual,$_POST['idTimeB']);
 	$jogoVW->inserirTempo($numeroJogoAtual);
+	
 	echo" <script>document.location.href='?pag=duranteJogo&idA=".$timeA."&idB=".$timeB."'</script>";
 
 }
