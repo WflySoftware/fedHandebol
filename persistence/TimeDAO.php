@@ -17,7 +17,7 @@ class TimeDAO{
 		$resultado = $this->conexao->banco->Execute($sql);
 		while($registro = $resultado->FetchNextObject()){
 			$dadosTime = new Time();
-			$dadosTime->__constructOverload($registro->ID_TIME,$registro->TECNICO_ID_TECNICO,$registro->NOME,$registro->CATEGORIA,$registro->ENDERECO,$registro->DATA_FUNDACAO,$registro->PRESIDENTE,$registro->TELEFONE,$registro->PONTOS);
+			$dadosTime->__constructOverload($registro->ID_TIME,$registro->TECNICO_ID_TECNICO,$registro->NOME,$registro->CATEGORIA,$registro->ENDERECO,$registro->DATA_FUNDACAO,$registro->PRESIDENTE,$registro->TELEFONE);
 			$retornaTime[] = $dadosTime;
 		}
 		return $retornaTime;

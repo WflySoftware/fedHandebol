@@ -97,7 +97,7 @@ class JogadorDAO{
 				
 				GROUP BY jogador_id_jogador
 				
-				ORDER BY faltas DESC";
+				ORDER BY faltas ASC";
 		$resultado = $this->conexao->banco->Execute($sql);
 		while($registro = $resultado->FetchNextObject()){
 			$fear['nome'] = $registro->NOME;
