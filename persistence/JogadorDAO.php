@@ -68,30 +68,39 @@ class JogadorDAO{
 		return $registro->CONTAGEM;
 	}
 	public function listarArtilheiros(){
-		$sql = "SELECT j.nome AS nome_jogador, t.nome AS nome_time, d.gol,j.numero
-				FROM jogador j, dados d, time t
+		$sql = "SELECT j.nome AS nome,t.nome AS nome_time,j.numero AS numero , SUM(gol) AS gols
+
+				FROM dados d,jogador j,time t
+				
 				WHERE j.id_jogador = d.jogador_id_jogador
 				AND j.time_id_time = t.id_time
-				ORDER BY d.gol DESC";
+				
+				GROUP BY jogador_id_jogador
+				
+				ORDER BY gols DESC";
 		$resultado = $this->conexao->banco->Execute($sql);
 		while($registro = $resultado->FetchNextObject()){
-			$artilheiro['nome'] = $registro->NOME_JOGADOR;
+			$artilheiro['nome'] = $registro->NOME;
 			$artilheiro['time'] = $registro->NOME_TIME;
-			$artilheiro['gols'] = $registro->GOL;
+			$artilheiro['gols'] = $registro->GOLS;
 			$artilheiro['numero'] = $registro->NUMERO;
 			$arrayArtilheiro[] = $artilheiro;
 		}	
 		return $arrayArtilheiro;
 	}
 	public function listarFearPlayers(){
-		$sql = "SELECT j.nome AS nome_jogador, t.nome AS nome_time, (d.advertencia + d.punicao + d.desqualificacao + d.relatorio) AS faltas, j.numero
-				FROM dados d, jogador j, time t
-				WHERE d.jogador_id_jogador = j.id_jogador
+		$sql = "SELECT j.nome AS nome,t.nome AS nome_time,j.numero AS numero , (d.advertencia + d.punicao + d.desqualificacao + d.relatorio) AS faltas
+				FROM dados d,jogador j,time t
+				
+				WHERE j.id_jogador = d.jogador_id_jogador
 				AND j.time_id_time = t.id_time
-				ORDER BY faltas ASC";
+				
+				GROUP BY jogador_id_jogador
+				
+				ORDER BY faltas DESC";
 		$resultado = $this->conexao->banco->Execute($sql);
 		while($registro = $resultado->FetchNextObject()){
-			$fear['nome'] = $registro->NOME_JOGADOR;
+			$fear['nome'] = $registro->NOME;
 			$fear['time'] = $registro->NOME_TIME;
 			$fear['faltas'] = $registro->FALTAS;
 			$fear['numero'] = $registro->NUMERO;
