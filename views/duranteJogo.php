@@ -147,6 +147,7 @@ require_once __APP_PATH.'/view/JogadorView.php';
 
 $idA = isset( $_GET['idA'] ) ? $_GET['idA'] : null;
 $idB = isset( $_GET['idB'] ) ? $_GET['idB'] : null;
+$idTempo = isset( $_GET['idTempo'] ) ? $_GET['idTempo'] : null;
 $jogadorVW = new JogadorView();	
 ?>
 
@@ -326,7 +327,7 @@ $jogadorVW = new JogadorView();
     		
 				
 						
-						$tr = $jogadorVW->listarJogadoresParaSumulaTimeA($idA);
+						$tr = $jogadorVW->listarJogadoresParaSumulaTimeA($idA,$idTempo);
 						for($i=0;$i<count($tr);$i++){
 							echo $tr[$i];
 					}
@@ -351,7 +352,7 @@ $jogadorVW = new JogadorView();
 		<?php 
 				
 						
-						$tr = $jogadorVW->listarJogadoresParaSumulaTimeB($idB);
+						$tr = $jogadorVW->listarJogadoresParaSumulaTimeB($idB,$idTempo);
 						for($i=0;$i<count($tr);$i++){
 							echo $tr[$i];
 						}

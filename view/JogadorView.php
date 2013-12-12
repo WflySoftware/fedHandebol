@@ -20,11 +20,11 @@ class JogadorView{
 	public function listarJogadoresParaTabela(){
 		return $this->jogadorCO->_listarJogadoresParaTabela();
 	}
-	public function listarJogadoresParaSumulaTimeA($time){
-		return $this->jogadorCO->_listarJogadoresParaSumulaTimeA($time);
+	public function listarJogadoresParaSumulaTimeA($time,$idTempo){
+		return $this->jogadorCO->_listarJogadoresParaSumulaTimeA($time,$idTempo);
 	}
-	public function listarJogadoresParaSumulaTimeB($time){
-		return $this->jogadorCO->_listarJogadoresParaSumulaTimeB($time);
+	public function listarJogadoresParaSumulaTimeB($time,$idTempo){
+		return $this->jogadorCO->_listarJogadoresParaSumulaTimeB($time,$idTempo);
 	}
 	public function atualizar($id){
 		$formulario = $_POST;

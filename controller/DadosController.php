@@ -74,6 +74,11 @@ class DadosController{
 		$dadosDados->__constructOverload($idDados,$idJogador,$idTempo,$advertencia,$punicao,$desqualificacao,$relatorio,$gol);
 		$this->dadosDAO->atualizar($dadosDados);
 	}
+	public function _atualizarDados($idJogador,$idTempo,$advertencia,$punicao,$desqualificacao,$relatorio,$gol){
+		$dadosDados = new Dados();
+		$dadosDados->__constructOverload(0,$idJogador,$idTempo,$advertencia,$punicao,$desqualificacao,$relatorio,$gol);
+		$this->dadosDAO->atualizarDados($dadosDados);
+	}
 	public function _salvar($idJogador,$idTempo,$advertencia,$punicao,$desqualificacao,$relatorio){
 		$dadosDados= new Dados();
 		$dadosDados->__constructOverload(0,$idJogador,$idTempo,$advertencia,$punicao,$desqualificacao,$relatorio);

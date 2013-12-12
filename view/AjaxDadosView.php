@@ -7,6 +7,7 @@ $jogadorA= $_GET["jogadorA"];
 $jogadorP= $_GET["jogadorP"];
 $jogadorD= $_GET["jogadorD"];
 $jogadorR= $_GET["jogadorR"];
+$idTempo = $_GET["idTempo"];
 
 $DadoCO = new DadosController();
-$DadoCO->_atualizar(1, 1, 1, $jogadorA, $jogadorP, $jogadorD, $jogadorR,$jogadorGol);
+$DadoCO->_atualizarDados($jogadorId, $idTempo, $jogadorA, $jogadorP, $jogadorD, $jogadorR,$jogadorGol);

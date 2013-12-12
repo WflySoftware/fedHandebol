@@ -253,9 +253,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$jogoVW->inserirTempo($numeroJogoAtual);
 	$idTempoInserido = mysql_insert_id();
 	$dadosVW->inserir($idTempoInserido,$timeA,$timeB);
-	echo" <script>document.location.href='?pag=duranteJogo&idA=".$timeA."&idB=".$timeB."'</script>";
+	echo" <script>document.location.href='?pag=duranteJogo&idA=".$timeA."&idB=".$timeB."&idTempo=".$idTempoInserido."'</script>";
 
 }
-
-
-

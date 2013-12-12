@@ -1,4 +1,4 @@
-function persistirDados(jogadorId,jogadorGol,jogadorA,jogadorP,jogadorD,jogadorR){
+function persistirDados(jogadorId,jogadorGol,jogadorA,jogadorP,jogadorD,jogadorR,idTempo){
 	var xmlhttp;
 	
 	
@@ -17,6 +17,6 @@ function persistirDados(jogadorId,jogadorGol,jogadorA,jogadorP,jogadorD,jogadorR
 		  	//alert("inserido");
 		  }
 	  }
-	xmlhttp.open("GET","view/AjaxDadosView.php?jogadorId="+jogadorId+"&jogadorGol="+jogadorGol+"&jogadorA="+jogadorA+"&jogadorP="+jogadorP+"&jogadorD="+jogadorD+"&jogadorR="+jogadorR+"",true);
+	xmlhttp.open("GET","view/AjaxDadosView.php?jogadorId="+jogadorId+"&jogadorGol="+jogadorGol+"&jogadorA="+jogadorA+"&jogadorP="+jogadorP+"&jogadorD="+jogadorD+"&jogadorR="+jogadorR+"&idTempo="+idTempo+"",true);
 	xmlhttp.send();
 	}

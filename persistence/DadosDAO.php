@@ -29,7 +29,12 @@ class DadosDAO{
 		$sql = "UPDATE dados SET jogador_id_jogador='{$dadosDados->__getIdJogador()}', tempo_id_tempo='{$dadosDados->__getIdTempo()}', advertencia='{$dadosDados->__getAdvertencia()}', punicao='{$dadosDados->__getPunicao()}', desqualificacao='{$dadosDados->__getDesqualificacao()}', relatorio='{$dadosDados->__getRelatorio()}', gol='{$dadosDados->__getGol()}' WHERE id_dados='{$dadosDados->__getIdDados()}' ";
 		$this->conexao->banco->Execute($sql);
 	}
-
+	public function atualizarDados(Dados $dadosDados){
+		$sql = "UPDATE dados SET advertencia='{$dadosDados->__getAdvertencia()}', punicao='{$dadosDados->__getPunicao()}', desqualificacao='{$dadosDados->__getDesqualificacao()}', relatorio='{$dadosDados->__getRelatorio()}', gol='{$dadosDados->__getGol()}'
+				WHERE jogador_id_jogador='{$dadosDados->__getIdJogador()}'
+				AND tempo_id_tempo='{$dadosDados->__getIdTempo()}'";
+		$this->conexao->banco->Execute($sql);
+	}
 	public function consultarPorId($id){
 		$sql = "SELECT * FROM dados WHERE id_dados= '{$id}'";
 		$resultado = $this->conexao->banco->Execute($sql);
