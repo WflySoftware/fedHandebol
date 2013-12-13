@@ -104,8 +104,12 @@ class TimeController{
 			$var = $time->_consultarPorId($dadosTime->__getIdTime());
 			$nome = $var['nome'];
 			$saldo = $dadosTime->__getGols() - $dadosTime->__getGolsLevados();
-			$porcentagem = (int)( 100*($dadosTime->__getVitorias())/($dadosTime->__getJogos()));
-			
+			if($dadosTime->__getJogos()!= 0){
+				$porcentagem = (int)( 100*($dadosTime->__getVitorias())/($dadosTime->__getJogos()));
+			}
+			else{
+				$porcentagem = 0;
+			}
 				
 		$arrayTr[] =" 
 			<tr>
