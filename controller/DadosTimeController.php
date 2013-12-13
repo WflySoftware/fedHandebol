@@ -24,8 +24,23 @@ class DadosTimeController{
 	}
 	public function _atualizar($idDadosTime,$pontos,$jogos,$vitorias,$empates,$derrotas,$gols,$golsLevados){
 		$dadosDadosTime = new DadosTime();
-		$dadosDadosTime->__constructOverload(1,$idDadosTime,$pontos,$jogos,$vitorias,$empates,$derrotas,$gols,$golsLevados);
+		$dadosDadosTime->__constructOverload(0,$idDadosTime,$pontos,$jogos,$vitorias,$empates,$derrotas,$gols,$golsLevados);
 		$this->dadosTimeDAO->atualizar($dadosDadosTime);
+	}
+	public function _atualizarPontos($idTimeA,$idTimeB,$golsTimeA,$golsTimeB){
+		if($golsTimeA > $golsTimeB){
+			$pontuacaoA = 3;
+			$pontuacaoB = 0;
+		}
+		else if($golsTimeA < $golsTimeB){
+			$pontuacaoA = 0;
+			$pontuacaoB = 3;
+		}
+		else if($golsTimeA == $golsTimeB){
+			$pontuacaoA = 1;
+			$pontuacaoB = 1;
+		}
+		$this->dadosTimeDAO->atualizarPontos($idTimeA, $idTimeB, $pontuacaoA, $pontuacaoB, $golsTimeA, $golsTimeB);
 	}
 	public function _excluir($id){
 		return $this->dadosTimeDAO->excluir($id);

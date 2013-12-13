@@ -1,10 +1,13 @@
 <?php
 include_once('C:/xampp/htdocs/fedHandebol/controller/DadosTimeController.php');
 
-$timeA= $_GET["idA"];
-$timeB= $_GET["idB"];
+$timeA = isset( $_GET['idA'] ) ? $_GET['idA'] : null;
+$timeB = isset( $_GET['idB'] ) ? $_GET['idB'] : null;
+$golsTimeA = isset( $_GET['golsTimeA'] ) ? $_GET['golsTimeA'] : null;
+$golsTimeB = isset( $_GET['golsTimeB'] ) ? $_GET['golsTimeB'] : null;
+
 
 
 $DadosTimeCO = new DadosTimeController();
-$DadosTimeCO->_atualizar($timeA,10, 5,4, 1, 0, 22, 41);
+$DadosTimeCO->_atualizarPontos($timeA, $timeB, $golsTimeA, $golsTimeB);
 

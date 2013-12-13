@@ -338,7 +338,7 @@ $jogadorVW = new JogadorView();
      <aside style="float: right; width: 300px;" >
 		 <tr>
 		  				<th></th>
-		  				<script>timeGolsTimeA = 0;timeGolsTimeB = 0;</script>
+		  				<script>var timeGolsTimeA = 0;var timeGolsTimeB = 0;</script>
 			         
 			 			<th class="tr"><small>N&ordm</small></th>
 			          
@@ -363,8 +363,8 @@ $jogadorVW = new JogadorView();
 </table>
 </div>
 </head>
-
+<script>var tentativa = 100;</script>
 
 <div style="margin-left: 500px;" id="termino"><h2>TERMINAR JOGO</h2>
-<button  class ="but but-error" style=" padding:10px 73px" type="button" onclick="persistirDadosCampeonato();alert('Obrigado por usar o software Wfly');document.location.href='?pag=initial';">terminar</button>
+<button  class ="but but-error" style=" padding:10px 73px" type="button" onclick="alert('Obrigado por usar o software Wfly');persistirDadosCampeonato(timeGolsTimeA,timeGolsTimeB);document.location.href='?pag=initial';">terminar</button>
 </div>

@@ -1,4 +1,4 @@
-function persistirDadosCampeonato(){
+function persistirDadosCampeonato(timeGolsTimeA,timeGolsTimeB){
 	var xmlhttp;
 	var url = window.location.href;
 	var parametros = url.split("?")[1];
@@ -19,11 +19,11 @@ function persistirDadosCampeonato(){
 	  {  
 		  if (xmlhttp.readyState==4 && xmlhttp.status==200)
 		  {
-		  	//alert("inserido");
-			 // alert(xmlhttp.responseText);
+		  	 // alert("inserido");
+			  //alert(xmlhttp.responseText);
 		  }
 	  }
 	//xmlhttp.open("GET","view/AjaxDadosCampeonatoView.php?jogadorId="+jogadorId+"&jogadorGol="+jogadorGol+"&jogadorA="+jogadorA+"&jogadorP="+jogadorP+"&jogadorD="+jogadorD+"&jogadorR="+jogadorR+"",true);
-	xmlhttp.open("GET","view/AjaxDadosCampeonatoView.php?idA="+parametrosIdA+"&idB="+parametrosIdB+"",true);
+	xmlhttp.open("GET","view/AjaxDadosCampeonatoView.php?idA="+parametrosIdA+"&idB="+parametrosIdB+"&golsTimeA="+timeGolsTimeA+"&golsTimeB="+timeGolsTimeB+"",true);
 	xmlhttp.send();
 	}

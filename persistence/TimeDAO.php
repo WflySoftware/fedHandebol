@@ -1,9 +1,9 @@
 <?php
-include_once (__APP_PATH.'/model/Time.php');
-include_once (__APP_PATH.'/model/Tecnico.php');
-include_once (__APP_PATH.'/model/Jogador.php');
-include_once (__APP_PATH.'/model/DadosTime.php');
-include_once (__APP_PATH.'/persistence/Conexao.php');
+include_once ('C:/xampp/htdocs/fedHandebol/model/Time.php');
+include_once ('C:/xampp/htdocs/fedHandebol/model/Tecnico.php');
+include_once ('C:/xampp/htdocs/fedHandebol/model/Jogador.php');
+include_once ('C:/xampp/htdocs/fedHandebol/model/DadosTime.php');
+include_once ('C:/xampp/htdocs/fedHandebol/persistence/Conexao.php');
 
 
 class TimeDAO{
