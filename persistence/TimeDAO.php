@@ -5,6 +5,7 @@ include_once (__APP_PATH.'/model/Jogador.php');
 include_once (__APP_PATH.'/model/DadosTime.php');
 include_once (__APP_PATH.'/persistence/Conexao.php');
 
+
 class TimeDAO{
 	private $conexao;
 	
@@ -48,6 +49,7 @@ class TimeDAO{
 	public function inserir(Time $dadosTime){
 		$sql = "INSERT INTO time (tecnico_id_tecnico,nome,categoria,endereco,data_fundacao,presidente,telefone) VALUES ('{$dadosTime->__getIdTecnico()}','{$dadosTime->__getNome()}','{$dadosTime->__getCategoria()}','{$dadosTime->__getEndereco()}','{$dadosTime->__getDataFundacao()}','{$dadosTime->__getPresidente()}','{$dadosTime->__getTelefone()}')";
 		$this->conexao->banco->Execute($sql);
+		return mysql_insert_id();
 	}
 	
 	public function atualizar(Time $dadosTime){

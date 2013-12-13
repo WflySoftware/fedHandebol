@@ -1,5 +1,6 @@
 <?php
 include_once(__APP_PATH.'/persistence/TimeDAO.php');
+include_once(__APP_PATH.'/persistence/DadosTimeDAO.php');
 include_once(__APP_PATH.'/model/Time.php');
 include_once(__APP_PATH.'/model/DadosTime.php');
 class TimeController{
@@ -71,8 +72,12 @@ class TimeController{
 	}
 	public function _salvar($idTecnico,$nome,$categoria,$endereco,$dataFundacao,$presidente,$telefone){
 		$dadosTime = new Time();
+		$dadosDadosTime = new DadosTime();
+		$dadosDadosTimeDAO = new DadosTimeDAO();
 		$dadosTime->__constructOverload(0, $idTecnico, $nome, $categoria, $endereco, $dataFundacao, $presidente, $telefone,0);
-		return $this->timeDAO->inserir($dadosTime);
+		$idTime = $this->timeDAO->inserir($dadosTime);
+		$dadosDadosTime->__constructOverload(0, $idTime,0,0,0,0,0,0,0);
+		return $dadosDadosTimeDAO->inserir($dadosDadosTime);
 	}
 	public function _atualizar($id,$idTecnico, $nome, $categoria, $endereco, $dataFundacao, $presidente, $telefone){
 

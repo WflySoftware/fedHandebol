@@ -19,9 +19,8 @@ class DadosTimeDAO{
 		return $retornaDadosTime;
 	}
 	public function inserir(DadosTime $dadosDadosTime){
-		$sql = "INSERT INTO dados_campeonato(pontos,jogos,vitorias,empates,derrotas,gols,gols_levados) VALUES ('{$dadosDadosTime->__getPontos()}','{$dadosDadosTime->__getJogos()}','{$dadosDadosTime->__getVitorias()}','{$dadosDadosTime->__getEmpates()}','{$dadosDadosTime->__getDerrotas()}','{$dadosDadosTime->__getGols()}','{$dadosDadosTime->__getGolsLevados()}')";
-		$this->conexao->banco->Execute($sql);
-		
+		$sql = "INSERT INTO dados_campeonato(pontos,jogos,vitorias,empates,derrotas,gols,gols_levados,time_id_time) VALUES ('{$dadosDadosTime->__getPontos()}','{$dadosDadosTime->__getJogos()}','{$dadosDadosTime->__getVitorias()}','{$dadosDadosTime->__getEmpates()}','{$dadosDadosTime->__getDerrotas()}','{$dadosDadosTime->__getGols()}','{$dadosDadosTime->__getGolsLevados()}','{$dadosDadosTime->__getIdTime()}')";
+		return $this->conexao->banco->Execute($sql);
 	}
 	public function consultarPorId($id){
 		$sql = "SELECT * FROM dados_campeonato WHERE id_dados_campeonato= '{$id}'";
