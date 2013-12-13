@@ -37,7 +37,7 @@ class TimeDAO{
 		$sql = "SELECT t.id_time,dc.pontos,dc.jogos,dc.vitorias,dc.empates,dc.derrotas,dc.gols,dc.gols_levados
 				FROM dados_campeonato dc,time t
 				WHERE t.id_time = dc.time_id_time
-				ORDER BY dc.gols DESC;";
+				ORDER BY dc.pontos DESC;";
 		$resultado = $this->conexao->banco->Execute($sql);
 		while($registro = $resultado->FetchNextObject()){
 			$dadosTime = new DadosTime();

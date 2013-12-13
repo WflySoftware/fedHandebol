@@ -20,7 +20,7 @@ function persistirDadosCampeonato(timeGolsTimeA,timeGolsTimeB){
 		  if (xmlhttp.readyState==4 && xmlhttp.status==200)
 		  {
 		  	 // alert("inserido");
-			  //alert(xmlhttp.responseText);
+			  alert(xmlhttp.responseText);
 		  }
 	  }
 	//xmlhttp.open("GET","view/AjaxDadosCampeonatoView.php?jogadorId="+jogadorId+"&jogadorGol="+jogadorGol+"&jogadorA="+jogadorA+"&jogadorP="+jogadorP+"&jogadorD="+jogadorD+"&jogadorR="+jogadorR+"",true);

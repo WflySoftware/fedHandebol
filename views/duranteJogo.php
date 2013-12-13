@@ -366,5 +366,5 @@ $jogadorVW = new JogadorView();
 <script>var tentativa = 100;</script>
 
 <div style="margin-left: 500px;" id="termino"><h2>TERMINAR JOGO</h2>
-<button  class ="but but-error" style=" padding:10px 73px" type="button" onclick="alert('Obrigado por usar o software Wfly');persistirDadosCampeonato(timeGolsTimeA,timeGolsTimeB);document.location.href='?pag=initial';">terminar</button>
+<button  class ="but but-error" style=" padding:10px 73px" type="button" onclick="alert('Obrigado por usar o software Wfly');persistirDadosCampeonato(timeGolsTimeA,timeGolsTimeB);">terminar</button>
 </div>
